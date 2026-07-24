@@ -1,0 +1,221 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import { services, getService, getRelatedServices } from "@/content/services";
+import { getBrand } from "@/content/brands";
+import { site } from "@/content/site";
+import { imageExists } from "@/lib/images";
+import {
+  breadcrumbSchema,
+  faqSchema,
+  pageMetadata,
+  serviceSchema,
+} from "@/lib/seo";
+import { Container, Section, SectionHeader } from "@/components/ui/Section";
+import { CheckList } from "@/components/ui/Checkbox";
+import { BothAudiencesTag } from "@/components/ui/Tag";
+import { MediaFrame } from "@/components/ui/Media";
+import { BrandCard } from "@/components/blocks/BrandCard";
+import { BeforeAfter } from "@/components/blocks/BeforeAfter";
+import { Gallery } from "@/components/blocks/Gallery";
+import { Faq } from "@/components/blocks/Faq";
+import { RelatedServices } from "@/components/blocks/ServiceGrid";
+import { QuoteSidebar } from "@/components/blocks/QuoteSidebar";
+import { QuoteCta } from "@/components/blocks/QuoteCta";
+
+export function generateStaticParams() {
+  return services.map((service) => ({ slug: service.slug }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const service = getService(slug);
+  if (!service) return {};
+
+  return pageMetadata({
+    title: service.name,
+    description: `${service.tagline} ${service.name} for homes and commercial properties across ${site.serviceAreaLabel}, from Cross Services Group.`,
+    path: `/services/${service.slug}`,
+  });
+}
+
+export default async function ServiceDetailPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const service = getService(slug);
+  if (!service) notFound();
+
+  const related = getRelatedServices(service);
+  const secondaryBrand = getBrand(service.secondaryBrandId);
+  const hasBrandSection = Boolean(getBrand(service.brandId) || secondaryBrand);
+
+  /* The before/after slider only appears when both photos actually exist. */
+  const ba = service.beforeAfter;
+  const showBeforeAfter =
+    Boolean(ba) && imageExists(ba!.before) && imageExists(ba!.after);
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema(service)) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(service.faqs)) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            breadcrumbSchema([
+              { name: "Home", path: "/" },
+              { name: "Services", path: "/services" },
+              { name: service.name, path: `/services/${service.slug}` },
+            ]),
+          ),
+        }}
+      />
+
+      <Container className="pt-8 pb-2 md:pt-10">
+        <nav aria-label="Breadcrumb">
+          <ol className="flex flex-wrap items-center gap-2 text-[15px] text-muted">
+            <li>
+              <Link href="/" className="underline-offset-4 hover:text-cross-blue hover:underline">
+                Home
+              </Link>
+            </li>
+            <li aria-hidden="true">/</li>
+            <li>
+              <Link
+                href="/services"
+                className="underline-offset-4 hover:text-cross-blue hover:underline"
+              >
+                Services
+              </Link>
+            </li>
+            <li aria-hidden="true">/</li>
+            <li aria-current="page" className="text-ink">
+              {service.name}
+            </li>
+          </ol>
+        </nav>
+      </Container>
+
+      <Container className="pt-6 pb-12 md:pt-8 md:pb-16">
+        <div className="lg:grid lg:grid-cols-[1fr_340px] lg:gap-16">
+          <div className="min-w-0">
+            {/* ------------------------------------------------ heading */}
+            <div className="mb-3">
+              <BothAudiencesTag />
+            </div>
+            <h1 className="text-[34px] leading-[1.05] md:text-[48px]">{service.name}</h1>
+            <p className="mt-4 max-w-[52ch] text-[19px] text-muted md:text-[21px]">
+              {service.tagline}
+            </p>
+
+            {/* -------------------------------------------------- visual */}
+            <div className="mt-8">
+              {showBeforeAfter ? (
+                <BeforeAfter
+                  before={ba!.before}
+                  after={ba!.after}
+                  alt={`${service.name} by Cross Services Group`}
+                  caption={ba!.caption}
+                />
+              ) : (
+                <MediaFrame
+                  src={service.heroImage}
+                  alt={`Cross Services Group ${service.name.toLowerCase()} work in ${site.serviceAreaLabel}`}
+                  ratio="16/9"
+                  sizes="(min-width: 1024px) 780px, 100vw"
+                  priority
+                  note={`${service.name} hero photo`}
+                />
+              )}
+            </div>
+
+            {/* ---------------------------------------------------- intro */}
+            <p className="mt-10 max-w-[68ch] text-[18px]">{service.intro}</p>
+
+            {/* -------------------------------------------- what's included */}
+            <div className="mt-12 md:mt-16">
+              <h2 className="text-[26px] leading-[1.15] md:text-[34px]">
+                What&apos;s included
+              </h2>
+              <div className="mt-6 max-w-[68ch]">
+                <CheckList items={service.includes} />
+              </div>
+            </div>
+
+            {/* ------------------------------------------- who does the work */}
+            {hasBrandSection ? (
+              <div className="mt-12 md:mt-16">
+                <h2 className="text-[26px] leading-[1.15] md:text-[34px]">
+                  Who does this work
+                </h2>
+                <div className="mt-6 flex flex-col gap-4">
+                  <BrandCard brandId={service.brandId} />
+                  {secondaryBrand ? (
+                    <BrandCard
+                      brandId={service.secondaryBrandId}
+                      note="On Cape Cod, residential cleaning is handled by The Furies rather than by our Natick crews. Same standard, same guarantee."
+                    />
+                  ) : null}
+                </div>
+              </div>
+            ) : null}
+
+            {/* -------------------------------------------------- gallery */}
+            <div className="mt-12 md:mt-16">
+              <h2 className="text-[26px] leading-[1.15] md:text-[34px]">On the job</h2>
+              <div className="mt-6">
+                <Gallery paths={service.gallery} serviceName={service.name} />
+              </div>
+            </div>
+
+            {/* ------------------------------------------------------ FAQ */}
+            <div className="mt-12 md:mt-16">
+              <h2 className="text-[26px] leading-[1.15] md:text-[34px]">
+                Questions we get asked
+              </h2>
+              <div className="mt-6">
+                <Faq faqs={service.faqs} />
+              </div>
+            </div>
+          </div>
+
+          <QuoteSidebar serviceSlug={service.slug} serviceName={service.name} />
+        </div>
+      </Container>
+
+      {/* -------------------------------------------- often paired with */}
+      {related.length > 0 ? (
+        <Section tone="surface" labelledBy="related-heading">
+          <SectionHeader
+            id="related-heading"
+            eyebrow="Often paired with"
+            title="People who book this usually book these too"
+            lead="Same crew, same visit where we can manage it, one invoice at the end."
+          />
+          <div className="mt-8 md:mt-12">
+            <RelatedServices services={related} />
+          </div>
+        </Section>
+      ) : null}
+
+      <QuoteCta
+        title={`Get a quote for ${service.name.toLowerCase()}`}
+        body="We will pre-tick this one for you. Add anything else you need on the same form."
+        service={service.slug}
+      />
+    </>
+  );
+}

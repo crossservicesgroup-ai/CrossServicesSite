@@ -1,0 +1,105 @@
+/* ==========================================================================
+   LEADERSHIP TEAM — shown on the About page.
+
+   A person with no bio and no photo still renders correctly: they get their
+   initials in a circle and just a name and title. Never put a company logo
+   in a headshot slot.
+
+   To add a headshot: drop the file into /public/images/team/ and set `photo`
+   to its path, e.g. "/images/team/megan-griffith.jpg".
+   ========================================================================== */
+
+export type TeamMember = {
+  id: string;
+  name: string;
+  title: string;
+  /** Path to the headshot, or null if we do not have one yet. */
+  photo: string | null;
+  /** Full bio, or null. A missing bio simply hides the "Read bio" control. */
+  bio: string | null;
+};
+
+export const team: TeamMember[] = [
+  {
+    id: "warren-cross-jr",
+    name: "Warren Cross Jr.",
+    title: "President and CEO",
+    photo: null, // [NEEDS INPUT] headshot
+    bio: "Warren founded Cross Services Group in 1989 shortly after graduating from college, and describes himself as a classic serial entrepreneur who enjoys acquiring complementary businesses. In 2007 he developed Cross Courts Squash and Fitness Center, with four international squash courts, professional coaching and a full fitness facility. He owns six commercial buildings totaling roughly 130,000 square feet across the Natick and Needham business parks. Warren holds degrees from Belmont Hill School and the University of Richmond, and an Executive MBA from Northeastern University. He serves as a trustee at Tenacre Country Day School, Belmont Hill School and Babson College. He lives in South Natick with his wife, has three children and three granddaughters, and spends his free time on paddle tennis, tennis and family time in Jackson, NH and Osterville, MA.",
+  },
+  {
+    id: "warren-cross-iii",
+    name: "Warren Cross III",
+    title: "Vice President",
+    photo: null, // [NEEDS INPUT] headshot
+    bio: null, // [NEEDS INPUT] bio
+  },
+  {
+    id: "chris-mastrodicasa",
+    name: "Chris Mastrodicasa",
+    title: "Chief Financial Officer",
+    photo: null, // [NEEDS INPUT] headshot
+    bio: "Chris joined Cross Services Group in October 2022 with a degree in Accounting and Finance from Babson College. He began his career in a first-generation family manufacturing business and became its president within four years, going on to reinvent its operations over 35 years before the business was sold. He then helped another family-operated company through an administrative and financial restructuring as it grew into a multimillion-dollar national organization. A problem solver with a critical thinker's mindset, Chris puts a high value on contributing to the growth and success of the people around him.",
+  },
+  {
+    id: "chip-tarbell",
+    name: "Chip Tarbell",
+    title: "Vice President of Operations",
+    photo: null, // [NEEDS INPUT] headshot
+    bio: "Chip joined Cross Services Group in July 2018 and oversees day-to-day operations. He graduated from St. Lawrence University in 1981 with a BA in Economics, lettering in both football and track. His career has included Haynes Management's landscape division and D.M. Bernardi contracting, followed by twelve years as Director of Facilities at Belmont Hill School, where he also coached football and wrestling. Chip lives in Wakefield with his wife and has two adult children and a grandchild. He is an avid New England sports fan and spends as much time as he can in Rockport, MA.",
+  },
+  {
+    id: "campbell-armstrong",
+    name: "Campbell Armstrong",
+    title: "Business Development and Real Estate Manager",
+    photo: null, // [NEEDS INPUT] headshot
+    bio: "Campbell joined Cross Services Group in July 2015, having grown up in Malvern, Pennsylvania. He manages the New-View division, covering window cleaning, power washing and gutter cleaning, and oversees the Cross Courts fitness center. As one of the company's longer-tenured managers he works across every division, and he holds a real estate license, helping clients buy and sell property. Before Cross he was an analyst in Investment Manager Services at SEI Investments and a marketing intern at Scala Inc. He earned a BA from Lynchburg College, where he captained the men's lacrosse team. Campbell golfs, skis and plays guitar, and lives with his wife and four children.",
+  },
+  {
+    id: "megan-griffith",
+    name: "Megan Griffith",
+    title: "Customer Development Manager",
+    photo: null, // [NEEDS INPUT] headshot
+    bio: null, // [NEEDS INPUT] bio
+  },
+  {
+    id: "giulia-palizzolo",
+    name: "Giulia Palizzolo",
+    title: "Operations Associate",
+    photo: null, // [NEEDS INPUT] headshot
+    bio: null, // [NEEDS INPUT] bio
+  },
+  {
+    id: "grace-silva",
+    name: "Grace Silva",
+    title: "Head of House Cleaning",
+    photo: null, // [NEEDS INPUT] headshot
+    bio: "Grace joined Cross Services Group in January 2020 and manages residential house cleaning. Originally from São Paulo, Brazil, she holds degrees in Tech Tourism and Hospitality from College Progresso, Administration and Marketing from University Torricelli, and Financial Management from College Eniac, along with an MBA in Coaching for People Management from Unopar. She previously led teams on political campaigns and served as a Director at the Sports Secretariat in Guarulhos, Brazil. After relocating to the United States in 2018 she established a cleaning business and obtained a professional house cleaning license from ARCSI in 2022. Grace loves working with all types of people, and enjoys traveling and spending time with her husband.",
+  },
+  {
+    id: "joe-slavik",
+    name: "Joe Slavik",
+    title: "Operations Analyst",
+    photo: null, // [NEEDS INPUT] headshot
+    bio: null, // [NEEDS INPUT] bio
+  },
+  {
+    id: "brian-rothwell",
+    name: "Brian Rothwell",
+    title: "Technology",
+    photo: null, // [NEEDS INPUT] headshot
+    bio: null, // [NEEDS INPUT] bio
+  },
+];
+
+/** "Warren Cross Jr." -> "WC". Used for the initials circle. */
+export function initialsOf(name: string): string {
+  const parts = name
+    .replace(/\b(Jr\.?|Sr\.?|II|III|IV)\b/gi, "")
+    .trim()
+    .split(/\s+/)
+    .filter(Boolean);
+  const first = parts[0]?.[0] ?? "";
+  const last = parts.length > 1 ? parts[parts.length - 1][0] : "";
+  return (first + last).toUpperCase();
+}
