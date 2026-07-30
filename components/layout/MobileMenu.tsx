@@ -76,7 +76,7 @@ export function MobileMenu({ open, onClose }: { open: boolean; onClose: () => vo
       aria-label="Site menu"
       className="fixed inset-0 z-50 flex flex-col bg-paper lg:hidden"
     >
-      <div className="flex h-16 shrink-0 items-center justify-between border-b border-line px-5">
+      <div className="flex h-20 shrink-0 items-center justify-between border-b border-line px-5">
         <LogoLink onNavigate={onClose} />
         <button
           ref={closeRef}

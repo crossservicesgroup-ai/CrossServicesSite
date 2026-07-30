@@ -31,7 +31,7 @@ export function Logo({
       width={750}
       height={291}
       priority
-      className={`h-11 w-auto md:h-12 ${className}`}
+      className={`h-13 w-auto md:h-14 ${className}`}
     />
   );
 }

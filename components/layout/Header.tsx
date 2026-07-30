@@ -39,7 +39,7 @@ export function Header() {
       >
         <nav
           aria-label="Main"
-          className="mx-auto flex h-16 w-full max-w-[1200px] items-center justify-between gap-4 px-5 md:h-20 md:px-8"
+          className="mx-auto flex h-20 w-full max-w-[1200px] items-center justify-between gap-4 px-5 md:h-24 md:px-8"
         >
           <LogoLink />
 
@@ -51,7 +51,7 @@ export function Header() {
                 key={item.href}
                 href={item.href}
                 aria-current={pathname === item.href ? "page" : undefined}
-                className={`inline-flex min-h-11 items-center rounded-[2px] px-3 text-[17px] transition-colors hover:text-cross-blue ${
+                className={`inline-flex min-h-11 items-center rounded-[2px] px-3.5 text-[18px] transition-colors hover:text-cross-blue ${
                   pathname === item.href ? "text-cross-blue" : "text-ink"
                 }`}
               >
@@ -145,7 +145,7 @@ function ServicesDropdown({ pathname }: { pathname: string }) {
         onClick={() => setOpen((v) => !v)}
         aria-expanded={open}
         aria-controls="services-menu"
-        className={`inline-flex min-h-11 items-center gap-1.5 rounded-[2px] px-3 text-[17px] transition-colors hover:text-cross-blue ${
+        className={`inline-flex min-h-11 items-center gap-1.5 rounded-[2px] px-3.5 text-[18px] transition-colors hover:text-cross-blue ${
           isActive ? "text-cross-blue" : "text-ink"
         }`}
       >

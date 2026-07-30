@@ -33,8 +33,9 @@
   --font-sans: var(--font-plex-sans);
   --font-mono: var(--font-plex-mono);
 
-  --radius-card: 12px;
-  --radius-control: 8px;
+  /* Deliberately near-square. Nothing on this site is pill-shaped. */
+  --radius-card: 3px;
+  --radius-control: 2px;
 
   --breakpoint-sm: 640px;
   --breakpoint-md: 768px;

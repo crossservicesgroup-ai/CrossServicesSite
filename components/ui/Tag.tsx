@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 
-/** Small pill label. Mono, uppercase — the one allowed all-caps style. */
+/** Small boxed label. Mono, uppercase — the one allowed all-caps style. */
 export function Tag({
   children,
   tone = "default",
