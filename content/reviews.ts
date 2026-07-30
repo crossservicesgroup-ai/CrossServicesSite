@@ -12,8 +12,6 @@ export type Review = {
   serviceSlug: string | null;
   /** Out of 5. Leave undefined to hide the stars. */
   rating?: number;
-  /** Set true for a business customer — used by the commercial proof block. */
-  isCommercial?: boolean;
 };
 
 export const reviews: Review[] = [
@@ -45,11 +43,4 @@ export const reviews: Review[] = [
     serviceSlug: "residential-cleaning",
     rating: 5,
   },
-  /* --------------------------------------------------------------------
-     [NEEDS INPUT] A commercial testimonial from a property or facility
-     manager. The homepage has a block reserved for one — until a real
-     quote arrives that block shows the buildings we run instead.
-     -------------------------------------------------------------------- */
 ];
-
-export const commercialReview = reviews.find((r) => r.isCommercial) ?? null;

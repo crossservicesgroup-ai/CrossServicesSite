@@ -160,18 +160,7 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Service area — plain text, which helps us show up in local search */}
-        <div className="mt-14 border-t border-white/15 pt-8">
-          <p className="type-eyebrow mb-3 text-white/60">Service area</p>
-          <p className="max-w-[80ch] text-[15px] text-white/70">
-            Serving {site.serviceAreaLabel}, including{" "}
-            {site.serviceAreaTowns.slice(0, -1).join(", ")} and{" "}
-            {site.serviceAreaTowns[site.serviceAreaTowns.length - 1]}, Massachusetts.
-            Residential and commercial.
-          </p>
-        </div>
-
-        <div className="mt-8 flex flex-col gap-2 border-t border-white/15 pt-8 text-[14px] text-white/55 md:flex-row md:items-center md:justify-between">
+        <div className="mt-14 flex flex-col gap-2 border-t border-white/15 pt-8 text-[14px] text-white/55 md:flex-row md:items-center md:justify-between">
           <p>
             © {new Date().getFullYear()} {site.legalName}. All rights reserved.
           </p>

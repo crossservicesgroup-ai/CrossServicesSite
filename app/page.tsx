@@ -7,7 +7,6 @@ import { Proof } from "@/components/blocks/Proof";
 import { ServiceGrid } from "@/components/blocks/ServiceGrid";
 import { GuaranteeBlock } from "@/components/blocks/GuaranteeBlock";
 import { HowItWorks } from "@/components/blocks/HowItWorks";
-import { CommercialProof } from "@/components/blocks/CommercialProof";
 import { Reviews } from "@/components/blocks/Reviews";
 import { ServiceAreaBlock } from "@/components/blocks/ServiceAreaBlock";
 import { ClubBand } from "@/components/blocks/ClubBand";
@@ -36,7 +35,7 @@ export default function HomePage() {
         <SectionHeader
           id="services-heading"
           eyebrow="Everything we do"
-          title="Eleven services, one phone number"
+          title="Twelve services, one phone number"
           lead="Grouped the way a property actually works, not alphabetically. Every one of them is available to homeowners and to commercial properties."
         />
         <div className="mt-12 md:mt-16">
@@ -46,11 +45,10 @@ export default function HomePage() {
 
       {/* 4 */} <GuaranteeBlock />
       {/* 5 */} <HowItWorks />
-      {/* 6 */} <CommercialProof />
-      {/* 7 */} <Reviews />
-      {/* 8 */} <ServiceAreaBlock />
-      {/* 9 */} <ClubBand />
-      {/* 10 */} <QuoteCta />
+      {/* 6 */} <Reviews />
+      {/* 7 */} <ServiceAreaBlock />
+      {/* 8 */} <ClubBand />
+      {/* 9 */} <QuoteCta />
     </>
   );
 }
