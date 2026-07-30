@@ -172,12 +172,7 @@ export default async function ServiceDetailPage({
             ) : null}
 
             {/* -------------------------------------------------- gallery */}
-            <div className="mt-12 md:mt-16">
-              <h2 className="text-[26px] leading-[1.15] md:text-[34px]">On the job</h2>
-              <div className="mt-6">
-                <Gallery paths={service.gallery} serviceName={service.name} />
-              </div>
-            </div>
+            <Gallery paths={service.gallery} serviceName={service.name} />
 
             {/* ------------------------------------------------------ FAQ */}
             <div className="mt-12 md:mt-16">
@@ -196,7 +191,7 @@ export default async function ServiceDetailPage({
 
       <QuoteCta
         title={`Get a quote for ${service.name.toLowerCase()}`}
-        body="We will pre-tick this one for you. Add anything else you need on the same form."
+        body="We will pre-select this one for you. Add anything else you need on the same form."
         service={service.slug}
       />
     </>

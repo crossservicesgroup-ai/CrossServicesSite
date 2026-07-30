@@ -123,11 +123,7 @@ export const services: Service[] = [
       },
       {
         q: "Do you work on commercial properties?",
-        a: "We do. Cross maintains the grounds at commercial buildings across the Natick and Needham business parks alongside our residential accounts.",
-      },
-      {
-        q: "Can this be booked with irrigation work on the same visit?",
-        a: "Yes, and most people do. Irrigation is its own crew, but scheduling it alongside grounds work means one visit instead of two.",
+        a: "We do. Cross maintains the grounds at many commercial buildings.",
       },
     ],
     legacyPath: "/landscaping-copy",

@@ -16,7 +16,7 @@ export function QuoteSidebar({ serviceSlug, serviceName }: { serviceSlug: string
           Get a quote
         </p>
         <p className="text-[17px]">
-          Start with {serviceName.toLowerCase()} — we will pre-tick it for you, and you
+          Start with {serviceName.toLowerCase()} — we will pre-select it for you, and you
           can add anything else while you are there.
         </p>
 
