@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { services, getService, getRelatedServices } from "@/content/services";
+import { services, getService } from "@/content/services";
 import { getBrand } from "@/content/brands";
 import { site } from "@/content/site";
 import { imageExists } from "@/lib/images";
@@ -11,7 +11,7 @@ import {
   pageMetadata,
   serviceSchema,
 } from "@/lib/seo";
-import { Container, Section, SectionHeader } from "@/components/ui/Section";
+import { Container } from "@/components/ui/Section";
 import { CheckList } from "@/components/ui/Checkbox";
 import { BothAudiencesTag } from "@/components/ui/Tag";
 import { MediaFrame } from "@/components/ui/Media";
@@ -19,7 +19,6 @@ import { BrandCard } from "@/components/blocks/BrandCard";
 import { BeforeAfter } from "@/components/blocks/BeforeAfter";
 import { Gallery } from "@/components/blocks/Gallery";
 import { Faq } from "@/components/blocks/Faq";
-import { RelatedServices } from "@/components/blocks/ServiceGrid";
 import { QuoteSidebar } from "@/components/blocks/QuoteSidebar";
 import { QuoteCta } from "@/components/blocks/QuoteCta";
 
@@ -52,7 +51,6 @@ export default async function ServiceDetailPage({
   const service = getService(slug);
   if (!service) notFound();
 
-  const related = getRelatedServices(service);
   const secondaryBrand = getBrand(service.secondaryBrandId);
   const hasBrandSection = Boolean(getBrand(service.brandId) || secondaryBrand);
 
@@ -195,21 +193,6 @@ export default async function ServiceDetailPage({
           <QuoteSidebar serviceSlug={service.slug} serviceName={service.name} />
         </div>
       </Container>
-
-      {/* -------------------------------------------- often paired with */}
-      {related.length > 0 ? (
-        <Section tone="surface" labelledBy="related-heading">
-          <SectionHeader
-            id="related-heading"
-            eyebrow="Often paired with"
-            title="People who book this usually book these too"
-            lead="Same crew, same visit where we can manage it, one invoice at the end."
-          />
-          <div className="mt-8 md:mt-12">
-            <RelatedServices services={related} />
-          </div>
-        </Section>
-      ) : null}
 
       <QuoteCta
         title={`Get a quote for ${service.name.toLowerCase()}`}
