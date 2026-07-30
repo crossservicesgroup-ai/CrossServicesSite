@@ -297,7 +297,7 @@ export function QuoteForm() {
               Where is the property? We work across {site.serviceAreaLabel}.
             </p>
 
-            <Field id="street" label="Street address" error={errors.street}>
+            <Field id="street" label="Street address" error={errors.street} required>
               <TextInput
                 id="street"
                 name="street"
@@ -306,10 +306,11 @@ export function QuoteForm() {
                 autoComplete="street-address"
                 placeholder="19 Tech Circle"
                 error={errors.street}
+                required
               />
             </Field>
 
-            <Field id="town" label="Town" error={errors.town}>
+            <Field id="town" label="Town" error={errors.town} required>
               <Select
                 id="town"
                 name="town"
@@ -319,6 +320,7 @@ export function QuoteForm() {
                 autoComplete="address-level2"
                 placeholder="Choose your town"
                 error={errors.town}
+                required
               />
             </Field>
 
@@ -340,7 +342,7 @@ export function QuoteForm() {
               </Field>
             ) : null}
 
-            <Field id="zip" label="Zip code" error={errors.zip}>
+            <Field id="zip" label="Zip code" error={errors.zip} required>
               <TextInput
                 id="zip"
                 name="zip"
@@ -351,6 +353,7 @@ export function QuoteForm() {
                 maxLength={5}
                 placeholder="01760"
                 error={errors.zip}
+                required
               />
             </Field>
           </div>

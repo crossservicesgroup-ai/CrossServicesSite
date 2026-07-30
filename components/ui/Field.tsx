@@ -14,18 +14,26 @@ export function Field({
   label,
   hint,
   error,
+  required,
   children,
 }: {
   id: string;
   label: string;
   hint?: string;
   error?: string;
+  required?: boolean;
   children: ReactNode;
 }) {
   return (
     <div className="flex flex-col gap-2">
       <label htmlFor={id} className="text-[16px] font-medium">
         {label}
+        {required ? (
+          <span aria-hidden="true" className="text-cross-blue">
+            {" "}
+            *
+          </span>
+        ) : null}
       </label>
       {hint ? <p className="text-[15px] text-muted">{hint}</p> : null}
       {children}
@@ -125,6 +133,7 @@ export function Select({
   options,
   autoComplete,
   placeholder = "Choose one",
+  required,
 }: {
   id: string;
   name: string;
@@ -134,6 +143,7 @@ export function Select({
   options: readonly string[];
   autoComplete?: string;
   placeholder?: string;
+  required?: boolean;
 }) {
   return (
     <select
@@ -141,6 +151,7 @@ export function Select({
       name={name}
       value={value}
       autoComplete={autoComplete}
+      required={required}
       onChange={(e) => onChange(e.target.value)}
       aria-invalid={error ? true : undefined}
       aria-describedby={error ? `${id}-error` : undefined}
