@@ -5,7 +5,6 @@ import { Section, SectionHeader } from "@/components/ui/Section";
 import { Hero } from "@/components/blocks/Hero";
 import { Proof } from "@/components/blocks/Proof";
 import { ServiceGrid } from "@/components/blocks/ServiceGrid";
-import { GuaranteeBlock } from "@/components/blocks/GuaranteeBlock";
 import { HowItWorks } from "@/components/blocks/HowItWorks";
 import { Reviews } from "@/components/blocks/Reviews";
 import { ServiceAreaBlock } from "@/components/blocks/ServiceAreaBlock";
@@ -43,12 +42,11 @@ export default function HomePage() {
         </div>
       </Section>
 
-      {/* 4 */} <GuaranteeBlock />
-      {/* 5 */} <HowItWorks />
-      {/* 6 */} <Reviews />
-      {/* 7 */} <ServiceAreaBlock />
-      {/* 8 */} <ClubBand />
-      {/* 9 */} <QuoteCta />
+      {/* 4 */} <HowItWorks />
+      {/* 5 */} <Reviews />
+      {/* 6 */} <ServiceAreaBlock />
+      {/* 7 */} <ClubBand />
+      {/* 8 */} <QuoteCta />
     </>
   );
 }
