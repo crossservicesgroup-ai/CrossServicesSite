@@ -14,11 +14,13 @@ import type { NextConfig } from "next";
 
 import { services } from "./content/services";
 
-const serviceRedirects = services.map((service) => ({
-  source: service.legacyPath,
-  destination: `/services/${service.slug}`,
-  statusCode: 301 as const,
-}));
+const serviceRedirects = services
+  .filter((service) => service.legacyPath)
+  .map((service) => ({
+    source: service.legacyPath!,
+    destination: `/services/${service.slug}`,
+    statusCode: 301 as const,
+  }));
 
 const pageRedirects = [
   { source: "/cardetailing", destination: "/services", statusCode: 301 as const },

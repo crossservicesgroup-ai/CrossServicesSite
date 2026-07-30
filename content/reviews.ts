@@ -21,7 +21,7 @@ export const reviews: Review[] = [
     quote:
       "Professional and very informative. The gentlemen took the time to go over options BEFORE fixing my irrigation system.",
     author: "Rochelle",
-    serviceSlug: "landscaping-irrigation",
+    serviceSlug: "irrigation",
     rating: 5,
   },
   {

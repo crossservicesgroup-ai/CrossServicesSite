@@ -14,8 +14,8 @@ Last updated when the site was built.
 | Logo as SVG (full lockup + compact mobile mark) | `/public/images/brand/` then update `LOGO_SRC` in `components/layout/Logo.tsx` | The supplied `.webp` lockup is used on light backgrounds; the navy footer uses a type-only lockup |
 | Hero photo — a real Cross crew or truck | `/public/images/hero/crew.jpg` | Hero renders on navy with a faint grid |
 | Founder photo, or an early Classic Shine photo | `/public/images/hero/warren-cross.jpg` | Labelled "photo needed" panel on the About page |
-| Job photos for all 11 services | `/public/images/services/` — exact paths are listed on each placeholder and in `content/services.ts` | Labelled "photo needed" panels |
-| Before/after pairs | `power-washing`, `car-detailing`, `landscaping-irrigation` — paths in `content/services.ts` under `beforeAfter` | The slider is skipped entirely; the hero photo shows instead |
+| Job photos for all 12 services | `/public/images/services/` — exact paths are listed on each placeholder and in `content/services.ts` | Labelled "photo needed" panels |
+| Before/after pairs | `power-washing`, `car-detailing`, `landscaping` — paths in `content/services.ts` under `beforeAfter` | The slider is skipped entirely; the hero photo shows instead |
 | Club and court photography | `/public/images/club/courts-hero.jpg`, `squash.jpg`, `garage-gym.jpg` | Club hero renders on navy; section photos show placeholders |
 | Portfolio company logos — Classic Shine, New-View, The Furies, Cross Courts | `/public/images/brands/` — filenames in `content/brands.ts` | Brand cards show the company initials, never a stock or invented mark |
 | Team headshots (all ten) | `/public/images/team/`, then set `photo:` in `content/team.ts` | Initials in a circle. Never a company logo — that is the thing the old site did wrong |
@@ -48,7 +48,7 @@ whether the file exists on disk; no code changes needed.
 
 - The Cross Guarantee (`content/site.ts`)
 - All four testimonials, with their names and service tags (`content/reviews.ts`)
-- Every `includes` list on all eleven services (`content/services.ts`)
+- Every `includes` list on all twelve services (`content/services.ts`)
 - All five existing team bios (`content/team.ts`)
 - The founding story on the About page
 - The squash and fitness copy on the Club page

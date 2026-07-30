@@ -3,14 +3,14 @@
 
    This one file drives:
      • the services index page
-     • all eleven service detail pages
+     • all twelve service detail pages
      • the Services dropdown in the header
      • the mobile menu
      • the checkboxes in the quote form
      • the footer services list
      • the sitemap that Google reads
 
-   TO ADD A TWELFTH SERVICE: copy an existing block below, change the fields,
+   TO ADD ANOTHER SERVICE: copy an existing block below, change the fields,
    drop the photos into /public/images/services/, and you are done. No other
    file needs touching.
 
@@ -50,8 +50,8 @@ export type Service = {
   /** A matched pair for the before/after slider, where good photos exist. */
   beforeAfter?: { before: string; after: string; caption: string };
   faqs: { q: string; a: string }[];
-  /** The old Squarespace address. Used to build the redirects in next.config.ts. */
-  legacyPath: string;
+  /** The old Squarespace address, if this service had one. Used to build the redirects in next.config.ts. */
+  legacyPath?: string;
 };
 
 /** Display names and running order for the five groups. */
@@ -86,35 +86,30 @@ export const serviceGroups: { id: ServiceGroup; name: string; blurb: string }[] 
 export const services: Service[] = [
   /* ---------------------------------------------------------------- GROUNDS */
   {
-    slug: "landscaping-irrigation",
-    name: "Landscaping & Irrigation",
+    slug: "landscaping",
+    name: "Landscaping",
     group: "grounds",
-    tagline: "Year-round grounds care and sprinkler systems that actually work.",
+    tagline: "Year-round grounds care, from spring clean-up to fall leaf removal.",
     intro:
-      "The first thing anyone sees when they arrive at your home or your building is the grounds. Our landscape crews handle design, planting, weekly maintenance and seasonal clean-ups, and our irrigation technicians design, install, repair and winterize automated sprinkler systems. Whether it is a single property in Natick or a portfolio of commercial sites, the same team looks after it all season long.",
+      "The first thing anyone sees when they arrive at your home or your building is the grounds. Our landscape crews handle design, planting, weekly maintenance and seasonal clean-ups, whether it is a single property in Natick or a portfolio of commercial sites, all season long.",
     includes: [
       "Full landscape assessments",
       "Plant recommendations and design",
       "Existing lawn renovations or overseeding",
       "Landscape lighting and design",
       "Year-round maintenance plans: spring clean-ups, bark mulching, weekly lawn maintenance, shrub pruning, fertilization, fall clean-ups and leaf removal",
-      "Full design services for new automated sprinkler systems",
-      "Installation of new irrigation systems",
-      "Redesign or adjustments to existing systems",
-      "Annual irrigation maintenance programs",
-      "General repairs to existing systems",
     ],
     brandId: null,
-    related: ["power-washing", "gutter-cleaning", "property-management"],
-    heroImage: "/images/services/landscaping-irrigation-hero.jpg",
+    related: ["irrigation", "power-washing", "gutter-cleaning"],
+    heroImage: "/images/services/landscaping-hero.jpg",
     gallery: [
-      "/images/services/landscaping-irrigation-1.jpg",
-      "/images/services/landscaping-irrigation-2.jpg",
-      "/images/services/landscaping-irrigation-3.jpg",
+      "/images/services/landscaping-1.jpg",
+      "/images/services/landscaping-2.jpg",
+      "/images/services/landscaping-3.jpg",
     ],
     beforeAfter: {
-      before: "/images/services/landscaping-irrigation-before.jpg",
-      after: "/images/services/landscaping-irrigation-after.jpg",
+      before: "/images/services/landscaping-before.jpg",
+      after: "/images/services/landscaping-after.jpg",
       caption: "A front bed rebuilt and replanted.",
     },
     faqs: [
@@ -122,6 +117,44 @@ export const services: Service[] = [
         q: "Do you take on weekly maintenance as well as one-off projects?",
         a: "Both. Some clients have us on a year-round maintenance plan covering spring clean-up through leaf removal. Others bring us in for a single project such as a bed redesign or a lighting install. Tell us which you want and we will price it that way.",
       },
+      {
+        q: "Do you renovate an existing lawn or only plant new beds?",
+        a: "Both. Lawn renovations and overseeding are a regular part of the work, alongside new plant beds and landscape lighting design.",
+      },
+      {
+        q: "Do you work on commercial properties?",
+        a: "We do. Cross maintains the grounds at commercial buildings across the Natick and Needham business parks alongside our residential accounts.",
+      },
+      {
+        q: "Can this be booked with irrigation work on the same visit?",
+        a: "Yes, and most people do. Irrigation is its own crew, but scheduling it alongside grounds work means one visit instead of two.",
+      },
+    ],
+    legacyPath: "/landscaping-copy",
+  },
+  {
+    slug: "irrigation",
+    name: "Irrigation",
+    group: "grounds",
+    tagline: "Sprinkler systems designed, installed, repaired and winterized.",
+    intro:
+      "A lawn is only as good as the water it gets. Our irrigation technicians design, install, repair and winterize automated sprinkler systems for homes and commercial properties, and we regularly take over systems we did not originally install.",
+    includes: [
+      "Full design services for new automated sprinkler systems",
+      "Installation of new irrigation systems",
+      "Redesign or adjustments to existing systems",
+      "Annual irrigation maintenance programs",
+      "General repairs to existing systems",
+    ],
+    brandId: null,
+    related: ["landscaping", "power-washing", "property-management"],
+    heroImage: "/images/services/irrigation-hero.jpg",
+    gallery: [
+      "/images/services/irrigation-1.jpg",
+      "/images/services/irrigation-2.jpg",
+      "/images/services/irrigation-3.jpg",
+    ],
+    faqs: [
       {
         q: "Can you repair an irrigation system you did not install?",
         a: "Yes. We regularly take over existing systems, walk the zones with you, and either repair what is there or redesign the parts that are not doing their job.",
@@ -131,11 +164,14 @@ export const services: Service[] = [
         a: "Yes, and most clients put it on an annual maintenance program so it happens without them having to remember to call.",
       },
       {
+        q: "Do you install brand-new systems as well as repair old ones?",
+        a: "Both. We design and install new automated sprinkler systems from scratch, and redesign or adjust existing ones that are not covering the yard properly.",
+      },
+      {
         q: "Do you work on commercial properties?",
-        a: "We do. Cross maintains the grounds at commercial buildings across the Natick and Needham business parks alongside our residential accounts.",
+        a: "We do. Cross maintains irrigation at commercial buildings across the Natick and Needham business parks alongside our residential accounts.",
       },
     ],
-    legacyPath: "/landscaping-copy",
   },
   {
     slug: "power-washing",
@@ -155,7 +191,7 @@ export const services: Service[] = [
       "Awnings",
     ],
     brandId: "new-view",
-    related: ["window-washing", "gutter-cleaning", "landscaping-irrigation"],
+    related: ["window-washing", "gutter-cleaning", "landscaping"],
     heroImage: "/images/services/power-washing-hero.jpg",
     gallery: [
       "/images/services/power-washing-1.jpg",
@@ -496,7 +532,7 @@ export const services: Service[] = [
       "Low monthly fee",
     ],
     brandId: null,
-    related: ["janitorial-cleaning", "landscaping-irrigation", "painting-handyman"],
+    related: ["janitorial-cleaning", "landscaping", "painting-handyman"],
     heroImage: "/images/services/property-management-hero.jpg",
     gallery: [
       "/images/services/property-management-1.jpg",
