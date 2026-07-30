@@ -34,10 +34,7 @@ export function Footer() {
           {/* Brand */}
           <div>
             <WordmarkLockup variant="light-on-dark" />
-            <p className="mt-5 font-display text-[22px] leading-snug text-white">
-              {site.tagline}
-            </p>
-            <p className="mt-3 max-w-[34ch] text-[15px] text-white/70">
+            <p className="mt-5 max-w-[34ch] text-[15px] text-white/70">
               One call handles your home or your building. Serving MetroWest since{" "}
               {site.foundedYear}.
             </p>
@@ -147,16 +144,6 @@ export function Footer() {
                 </a>
               </li>
             </ul>
-
-            <div className="mt-6 overflow-hidden rounded-[3px] border border-white/15">
-              <iframe
-                src={site.address.mapEmbedUrl}
-                title="Map showing 19 Tech Circle, Natick, Massachusetts"
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                className="block h-36 w-full grayscale-[0.4]"
-              />
-            </div>
           </div>
         </div>
 

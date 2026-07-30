@@ -46,17 +46,12 @@ export function WordmarkLockup({
 }) {
   const light = variant === "light-on-dark";
   return (
-    <span className={`inline-flex flex-col leading-none ${className}`}>
-      <span
-        className={`font-display text-[26px] leading-none font-medium ${
-          light ? "text-white" : "text-cross-navy"
-        }`}
-      >
-        Cross
-      </span>
-      <span className={`type-eyebrow mt-1.5 ${light ? "text-white/70" : "text-cross-blue"}`}>
-        Services Group
-      </span>
+    <span
+      className={`font-display text-[26px] leading-none font-medium whitespace-nowrap ${
+        light ? "text-white" : "text-cross-navy"
+      } ${className}`}
+    >
+      Cross Services Group
     </span>
   );
 }

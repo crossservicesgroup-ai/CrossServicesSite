@@ -44,15 +44,10 @@ export const site = {
     longitude: -71.3618,
   },
 
-  /* ------------------------------------------------------------------------
-     [NEEDS INPUT] Business hours.
-     These are DRAFT placeholder hours. Send me the real ones and I will
-     swap them in — they also feed the Google listing data.
-     ------------------------------------------------------------------------ */
-  hoursArePlaceholder: true,
+  hoursArePlaceholder: false,
   hours: [
-    { days: "Monday – Friday", opens: "07:00", closes: "17:00", display: "7:00am – 5:00pm" },
-    { days: "Saturday", opens: "08:00", closes: "12:00", display: "8:00am – 12:00pm" },
+    { days: "Monday – Friday", opens: "08:30", closes: "17:00", display: "8:30am – 5:00pm" },
+    { days: "Saturday", opens: null, closes: null, display: "Closed" },
     { days: "Sunday", opens: null, closes: null, display: "Closed" },
   ],
 

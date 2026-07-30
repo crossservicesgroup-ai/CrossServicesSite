@@ -58,9 +58,9 @@ export const timeline: TimelineEntry[] = [
     yearConfirmed: false, // [NEEDS INPUT] acquisition year
   },
   {
-    year: null,
+    year: 2026,
     title: "Technology division launches",
     body: "Audio and video, network cameras, data networking and hosted phone systems become the newest Cross service.",
-    yearConfirmed: false, // [NEEDS INPUT] launch year
+    yearConfirmed: true,
   },
 ];

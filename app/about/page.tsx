@@ -8,7 +8,6 @@ import { Reveal } from "@/components/ui/Reveal";
 import { GuaranteeBlock } from "@/components/blocks/GuaranteeBlock";
 import { Timeline } from "@/components/blocks/Timeline";
 import { TeamGrid } from "@/components/blocks/TeamGrid";
-import { QuoteCta } from "@/components/blocks/QuoteCta";
 
 export const metadata: Metadata = pageMetadata({
   title: "About Cross Services Group",
@@ -133,8 +132,6 @@ export default function AboutPage() {
           </ButtonLink>
         </div>
       </Section>
-
-      <QuoteCta />
     </>
   );
 }

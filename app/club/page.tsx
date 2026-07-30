@@ -212,26 +212,6 @@ export default function ClubPage() {
           </div>
         </div>
       </Section>
-
-      {/* --------------------------------------------------- closing CTA */}
-      <section className="on-navy bg-cross-navy text-white">
-        <Container className="py-16 md:py-20">
-          <div className="flex flex-col items-start gap-8 lg:flex-row lg:items-center lg:justify-between">
-            <div className="max-w-[44ch]">
-              <h2 className="text-[26px] leading-[1.15] text-white md:text-[34px]">
-                Come and hit a ball
-              </h2>
-              <p className="mt-3 text-[17px] text-white/85">
-                Memberships, court bookings and program sign-ups all live in the club
-                portal.
-              </p>
-            </div>
-            <ButtonLink href={site.courtReserveUrl} external variant="on-navy" size="lg">
-              Join today
-            </ButtonLink>
-          </div>
-        </Container>
-      </section>
     </>
   );
 }

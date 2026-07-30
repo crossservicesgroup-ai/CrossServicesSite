@@ -3,13 +3,8 @@ import { site } from "@/content/site";
 import { localBusinessSchema, pageMetadata } from "@/lib/seo";
 import { Section, SectionHeader } from "@/components/ui/Section";
 import { Hero } from "@/components/blocks/Hero";
-import { Proof } from "@/components/blocks/Proof";
 import { ServiceGrid } from "@/components/blocks/ServiceGrid";
-import { HowItWorks } from "@/components/blocks/HowItWorks";
 import { Reviews } from "@/components/blocks/Reviews";
-import { ServiceAreaBlock } from "@/components/blocks/ServiceAreaBlock";
-import { ClubBand } from "@/components/blocks/ClubBand";
-import { QuoteCta } from "@/components/blocks/QuoteCta";
 
 export const metadata: Metadata = pageMetadata({
   title: `${site.name} — ${site.tagline}`,
@@ -27,26 +22,20 @@ export default function HomePage() {
       />
 
       {/* 1 */} <Hero />
-      {/* 2 */} <Proof />
 
-      {/* 3 */}
-      <Section tone="paper" labelledBy="services-heading">
-        <SectionHeader
-          id="services-heading"
-          eyebrow="Everything we do"
-          title="Twelve services, one phone number"
-          lead="Grouped the way a property actually works, not alphabetically. Every one of them is available to homeowners and to commercial properties."
-        />
+      {/* 2 */}
+      <Section
+        tone="paper"
+        labelledBy="services-heading"
+        className="!pt-8 md:!pt-12 lg:!pt-16"
+      >
+        <SectionHeader id="services-heading" title="Our Services" align="center" />
         <div className="mt-12 md:mt-16">
-          <ServiceGrid showGroupBlurbs />
+          <ServiceGrid />
         </div>
       </Section>
 
-      {/* 4 */} <HowItWorks />
-      {/* 5 */} <Reviews />
-      {/* 6 */} <ServiceAreaBlock />
-      {/* 7 */} <ClubBand />
-      {/* 8 */} <QuoteCta />
+      {/* 3 */} <Reviews />
     </>
   );
 }

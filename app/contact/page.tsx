@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { Clock, Mail, MapPin, Phone } from "lucide-react";
 import { site } from "@/content/site";
 import { pageMetadata } from "@/lib/seo";
-import { Container, Section, SectionHeader } from "@/components/ui/Section";
-import { ButtonLink } from "@/components/ui/Button";
+import { Section, SectionHeader } from "@/components/ui/Section";
 import { ContactForm } from "@/components/blocks/ContactForm";
 
 export const metadata: Metadata = pageMetadata({
@@ -16,26 +14,6 @@ export const metadata: Metadata = pageMetadata({
 export default function ContactPage() {
   return (
     <>
-      <section className="border-b border-line bg-paper">
-        <Container className="py-12 md:py-20">
-          <p className="type-eyebrow mb-5 text-cross-blue">Contact</p>
-          <h1 className="max-w-[18ch] text-[34px] leading-[1.05] md:text-[52px]">
-            Talk to a person in Natick
-          </h1>
-          <p className="mt-5 max-w-[68ch] text-[18px] text-muted">
-            Our office is at 19 Tech Circle and the phone is answered by someone who can
-            actually help.{" "}
-            <Link
-              href="/quote"
-              className="font-medium text-cross-blue underline underline-offset-4"
-            >
-              Looking for a quote? Use the quote form instead
-            </Link>{" "}
-            — it takes about a minute and lets you tick everything at once.
-          </p>
-        </Container>
-      </section>
-
       <Section tone="paper">
         <div className="grid gap-12 lg:grid-cols-[1fr_1.1fr] lg:gap-16">
           {/* --------------------------------------------------- details */}
@@ -121,19 +99,6 @@ export default function ContactPage() {
                 referrerPolicy="no-referrer-when-downgrade"
                 className="block h-[280px] w-full"
               />
-            </div>
-
-            <div className="mt-8 rounded-[3px] border border-line bg-surface p-6">
-              <p className="type-eyebrow mb-3 text-cross-blue">Cross Courts members</p>
-              <p className="text-[16px] text-muted">
-                Court bookings, memberships and program sign-ups are handled in the
-                club portal.
-              </p>
-              <div className="mt-4">
-                <ButtonLink href={site.courtReserveUrl} external variant="secondary">
-                  Open the club portal
-                </ButtonLink>
-              </div>
             </div>
           </div>
 
