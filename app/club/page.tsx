@@ -149,7 +149,7 @@ export default function ClubPage() {
           <div>
             <div className="rounded-[3px] border border-line bg-surface p-6 md:p-8">
               <h3 className="text-[19px]">Club hours</h3>
-              {site.hoursArePlaceholder ? (
+              {site.clubHoursArePlaceholder ? (
                 <p className="mt-3 rounded-[2px] border border-dashed border-line bg-paper p-4 text-[15px] text-muted">
                   <span className="type-eyebrow block text-muted">Draft — to confirm</span>
                   <span className="mt-2 block">
@@ -160,7 +160,7 @@ export default function ClubPage() {
                 </p>
               ) : (
                 <dl className="mt-4 flex flex-col gap-2 text-[16px]">
-                  {site.hours.map((h) => (
+                  {site.clubHours.map((h) => (
                     <div key={h.days} className="flex justify-between gap-4">
                       <dt className="text-muted">{h.days}</dt>
                       <dd>{h.display}</dd>

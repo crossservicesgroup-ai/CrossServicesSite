@@ -51,6 +51,11 @@ export const site = {
     { days: "Sunday", opens: null, closes: null, display: "Closed" },
   ],
 
+  clubHoursArePlaceholder: false,
+  clubHours: [
+    { days: "Monday – Sunday", opens: "06:00", closes: "22:00", display: "6:00am – 10:00pm" },
+  ],
+
   social: {
     instagram: "https://www.instagram.com/crossservicesgroup/",
     linkedin: "https://www.linkedin.com/company/cross-services-group-inc/",
