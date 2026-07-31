@@ -100,7 +100,7 @@ export function Footer() {
                   rel="noopener noreferrer"
                   className="inline-flex min-h-9 items-center text-[16px] text-white/80 underline-offset-4 transition-colors hover:text-white hover:underline"
                 >
-                  Club membership
+                  Cross Courts Membership
                 </a>
               </li>
             </ul>
