@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
-import { Phone } from "lucide-react";
 import { site } from "@/content/site";
 import { pageMetadata } from "@/lib/seo";
-import { Container, Section, SectionHeader } from "@/components/ui/Section";
+import { Section, SectionHeader } from "@/components/ui/Section";
 import { ButtonLink } from "@/components/ui/Button";
 
 export const metadata: Metadata = pageMetadata({
@@ -61,40 +60,6 @@ export default function CareersPage() {
           </div>
         )}
       </Section>
-
-      <section className="on-navy bg-cross-blue text-white">
-        <Container className="py-16 md:py-20">
-          <div className="flex flex-col items-start gap-8 lg:flex-row lg:items-center lg:justify-between">
-            <div className="max-w-[46ch]">
-              <h2 className="text-[26px] leading-[1.15] text-white md:text-[34px]">
-                Tell us what you are good at
-              </h2>
-              <p className="mt-3 text-[17px] text-white/85">
-                Email a note and a résumé if you have one. If you would rather talk,
-                call the office and ask for operations.
-              </p>
-            </div>
-            <div className="flex w-full shrink-0 flex-col gap-3 sm:w-auto sm:flex-row">
-              <ButtonLink
-                href={`mailto:${site.email}?subject=Careers%20inquiry`}
-                variant="on-navy"
-                size="lg"
-              >
-                {site.email}
-              </ButtonLink>
-              <ButtonLink
-                href={site.phone.href}
-                variant="secondary"
-                size="lg"
-                className="border-white/50 text-white hover:bg-white/10"
-              >
-                <Phone aria-hidden="true" className="size-4.5" />
-                {site.phone.display}
-              </ButtonLink>
-            </div>
-          </div>
-        </Container>
-      </section>
     </>
   );
 }

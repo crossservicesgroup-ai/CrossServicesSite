@@ -24,8 +24,8 @@ export const team: TeamMember[] = [
     id: "warren-cross-jr",
     name: "Warren Cross Jr.",
     title: "President and CEO",
-    photo: null, // [NEEDS INPUT] headshot
-    bio: "Warren founded Cross Services Group in 1989 shortly after graduating from college, and describes himself as a classic serial entrepreneur who enjoys acquiring complementary businesses. In 2007 he developed Cross Courts Squash and Fitness Center, with four international squash courts, professional coaching and a full fitness facility. He owns six commercial buildings totaling roughly 130,000 square feet across the Natick and Needham business parks. Warren holds degrees from Belmont Hill School and the University of Richmond, and an Executive MBA from Northeastern University. He serves as a trustee at Tenacre Country Day School, Belmont Hill School and Babson College. He lives in South Natick with his wife, has three children and three granddaughters, and spends his free time on paddle tennis, tennis and family time in Jackson, NH and Osterville, MA.",
+    photo: "/images/team/warren-cross-jr.png",
+    bio: "Warren founded Cross Services Group in 1989 shortly after graduating from college, and describes himself as a classic serial entrepreneur who enjoys acquiring complementary businesses.\n\nIn 2007 he developed Cross Courts Squash and Fitness Center, with four international squash courts, professional coaching and a full fitness facility. He owns six commercial buildings totaling roughly 130,000 square feet across the Natick and Needham business parks.\n\nWarren holds degrees from Belmont Hill School and the University of Richmond, and an Executive MBA from Northeastern University. He serves as a trustee at Tenacre Country Day School, Belmont Hill School and Babson College.\n\nHe lives in South Natick with his wife, has three children and three granddaughters, and spends his free time on paddle tennis, tennis and family time in Jackson, NH and Osterville, MA.",
   },
   {
     id: "warren-cross-iii",
