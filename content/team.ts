@@ -40,7 +40,7 @@ export const team: TeamMember[] = [
     id: "chris-mastrodicasa",
     name: "Chris Mastrodicasa",
     title: "Chief Financial Officer",
-    photo: null, // [NEEDS INPUT] headshot
+    photo: "/images/team/chris-mastrodicasa.png",
     bio: "Chris joined Cross Services Group in October 2022 with a degree in Accounting and Finance from Babson College. He began his career in a first-generation family manufacturing business and became its president within four years, going on to reinvent its operations over 35 years before the business was sold. He then helped another family-operated company through an administrative and financial restructuring as it grew into a multimillion-dollar national organization. A problem solver with a critical thinker's mindset, Chris puts a high value on contributing to the growth and success of the people around him.",
   },
   {
@@ -54,14 +54,14 @@ export const team: TeamMember[] = [
     id: "campbell-armstrong",
     name: "Campbell Armstrong",
     title: "Business Development and Real Estate Manager",
-    photo: null, // [NEEDS INPUT] headshot
+    photo: "/images/team/campbell-armstrong.png",
     bio: "Campbell joined Cross Services Group in July 2015, having grown up in Malvern, Pennsylvania. He manages the New-View division, covering window cleaning, power washing and gutter cleaning, and oversees the Cross Courts fitness center. As one of the company's longer-tenured managers he works across every division, and he holds a real estate license, helping clients buy and sell property. Before Cross he was an analyst in Investment Manager Services at SEI Investments and a marketing intern at Scala Inc. He earned a BA from Lynchburg College, where he captained the men's lacrosse team. Campbell golfs, skis and plays guitar, and lives with his wife and four children.",
   },
   {
     id: "megan-griffith",
     name: "Megan Griffith",
     title: "Customer Development Manager",
-    photo: null, // [NEEDS INPUT] headshot
+    photo: "/images/team/megan-griffith.png",
     bio: null, // [NEEDS INPUT] bio
   },
   {
@@ -75,7 +75,7 @@ export const team: TeamMember[] = [
     id: "grace-silva",
     name: "Grace Silva",
     title: "House Cleaning",
-    photo: null, // [NEEDS INPUT] headshot
+    photo: "/images/team/grace-silva.png",
     bio: "Grace joined Cross Services Group in January 2020 and manages residential house cleaning. Originally from São Paulo, Brazil, she holds degrees in Tech Tourism and Hospitality from College Progresso, Administration and Marketing from University Torricelli, and Financial Management from College Eniac, along with an MBA in Coaching for People Management from Unopar. She previously led teams on political campaigns and served as a Director at the Sports Secretariat in Guarulhos, Brazil. After relocating to the United States in 2018 she established a cleaning business and obtained a professional house cleaning license from ARCSI in 2022. Grace loves working with all types of people, and enjoys traveling and spending time with her husband.",
     isDivisionHead: true,
   },
