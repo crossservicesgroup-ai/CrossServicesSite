@@ -32,12 +32,24 @@ export function LinkCard({
   className?: string;
   ariaLabel?: string;
 }) {
+  const cardClassName = `card-lift group block overflow-hidden rounded-[3px] border border-line bg-surface hover:border-cross-blue/30 ${className}`;
+
+  if (href.startsWith("http")) {
+    return (
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={ariaLabel}
+        className={cardClassName}
+      >
+        {children}
+      </a>
+    );
+  }
+
   return (
-    <Link
-      href={href}
-      aria-label={ariaLabel}
-      className={`card-lift group block overflow-hidden rounded-[3px] border border-line bg-surface hover:border-cross-blue/30 ${className}`}
-    >
+    <Link href={href} aria-label={ariaLabel} className={cardClassName}>
       {children}
     </Link>
   );

@@ -26,11 +26,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: page.changeFrequency,
       priority: page.priority,
     })),
-    ...services.map((service) => ({
-      url: new URL(`/services/${service.slug}`, SITE_URL).toString(),
-      lastModified: now,
-      changeFrequency: "monthly" as const,
-      priority: 0.8,
-    })),
+    ...services
+      .filter((service) => !service.externalUrl)
+      .map((service) => ({
+        url: new URL(`/services/${service.slug}`, SITE_URL).toString(),
+        lastModified: now,
+        changeFrequency: "monthly" as const,
+        priority: 0.8,
+      })),
   ];
 }

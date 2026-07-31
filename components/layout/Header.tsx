@@ -168,16 +168,29 @@ function ServicesDropdown({ pathname }: { pathname: string }) {
                 <div key={group.id}>
                   <p className="type-eyebrow mb-3 text-muted">{group.name}</p>
                   <ul className="flex flex-col gap-0.5">
-                    {group.services.map((service) => (
-                      <li key={service.slug}>
-                        <Link
-                          href={`/services/${service.slug}`}
-                          className="block rounded-[2px] py-1.5 text-[16px] text-ink transition-colors hover:text-cross-blue"
-                        >
-                          {service.name}
-                        </Link>
-                      </li>
-                    ))}
+                    {group.services.map((service) =>
+                      service.externalUrl ? (
+                        <li key={service.slug}>
+                          <a
+                            href={service.externalUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="block rounded-[2px] py-1.5 text-[16px] text-ink transition-colors hover:text-cross-blue"
+                          >
+                            {service.name}
+                          </a>
+                        </li>
+                      ) : (
+                        <li key={service.slug}>
+                          <Link
+                            href={`/services/${service.slug}`}
+                            className="block rounded-[2px] py-1.5 text-[16px] text-ink transition-colors hover:text-cross-blue"
+                          >
+                            {service.name}
+                          </Link>
+                        </li>
+                      ),
+                    )}
                   </ul>
                 </div>
               ))}

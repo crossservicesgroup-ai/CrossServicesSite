@@ -69,7 +69,14 @@ export function QuoteForm() {
   const [submitting, setSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
   const headingRef = useRef<HTMLHeadingElement>(null);
-  const groups = useMemo(() => servicesByGroup(), []);
+  const groups = useMemo(
+    () =>
+      servicesByGroup().map((group) => ({
+        ...group,
+        services: group.services.filter((s) => !s.externalUrl),
+      })),
+    [],
+  );
 
   /* Arriving from a service page pre-checks that service, and arriving from
      the commercial block pre-selects "business". */

@@ -17,7 +17,7 @@ export function ServiceCard({
   return (
     <Reveal as="li" delayIndex={index} className="h-full">
       <LinkCard
-        href={`/services/${service.slug}`}
+        href={service.externalUrl ?? `/services/${service.slug}`}
         className="flex h-full flex-col"
         ariaLabel={`${service.name} — ${service.tagline}`}
       >

@@ -103,17 +103,31 @@ export function MobileMenu({ open, onClose }: { open: boolean; onClose: () => vo
               <div key={group.id}>
                 <p className="type-eyebrow mb-2 text-muted">{group.name}</p>
                 <ul className="flex flex-col">
-                  {group.services.map((service) => (
-                    <li key={service.slug}>
-                      <Link
-                        href={`/services/${service.slug}`}
-                        onClick={onClose}
-                        className="flex min-h-12 items-center border-b border-line text-[18px] text-ink"
-                      >
-                        {service.name}
-                      </Link>
-                    </li>
-                  ))}
+                  {group.services.map((service) =>
+                    service.externalUrl ? (
+                      <li key={service.slug}>
+                        <a
+                          href={service.externalUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={onClose}
+                          className="flex min-h-12 items-center border-b border-line text-[18px] text-ink"
+                        >
+                          {service.name}
+                        </a>
+                      </li>
+                    ) : (
+                      <li key={service.slug}>
+                        <Link
+                          href={`/services/${service.slug}`}
+                          onClick={onClose}
+                          className="flex min-h-12 items-center border-b border-line text-[18px] text-ink"
+                        >
+                          {service.name}
+                        </Link>
+                      </li>
+                    ),
+                  )}
                 </ul>
               </div>
             ))}

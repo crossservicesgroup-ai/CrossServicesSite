@@ -63,16 +63,29 @@ export function Footer() {
                 <div key={group.id}>
                   <p className="mb-2 text-[15px] font-medium text-white">{group.name}</p>
                   <ul className="flex flex-col gap-1">
-                    {group.services.map((service) => (
-                      <li key={service.slug}>
-                        <Link
-                          href={`/services/${service.slug}`}
-                          className="inline-block py-0.5 text-[15px] text-white/70 underline-offset-4 transition-colors hover:text-white hover:underline"
-                        >
-                          {service.name}
-                        </Link>
-                      </li>
-                    ))}
+                    {group.services.map((service) =>
+                      service.externalUrl ? (
+                        <li key={service.slug}>
+                          <a
+                            href={service.externalUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-block py-0.5 text-[15px] text-white/70 underline-offset-4 transition-colors hover:text-white hover:underline"
+                          >
+                            {service.name}
+                          </a>
+                        </li>
+                      ) : (
+                        <li key={service.slug}>
+                          <Link
+                            href={`/services/${service.slug}`}
+                            className="inline-block py-0.5 text-[15px] text-white/70 underline-offset-4 transition-colors hover:text-white hover:underline"
+                          >
+                            {service.name}
+                          </Link>
+                        </li>
+                      ),
+                    )}
                   </ul>
                 </div>
               ))}

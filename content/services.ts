@@ -43,6 +43,8 @@ export type Service = {
   brandId: string | null;
   /** A second company, e.g. The Furies covering Cape Cod. */
   secondaryBrandId?: string;
+  /** Set only for a card that links straight out to a portfolio company's own site instead of an internal detail page. */
+  externalUrl?: string;
   /** Two or three other service slugs customers usually book alongside this one. */
   related: string[];
   heroImage: string;
@@ -364,6 +366,20 @@ export const services: Service[] = [
     ],
     legacyPath: "/janitorial-cleaning",
   },
+  {
+    slug: "the-furies",
+    name: "The Furies",
+    group: "cleaning",
+    tagline: "Our sister company handling residential cleaning on Cape Cod.",
+    intro: "Our sister company handling residential cleaning on Cape Cod.",
+    includes: [],
+    brandId: "the-furies",
+    related: [],
+    heroImage: "/images/services/the-furies-hero.jpg",
+    gallery: [],
+    faqs: [],
+    externalUrl: "https://furiescapecodcleaning.com/",
+  },
 
   /* ---------------------------------------------------------------- REPAIRS */
   {
@@ -612,4 +628,4 @@ export function getRelatedServices(service: Service): Service[] {
     .filter((s): s is Service => Boolean(s));
 }
 
-export const serviceSlugs = services.map((s) => s.slug);
+export const serviceSlugs = services.filter((s) => !s.externalUrl).map((s) => s.slug);

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import { services, getService } from "@/content/services";
 import { site } from "@/content/site";
 import { imageExists } from "@/lib/images";
@@ -21,7 +21,9 @@ import { QuoteSidebar } from "@/components/blocks/QuoteSidebar";
 import { QuoteCta } from "@/components/blocks/QuoteCta";
 
 export function generateStaticParams() {
-  return services.map((service) => ({ slug: service.slug }));
+  return services
+    .filter((service) => !service.externalUrl)
+    .map((service) => ({ slug: service.slug }));
 }
 
 export async function generateMetadata({
@@ -48,6 +50,7 @@ export default async function ServiceDetailPage({
   const { slug } = await params;
   const service = getService(slug);
   if (!service) notFound();
+  if (service.externalUrl) redirect(service.externalUrl);
 
   /* The before/after slider only appears when both photos actually exist. */
   const ba = service.beforeAfter;
