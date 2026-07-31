@@ -31,20 +31,28 @@ export default function AboutPage() {
                 <p>
                   Cross Services Group was founded by Warren Cross Jr. in {site.foundedYear},
                   and has been providing the very best in car and property maintenance
-                  services to the MetroWest area ever since.
+                  services to the Metro-West area ever since. CSG&rsquo;s first business
+                  was Classic Shine, our car cleaning division. Over the next 33 years,
+                  through strategic acquisitions, we have added a number of services:
+                  Residential House Cleaning, Window Cleaning, Power Washing and Gutter
+                  Cleaning, Landscaping, Irrigation, Commercial Cleaning, Junk Removal and
+                  Carpentry/Painting.
                 </p>
                 <p>
-                  It started with one business: Classic Shine, the car cleaning division.
-                  Over the following thirty-odd years Warren acquired complementary
-                  companies — house cleaning, window cleaning, power washing, gutter
-                  cleaning, landscaping, irrigation, commercial cleaning, junk removal,
-                  carpentry and painting — and kept each of them specialist while putting
-                  one phone number in front of all of them.
+                  As a locally owned and operated company, outstanding service is our #1
+                  priority, and we try and deliver exceptional service in everything we
+                  do. We have handled thousands of satisfied clients since our inception,
+                  and have grown over the years through repeat business and referrals.
                 </p>
                 <p>
-                  It is still family owned. Outstanding service is the number one
-                  priority, and the growth has come almost entirely from repeat business
-                  and referrals.
+                  We are so convinced you will love any of our services, we have our
+                  Cross Guarantee: &ldquo;If you are not completely satisfied with the
+                  service we provide, then we will do it again, free of charge. No
+                  Questions Asked.&rdquo;
+                </p>
+                <p>
+                  Thank you for your interest in Cross Services Group, and we look
+                  forward to working with you for many years to come.
                 </p>
               </div>
             </div>
