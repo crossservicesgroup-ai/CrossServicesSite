@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { services, getService } from "@/content/services";
-import { getBrand } from "@/content/brands";
 import { site } from "@/content/site";
 import { imageExists } from "@/lib/images";
 import {
@@ -15,7 +14,6 @@ import { Container } from "@/components/ui/Section";
 import { CheckList } from "@/components/ui/Checkbox";
 import { BothAudiencesTag } from "@/components/ui/Tag";
 import { MediaFrame } from "@/components/ui/Media";
-import { BrandCard } from "@/components/blocks/BrandCard";
 import { BeforeAfter } from "@/components/blocks/BeforeAfter";
 import { Gallery } from "@/components/blocks/Gallery";
 import { Faq } from "@/components/blocks/Faq";
@@ -50,9 +48,6 @@ export default async function ServiceDetailPage({
   const { slug } = await params;
   const service = getService(slug);
   if (!service) notFound();
-
-  const secondaryBrand = getBrand(service.secondaryBrandId);
-  const hasBrandSection = Boolean(getBrand(service.brandId) || secondaryBrand);
 
   /* The before/after slider only appears when both photos actually exist. */
   const ba = service.beforeAfter;
@@ -152,24 +147,6 @@ export default async function ServiceDetailPage({
                 <CheckList items={service.includes} />
               </div>
             </div>
-
-            {/* ------------------------------------------- who does the work */}
-            {hasBrandSection ? (
-              <div className="mt-12 md:mt-16">
-                <h2 className="text-[26px] leading-[1.15] md:text-[34px]">
-                  Who does this work
-                </h2>
-                <div className="mt-6 flex flex-col gap-4">
-                  <BrandCard brandId={service.brandId} />
-                  {secondaryBrand ? (
-                    <BrandCard
-                      brandId={service.secondaryBrandId}
-                      note="On Cape Cod, residential cleaning is handled by The Furies rather than by our Natick crews. Same standard, same guarantee."
-                    />
-                  ) : null}
-                </div>
-              </div>
-            ) : null}
 
             {/* -------------------------------------------------- gallery */}
             <Gallery paths={service.gallery} serviceName={service.name} />

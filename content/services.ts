@@ -255,7 +255,7 @@ export const services: Service[] = [
     ],
     brandId: "new-view",
     related: ["power-washing", "window-washing", "painting-handyman"],
-    heroImage: "/images/services/gutter-cleaning-hero.jpg",
+    heroImage: "/images/services/gutter-cleaning-hero.png",
     gallery: [
       "/images/services/gutter-cleaning-1.jpg",
       "/images/services/gutter-cleaning-2.jpg",
@@ -553,9 +553,9 @@ export const services: Service[] = [
     ],
     brandId: "classic-shine",
     related: ["residential-cleaning", "power-washing", "property-management"],
-    heroImage: "/images/services/car-detailing-hero.jpg",
+    heroImage: "/images/services/car-detailing-hero.png",
     gallery: [
-      "/images/services/car-detailing-1.jpg",
+      "/images/services/car-detailing-1.png",
       "/images/services/car-detailing-2.jpg",
     ],
     beforeAfter: {
