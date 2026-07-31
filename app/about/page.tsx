@@ -5,7 +5,6 @@ import { Container, Section, SectionHeader } from "@/components/ui/Section";
 import { MediaFrame } from "@/components/ui/Media";
 import { Reveal } from "@/components/ui/Reveal";
 import { GuaranteeBlock } from "@/components/blocks/GuaranteeBlock";
-import { Timeline } from "@/components/blocks/Timeline";
 import { TeamGrid } from "@/components/blocks/TeamGrid";
 
 export const metadata: Metadata = pageMetadata({
@@ -44,16 +43,6 @@ export default function AboutPage() {
                   do. We have handled thousands of satisfied clients since our inception,
                   and have grown over the years through repeat business and referrals.
                 </p>
-                <p>
-                  We are so convinced you will love any of our services, we have our
-                  Cross Guarantee: &ldquo;If you are not completely satisfied with the
-                  service we provide, then we will do it again, free of charge. No
-                  Questions Asked.&rdquo;
-                </p>
-                <p>
-                  Thank you for your interest in Cross Services Group, and we look
-                  forward to working with you for many years to come.
-                </p>
               </div>
             </div>
             <Reveal delayIndex={1}>
@@ -68,27 +57,6 @@ export default function AboutPage() {
           </div>
         </Container>
       </section>
-
-      {/* ------------------------------------------------------- timeline */}
-      <Section tone="surface" labelledBy="timeline-heading">
-        <SectionHeader
-          id="timeline-heading"
-          eyebrow="How we got here"
-          title="Thirty-plus years of adding one more thing"
-          lead="Each of these was a company in its own right before it became a Cross division."
-        />
-        <div className="mt-10 md:mt-14">
-          <Timeline />
-        </div>
-        <p className="mt-8 rounded-[2px] border border-dashed border-line bg-paper p-4 text-[15px] text-muted">
-          <span className="type-eyebrow block text-muted">Draft — years to confirm</span>
-          <span className="mt-2 block">
-            The 1989 and 2007 dates are confirmed. The acquisition years for the other
-            divisions are still needed — send them over and they replace the
-            &ldquo;year to confirm&rdquo; markers above.
-          </span>
-        </p>
-      </Section>
 
       {/* ------------------------------------------------------ guarantee */}
       <Section tone="paper">
