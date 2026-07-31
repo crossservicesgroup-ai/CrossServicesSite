@@ -97,8 +97,8 @@ export function Hero() {
             </h1>
 
             <p className="mt-5 max-w-[46ch] text-[18px] text-pretty text-white/85 md:text-[20px]">
-              One call handles your home or your building. Cleaning, grounds, repairs,
-              property management and detailing, from one family-owned company.
+              One call handles your residential or commercial property. Cleaning, grounds,
+              repairs, property management and detailing, from one family-owned company.
             </p>
 
             {/* Both buttons carry the same outlined treatment. A coloured
