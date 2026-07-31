@@ -97,15 +97,15 @@ export const services: Service[] = [
     faqs: [
       {
         q: "Do you take on weekly maintenance as well as one-off projects?",
-        a: "Both. Some clients have us on a year-round maintenance plan covering spring clean-up through leaf removal. Others bring us in for a single project such as a bed redesign or a lighting install. Tell us which you want and we will price it that way.",
-      },
-      {
-        q: "Do you renovate an existing lawn or only plant new beds?",
-        a: "Both. Lawn renovations and overseeding are a regular part of the work, alongside new plant beds and landscape lighting design.",
+        a: "Both. All of our clients are on a year-round maintenance plan covering spring clean-up, weekly mowing, mulch, pruning, fall cleanups. But we also have clients we do work for that bring us in for a single project such as a bed redesign or a new patio.",
       },
       {
         q: "Do you work on commercial properties?",
         a: "We do. Cross maintains the grounds at many commercial buildings.",
+      },
+      {
+        q: "Do you offer a free estimate before starting work?",
+        a: "Yes. We walk the property with you and put together a plan and a price before anything is scheduled.",
       },
     ],
     legacyPath: "/landscaping-copy",
@@ -139,7 +139,7 @@ export const services: Service[] = [
       },
       {
         q: "Do you handle spring start-up and fall winterizing?",
-        a: "Yes, and most clients put it on an annual maintenance program so it happens without them having to remember to call.",
+        a: "Yes, and most clients put it on an annual maintenance program.",
       },
       {
         q: "Do you install brand-new systems as well as repair old ones?",
@@ -147,7 +147,7 @@ export const services: Service[] = [
       },
       {
         q: "Do you work on commercial properties?",
-        a: "We do. Cross maintains irrigation at commercial buildings across the Natick and Needham business parks alongside our residential accounts.",
+        a: "We do. Cross maintains irrigation at many commercial buildings.",
       },
     ],
   },
@@ -184,19 +184,15 @@ export const services: Service[] = [
     faqs: [
       {
         q: "Will the pressure damage my siding or my plants?",
-        a: "No. We match the pressure and the cleaning solution to the surface, and the products we use are environmentally safe around children, pets and landscaping.",
+        a: "No. We match the pressure and the cleaning solution to the surface.",
       },
       {
         q: "Can you clean moss and staining off a roof?",
         a: "Yes. Roof shingles are one of the surfaces we treat, using a low-pressure approach so the shingles are not stripped.",
       },
       {
-        q: "Do I need to be home?",
-        a: "Not usually. Exterior work only needs access to an outside water spigot, so most clients leave us to it and come home to a finished job.",
-      },
-      {
         q: "Can you do a whole commercial building or a parking area?",
-        a: "Yes. Walkways, pavement, entryways and full building exteriors are all regular work for our New-View crews.",
+        a: "Yes. Walkways, pavement, entryways and full building exteriors are all regular work for our team.",
       },
     ],
     legacyPath: "/power-washing",
@@ -509,19 +505,15 @@ export const services: Service[] = [
     faqs: [
       {
         q: "What does routine maintenance actually cover?",
-        a: "We build the schedule around the property: seasonal systems, filters, gutters, grounds, the checks that stop a small thing becoming a claim. You approve the plan before it starts.",
+        a: "We build the schedule around the property: seasonal systems, filters, gutters, grounds, the checks that stop a small thing becoming a problem.",
       },
       {
         q: "Who do I call in an emergency?",
-        a: "Us, at any hour. A 24/7 emergency contact is part of the arrangement, and because our own crews cover cleaning, grounds, carpentry and tech, the response usually does not need a third party.",
-      },
-      {
-        q: "Do you manage second homes and vacant properties?",
-        a: "Yes. Keeping an eye on a property while the owner is away is one of the most common reasons people start with us.",
+        a: "Us, at any hour. A 24/7 emergency contact is part of the arrangement.",
       },
       {
         q: "Do you manage commercial buildings?",
-        a: "We do, including buildings Cross owns and operates in the Natick and Needham business parks.",
+        a: "Yes, we manage several commercial buildings throughout Natick, Weston, Needham and more.",
       },
     ],
     legacyPath: "/property-management",
@@ -558,7 +550,7 @@ export const services: Service[] = [
     faqs: [
       {
         q: "Do you come to me?",
-        a: "We can. Mobile detailing brings the work to your driveway or your office car park, and within five miles pick-up and delivery is free.",
+        a: "We can. Mobile detailing brings the work to your driveway or your office.",
       },
       {
         q: "Can I book interior only?",
@@ -566,11 +558,11 @@ export const services: Service[] = [
       },
       {
         q: "Do you store cars over the winter?",
-        a: "Yes, car storage is one of the services Classic Shine offers. Call us for availability.",
+        a: "Yes, car storage is one of the services we offer. Call today to learn more!",
       },
       {
-        q: "Do you look after company vehicles?",
-        a: "Yes. Fleets, vans and company cars are regular work, and we can set up a repeating schedule so they stay presentable.",
+        q: "Can you provide mobile detailing for my office on a regular basis?",
+        a: "Yes. We can set up a repeating schedule so our mobile team is at your office on the same day every week or month.",
       },
     ],
     legacyPath: "/car-detailing",
