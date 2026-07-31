@@ -4,7 +4,6 @@ import { pageMetadata } from "@/lib/seo";
 import { Container, Section, SectionHeader } from "@/components/ui/Section";
 import { MediaFrame } from "@/components/ui/Media";
 import { Reveal } from "@/components/ui/Reveal";
-import { GuaranteeBlock } from "@/components/blocks/GuaranteeBlock";
 import { TeamGrid } from "@/components/blocks/TeamGrid";
 
 export const metadata: Metadata = pageMetadata({
@@ -57,13 +56,6 @@ export default function AboutPage() {
           </div>
         </Container>
       </section>
-
-      {/* ------------------------------------------------------ guarantee */}
-      <Section tone="paper">
-        <div className="mx-auto max-w-[880px]">
-          <GuaranteeBlock size="small" />
-        </div>
-      </Section>
 
       {/* ----------------------------------------------------------- team */}
       <Section tone="surface" id="team" labelledBy="team-heading" className="scroll-mt-24">
