@@ -35,6 +35,8 @@ export type Service = {
   group: ServiceGroup;
   /** One sentence. Shown on cards and under the page heading. */
   tagline: string;
+  /** Overrides `tagline` as the description under this service's checkbox on the quote form. */
+  quoteDescription?: string;
   /** Two or three sentences at the top of the detail page. */
   intro: string;
   /** The "What's included" checklist. */
@@ -155,7 +157,7 @@ export const services: Service[] = [
     slug: "power-washing",
     name: "Power Washing",
     group: "grounds",
-    tagline: "Siding, decks, patios and walkways brought back without the damage.",
+    tagline: "Houses, siding, decks, patios, driveways and walkways.",
     intro:
       "New England weather is not just hard on us, it is hard on our buildings too. Our crews power wash siding, roofs, decks, patios, walkways and courts using environmentally safe products that are gentle on children, pets and planting beds. It is the fastest way to make a house or a commercial building look cared for again.",
     includes: [
@@ -406,7 +408,7 @@ export const services: Service[] = [
     slug: "junk-removal",
     name: "Junk Removal",
     group: "repairs",
-    tagline: "We sort it, lift it, load it and take it away.",
+    tagline: "We sort it, load it and take it away.",
     intro:
       "At Cross Junk Removal we handle everything from sorting and lifting to loading and disposal, so the only thing you have to do is point. Furniture, appliances, construction debris, an old hot tub or a full estate clear-out — it goes in one visit. We clear garages, attics, basements, storage units, offices and yards for homeowners, realtors and property managers alike.",
     includes: [
@@ -448,7 +450,7 @@ export const services: Service[] = [
     slug: "audio-video",
     name: "Audio & Video",
     group: "repairs",
-    tagline: "Screens, sound, cameras and networks that hold up.",
+    tagline: "Tv's, sound, cameras and networks.",
     intro:
       "Do not let outdated technology or security gaps disrupt your home or your business. Our technology division installs and supports audio and video systems, network cameras, data networking, hosted phone systems and video conferencing. For a homeowner that means the TV and the wifi finally behave. For a facility manager it means the cameras, the phones and the conference rooms are one vendor's problem instead of four.",
     includes: [
@@ -525,6 +527,7 @@ export const services: Service[] = [
     name: "Car Detailing",
     group: "vehicles",
     tagline: "Hand detailing, with free pick-up and delivery nearby.",
+    quoteDescription: "We come to your home or office.",
     intro:
       "Keep your car, truck or van looking and feeling new. Your vehicle is an investment, so it should be treated like one. Classic Shine was the first Cross business, founded in 1989, and it still does full details, interior or exterior only, hand washes, mobile detailing at your home or office, and seasonal car storage — with free pick-up and delivery within five miles.",
     includes: [

@@ -216,8 +216,7 @@ export function QuoteForm() {
         {step === 0 ? (
           <div className="mt-6">
             <p className="max-w-[68ch] text-[17px] text-muted">
-              Tick everything you need. Picking several is the whole point — one
-              company, one quote, one visit where we can.
+              Select everything you need!
             </p>
             {errors.services ? (
               <p role="alert" className="mt-4 text-[15px] text-cross-blue">
@@ -238,7 +237,7 @@ export function QuoteForm() {
                           id={`service-${service.slug}`}
                           name="services"
                           label={service.name}
-                          description={service.tagline}
+                          description={service.quoteDescription ?? service.tagline}
                           checked={form.services.includes(service.slug)}
                           onChange={(checked) =>
                             update(
