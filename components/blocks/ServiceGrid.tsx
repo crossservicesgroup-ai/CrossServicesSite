@@ -47,10 +47,8 @@ export function ServiceCard({
 
 /** All eleven services, grouped into the five buckets. */
 export function ServiceGrid({
-  showGroupBlurbs = false,
   headingLevel = "h3",
 }: {
-  showGroupBlurbs?: boolean;
   /** Use h3 when the grid sits under a section h2. */
   headingLevel?: "h2" | "h3";
 }) {
@@ -61,13 +59,10 @@ export function ServiceGrid({
     <div className="flex flex-col gap-16 md:gap-24">
       {groups.map((group) => (
         <div key={group.id} id={group.id} className="scroll-mt-28">
-          <div className="mb-6 flex flex-col gap-2 border-b border-line pb-4 md:mb-8 md:flex-row md:items-baseline md:justify-between">
+          <div className="mb-6 border-b border-line pb-4 md:mb-8">
             <GroupHeading className="type-eyebrow text-cross-blue">
               {group.name}
             </GroupHeading>
-            {showGroupBlurbs ? (
-              <p className="text-[15px] text-muted">{group.blurb}</p>
-            ) : null}
           </div>
           <ul className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
             {group.services.map((service, i) => (

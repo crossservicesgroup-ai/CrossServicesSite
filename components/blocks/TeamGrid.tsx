@@ -13,14 +13,27 @@ import { team, initialsOf, type TeamMember } from "@/content/team";
 export function TeamGrid() {
   const [activeId, setActiveId] = useState<string | null>(null);
   const activeMember = team.find((member) => member.id === activeId) ?? null;
+  const leadership = team.filter((member) => !member.isDivisionHead);
+  const divisionHeads = team.filter((member) => member.isDivisionHead);
 
   return (
     <>
       <ul className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        {team.map((member) => (
+        {leadership.map((member) => (
           <TeamCard key={member.id} member={member} onOpen={() => setActiveId(member.id)} />
         ))}
       </ul>
+
+      {divisionHeads.length > 0 ? (
+        <div className="mt-12">
+          <p className="type-eyebrow mb-6 text-cross-blue">Division heads</p>
+          <ul className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {divisionHeads.map((member) => (
+              <TeamCard key={member.id} member={member} onOpen={() => setActiveId(member.id)} />
+            ))}
+          </ul>
+        </div>
+      ) : null}
 
       <BioModal member={activeMember} onClose={() => setActiveId(null)} />
     </>

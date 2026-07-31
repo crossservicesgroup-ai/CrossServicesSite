@@ -17,6 +17,8 @@ export type TeamMember = {
   photo: string | null;
   /** Full bio, or null. A missing bio simply hides the "Read bio" control. */
   bio: string | null;
+  /** True for the leads of a specific service division, shown in their own group. */
+  isDivisionHead?: boolean;
 };
 
 export const team: TeamMember[] = [
@@ -72,9 +74,26 @@ export const team: TeamMember[] = [
   {
     id: "grace-silva",
     name: "Grace Silva",
-    title: "Head of House Cleaning",
+    title: "House Cleaning",
     photo: null, // [NEEDS INPUT] headshot
     bio: "Grace joined Cross Services Group in January 2020 and manages residential house cleaning. Originally from São Paulo, Brazil, she holds degrees in Tech Tourism and Hospitality from College Progresso, Administration and Marketing from University Torricelli, and Financial Management from College Eniac, along with an MBA in Coaching for People Management from Unopar. She previously led teams on political campaigns and served as a Director at the Sports Secretariat in Guarulhos, Brazil. After relocating to the United States in 2018 she established a cleaning business and obtained a professional house cleaning license from ARCSI in 2022. Grace loves working with all types of people, and enjoys traveling and spending time with her husband.",
+    isDivisionHead: true,
+  },
+  {
+    id: "marcio-de-arruda",
+    name: "Marcio De Arruda",
+    title: "New-View",
+    photo: null, // [NEEDS INPUT] headshot
+    bio: null, // [NEEDS INPUT] bio
+    isDivisionHead: true,
+  },
+  {
+    id: "kevin-tiberi",
+    name: "Kevin Tiberi",
+    title: "Landscaping",
+    photo: null, // [NEEDS INPUT] headshot
+    bio: null, // [NEEDS INPUT] bio
+    isDivisionHead: true,
   },
   {
     id: "joe-slavik",
@@ -89,6 +108,7 @@ export const team: TeamMember[] = [
     title: "Technology",
     photo: null, // [NEEDS INPUT] headshot
     bio: null, // [NEEDS INPUT] bio
+    isDivisionHead: true,
   },
 ];
 

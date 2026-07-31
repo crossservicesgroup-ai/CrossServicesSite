@@ -55,32 +55,12 @@ export type Service = {
 };
 
 /** Display names and running order for the five groups. */
-export const serviceGroups: { id: ServiceGroup; name: string; blurb: string }[] = [
-  {
-    id: "grounds",
-    name: "Grounds & exterior",
-    blurb: "Everything outside the walls, from the lawn to the gutters.",
-  },
-  {
-    id: "cleaning",
-    name: "Cleaning",
-    blurb: "Homes and workplaces, on a schedule or one time only.",
-  },
-  {
-    id: "repairs",
-    name: "Repairs & projects",
-    blurb: "The list of jobs that never quite gets done.",
-  },
-  {
-    id: "property",
-    name: "Property management",
-    blurb: "One point of contact looking after the whole property.",
-  },
-  {
-    id: "vehicles",
-    name: "Vehicles",
-    blurb: "Where Cross started, back in 1989.",
-  },
+export const serviceGroups: { id: ServiceGroup; name: string }[] = [
+  { id: "grounds", name: "Grounds & exterior" },
+  { id: "cleaning", name: "Cleaning" },
+  { id: "repairs", name: "Repairs & projects" },
+  { id: "property", name: "Property management" },
+  { id: "vehicles", name: "Vehicles" },
 ];
 
 export const services: Service[] = [
@@ -621,7 +601,6 @@ export function getServicesInGroup(group: ServiceGroup): Service[] {
 export function servicesByGroup(): {
   id: ServiceGroup;
   name: string;
-  blurb: string;
   services: Service[];
 }[] {
   return serviceGroups.map((g) => ({ ...g, services: getServicesInGroup(g.id) }));
