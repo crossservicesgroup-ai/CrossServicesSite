@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { site } from "@/content/site";
 import { pageMetadata } from "@/lib/seo";
 import { Container, Section, SectionHeader } from "@/components/ui/Section";
-import { ButtonLink } from "@/components/ui/Button";
 import { MediaFrame } from "@/components/ui/Media";
 import { Reveal } from "@/components/ui/Reveal";
 import { GuaranteeBlock } from "@/components/blocks/GuaranteeBlock";
@@ -109,28 +108,6 @@ export default function AboutPage() {
             title, which is deliberate — a company logo never stands in for a person.
           </span>
         </p>
-      </Section>
-
-      {/* -------------------------------------------------------- careers */}
-      <Section tone="paper" labelledBy="careers-teaser-heading">
-        <div className="flex flex-col items-start gap-8 lg:flex-row lg:items-center lg:justify-between">
-          <div className="max-w-[52ch]">
-            <p className="type-eyebrow mb-4 text-cross-blue">Careers</p>
-            <h2
-              id="careers-teaser-heading"
-              className="text-[26px] leading-[1.15] md:text-[34px]"
-            >
-              We are usually hiring
-            </h2>
-            <p className="mt-3 text-[17px] text-muted">
-              Crews, technicians and office staff across every division. If you like
-              doing the job properly, we would like to hear from you.
-            </p>
-          </div>
-          <ButtonLink href="/careers" variant="secondary" size="lg">
-            See careers at Cross
-          </ButtonLink>
-        </div>
       </Section>
     </>
   );

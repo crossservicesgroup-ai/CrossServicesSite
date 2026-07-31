@@ -12,7 +12,7 @@ import { WordmarkLockup } from "@/components/layout/Logo";
 
 const COMPANY_LINKS = [
   { label: "About", href: "/about" },
-  { label: "The Club", href: "/club" },
+  { label: "Cross Courts", href: "/club" },
   { label: "Careers", href: "/careers" },
   { label: "Contact", href: "/contact" },
   { label: "Get a quote", href: "/quote" },

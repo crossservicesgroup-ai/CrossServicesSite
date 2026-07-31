@@ -10,7 +10,7 @@ import { ButtonLink } from "@/components/ui/Button";
 import { LogoLink } from "@/components/layout/Logo";
 
 const PAGES = [
-  { label: "The Club", href: "/club" },
+  { label: "Cross Courts", href: "/club" },
   { label: "About", href: "/about" },
   { label: "Careers", href: "/careers" },
   { label: "Contact", href: "/contact" },

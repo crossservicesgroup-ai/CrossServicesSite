@@ -1,11 +1,9 @@
 import type { Metadata } from "next";
-import { Mail, Phone } from "lucide-react";
+import { Phone } from "lucide-react";
 import { site } from "@/content/site";
 import { pageMetadata } from "@/lib/seo";
 import { Container, Section, SectionHeader } from "@/components/ui/Section";
 import { ButtonLink } from "@/components/ui/Button";
-import { CheckList } from "@/components/ui/Checkbox";
-import { Reveal } from "@/components/ui/Reveal";
 
 export const metadata: Metadata = pageMetadata({
   title: "Careers",
@@ -14,19 +12,6 @@ export const metadata: Metadata = pageMetadata({
   path: "/careers",
 });
 
-const WHY = [
-  "A family-owned company, in business since 1989",
-  "Year-round work rather than one busy season",
-  "Room to move between divisions as you learn them",
-  "Local routes across MetroWest — you are home at night",
-  "Work you can point at when it is finished",
-];
-
-/* [NEEDS INPUT] Benefits. The list below is deliberately empty rather than
-   invented — send over what Cross actually offers (health, PTO, vehicle,
-   training, retirement) and it goes straight in. */
-const BENEFITS: string[] = [];
-
 /* [NEEDS INPUT] Open roles. Add objects here as positions open up and they
    render automatically. */
 const OPEN_ROLES: { title: string; division: string; type: string }[] = [];
@@ -34,57 +19,6 @@ const OPEN_ROLES: { title: string; division: string; type: string }[] = [];
 export default function CareersPage() {
   return (
     <>
-      <section className="border-b border-line bg-paper">
-        <Container className="py-12 md:py-20">
-          <p className="type-eyebrow mb-5 text-cross-blue">Careers</p>
-          <h1 className="max-w-[20ch] text-[34px] leading-[1.05] md:text-[52px]">
-            Come and do the job properly
-          </h1>
-          <p className="mt-5 max-w-[68ch] text-[18px] text-muted">
-            Cross has been in Natick since 1989. We run our own crews across cleaning,
-            grounds, exteriors, carpentry, technology and detailing, which means there is
-            usually somewhere to start and somewhere to go next.
-          </p>
-          <div className="mt-8">
-            <ButtonLink href={`mailto:${site.email}?subject=Careers%20inquiry`} size="lg">
-              <Mail aria-hidden="true" className="size-4.5" />
-              Email us about a job
-            </ButtonLink>
-          </div>
-        </Container>
-      </section>
-
-      <Section tone="surface" labelledBy="why-heading">
-        <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
-          <Reveal>
-            <SectionHeader id="why-heading" eyebrow="Why work here" title="What the job is like" />
-            <div className="mt-8">
-              <CheckList items={WHY} />
-            </div>
-          </Reveal>
-
-          <Reveal delayIndex={1}>
-            <div className="rounded-[3px] border border-line bg-paper p-6 md:p-8">
-              <h2 className="text-[22px]">Benefits</h2>
-              {BENEFITS.length > 0 ? (
-                <div className="mt-5">
-                  <CheckList items={BENEFITS} />
-                </div>
-              ) : (
-                <p className="mt-4 rounded-[2px] border border-dashed border-line bg-surface p-4 text-[15px] text-muted">
-                  <span className="type-eyebrow block text-muted">To confirm</span>
-                  <span className="mt-2 block">
-                    The benefits list has not been supplied yet. Rather than guess at
-                    health cover, time off or training, this space stays empty until
-                    Cross confirms what is actually offered.
-                  </span>
-                </p>
-              )}
-            </div>
-          </Reveal>
-        </div>
-      </Section>
-
       <Section tone="paper" labelledBy="roles-heading">
         <SectionHeader id="roles-heading" eyebrow="Open roles" title="What we are hiring for" />
 

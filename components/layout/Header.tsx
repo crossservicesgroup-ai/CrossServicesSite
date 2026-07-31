@@ -11,8 +11,9 @@ import { LogoLink } from "@/components/layout/Logo";
 import { MobileMenu } from "@/components/layout/MobileMenu";
 
 const NAV = [
-  { label: "The Club", href: "/club" },
+  { label: "Cross Courts", href: "/club" },
   { label: "About", href: "/about" },
+  { label: "Careers", href: "/careers" },
   { label: "Contact", href: "/contact" },
 ];
 
