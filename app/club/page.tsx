@@ -17,7 +17,7 @@ export const metadata: Metadata = pageMetadata({
   path: "/club",
 });
 
-const HERO_IMAGE = "/images/club/courts-hero.jpg"; // [NEEDS INPUT] court photography
+const HERO_IMAGE = "/images/club/courts-hero.webp";
 
 const SQUASH = [
   "Four international squash courts",

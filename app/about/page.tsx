@@ -42,6 +42,12 @@ export default function AboutPage() {
                   do. We have handled thousands of satisfied clients since our inception,
                   and have grown over the years through repeat business and referrals.
                 </p>
+                <p>
+                  We are so convinced you will love any of our services, we have our
+                  Cross Guarantee: &ldquo;If you are not completely satisfied with the
+                  service we provide, then we will do it again, free of charge. No
+                  Questions Asked.&rdquo;
+                </p>
               </div>
             </div>
             <Reveal delayIndex={1}>
