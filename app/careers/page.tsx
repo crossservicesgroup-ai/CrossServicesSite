@@ -45,19 +45,19 @@ export default function CareersPage() {
             ))}
           </ul>
         ) : (
-          <div className="mt-8 rounded-[3px] border border-line bg-surface p-6 md:p-8">
-            <p className="text-[17px]">
-              There is no current vacancy list on this page yet. We take applications
-              year round, so send a note with what you have done and which side of the
-              business interests you.
+          <div className="mt-8 flex flex-col gap-4 rounded-[3px] border border-line bg-surface p-6 text-[17px] md:p-8">
+            <p>
+              We don&rsquo;t have any current openings, but we&rsquo;re always
+              interested in connecting with great people.
             </p>
-            <p className="mt-4 rounded-[2px] border border-dashed border-line bg-paper p-4 text-[15px] text-muted">
-              <span className="type-eyebrow block text-muted">To confirm</span>
-              <span className="mt-2 block">
-                Send me the open positions and they will list here with their own apply
-                links. Add them to OPEN_ROLES in app/careers/page.tsx.
-              </span>
+            <p>
+              If you&rsquo;re interested in joining Cross Services Group, send us a
+              brief note about your background, experience, and which area
+              you&rsquo;re most interested in. We&rsquo;ll keep your information on
+              file and reach out if a position becomes available that matches your
+              skills.
             </p>
+            <p>We appreciate your interest and look forward to hearing from you!</p>
           </div>
         )}
       </Section>
