@@ -230,15 +230,11 @@ export const services: Service[] = [
       },
       {
         q: "How often should windows be washed?",
-        a: "Most homeowners in MetroWest have us out once or twice a year. Storefronts and offices usually want a more frequent schedule because the glass is at the entrance.",
+        a: "Most homeowners in MetroWest have us out once or twice a year. Storefronts and offices usually want a more frequent schedule.",
       },
       {
-        q: "Can you reach high or awkward windows?",
-        a: "Yes. Our technicians are set up for multi-storey homes and commercial glass, including outdoor light fixtures and chandeliers.",
-      },
-      {
-        q: "Can window washing be booked with power washing on the same visit?",
-        a: "Yes, and most people do. Both are handled by our New-View division, so it is one crew, one visit and one bill.",
+        q: "Can you reach windows on high story houses and buildings?",
+        a: "Yes. Our team is set up for multi-storey homes and commercial glass, including outdoor light fixtures and chandeliers.",
       },
     ],
     legacyPath: "/window-washing",
@@ -269,11 +265,7 @@ export const services: Service[] = [
       },
       {
         q: "Do you fix gutters as well as clean them?",
-        a: "Yes. Repair and caulking are part of the service, so if we find a leaking seam or a loose section while we are up there we can deal with it.",
-      },
-      {
-        q: "Do you clear the downspouts and underground drains?",
-        a: "Downspout and drain clearing is included. A clean gutter feeding a blocked downspout does not help anyone.",
+        a: "Yes. Repair and caulking can be a part of the service by request.",
       },
       {
         q: "Can you put this on a standing schedule?",
@@ -312,15 +304,15 @@ export const services: Service[] = [
       },
       {
         q: "Is it the same cleaner every visit?",
-        a: "We keep clients with the same team wherever we can, because knowing a house makes the work better. Grace Silva heads up house cleaning and manages the schedules.",
+        a: "We keep clients with the same team wherever we can, because knowing a house makes the work better.",
       },
       {
         q: "Can you do a one-off clean rather than a schedule?",
-        a: "Yes. Spring cleans, move-out cleans, post-construction cleans and cleans before or after an event are all regular work for us.",
+        a: "Yes. Spring cleaning, move-out cleaning, post-construction cleaning and cleaning before or after an event are all regular work for us.",
       },
       {
         q: "Do you clean on Cape Cod?",
-        a: "On the Cape, residential cleaning is handled by our sister company The Furies. Same standard, and we will introduce you.",
+        a: "On the Cape, residential cleaning is handled by our sister company The Furies. Same standard, call 508-349-1145 today to learn more!",
       },
     ],
     legacyPath: "/residential-cleaning",
@@ -349,11 +341,7 @@ export const services: Service[] = [
     faqs: [
       {
         q: "Can you clean outside our business hours?",
-        a: "Yes. Nights and early mornings are how most of our commercial accounts run, so the building is ready before anyone arrives.",
-      },
-      {
-        q: "Who do we call if something is missed?",
-        a: "Every account has a relationship manager and a responsive office behind them. You call one number and it gets sorted.",
+        a: "Yes. Nights are how most of our commercial accounts run, so the building is ready before anyone arrives.",
       },
       {
         q: "Do you provide the supplies and consumables?",
@@ -412,12 +400,8 @@ export const services: Service[] = [
         a: "Both, for homes and for commercial spaces. If the exterior needs washing first, our power washing crew handles that on the same job.",
       },
       {
-        q: "Can you hang holiday decorations?",
-        a: "Yes. Christmas and holiday decorating is a service we run every season, including the parts that involve a ladder.",
-      },
-      {
         q: "Can I hand over a whole list at once?",
-        a: "Please do. That is the point of the company. One visit, one crew, one invoice, list gone.",
+        a: "Please do. One visit, one crew, one invoice, list gone.",
       },
     ],
     legacyPath: "/painting-handyman",
@@ -458,12 +442,8 @@ export const services: Service[] = [
         a: "Yes. Hot tubs, sheds, swing sets, fences and decks are all things we dismantle and remove.",
       },
       {
-        q: "Can you handle a full estate or an apartment turnover?",
-        a: "Yes. Estate cleanouts and turnovers are regular work, and we can follow the removal with a full clean so the space is ready to list.",
-      },
-      {
-        q: "What happens to everything you take?",
-        a: "It is sorted and disposed of properly. Scrap metal and yard waste go where they should rather than straight into a hole.",
+        q: "Can you handle a full estate cleanout?",
+        a: "Yes. We can follow the removal with a full clean so the space is ready to list.",
       },
     ],
     legacyPath: "/junk-removal",
@@ -499,10 +479,6 @@ export const services: Service[] = [
       {
         q: "Do you handle phones and conference rooms?",
         a: "Yes. Hosted phone systems and video conference setups are both on the list, including the cabling.",
-      },
-      {
-        q: "Can you advise before we buy anything?",
-        a: "Tech consulting is a service on its own. We would rather help you spec it properly than install the wrong thing well.",
       },
     ],
     legacyPath: "/new-page-2",
