@@ -102,11 +102,10 @@ export default function ClubPage() {
           </Reveal>
           <Reveal delayIndex={1}>
             <MediaFrame
-              src="/images/club/squash.jpg"
-              alt="Juniors training on a squash court at Cross Courts"
+              src="/images/club/squash.png"
+              alt="A squash court at Cross Courts"
               ratio="4/3"
               sizes="(min-width: 1024px) 520px, 90vw"
-              note="Squash court or junior academy photo"
             />
           </Reveal>
         </div>
