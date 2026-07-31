@@ -538,10 +538,7 @@ export const services: Service[] = [
     brandId: "classic-shine",
     related: ["residential-cleaning", "power-washing", "property-management"],
     heroImage: "/images/services/car-detailing-hero.png",
-    gallery: [
-      "/images/services/car-detailing-1.png",
-      "/images/services/car-detailing-2.jpg",
-    ],
+    gallery: [],
     beforeAfter: {
       before: "/images/services/car-detailing-before.jpg",
       after: "/images/services/car-detailing-after.jpg",
