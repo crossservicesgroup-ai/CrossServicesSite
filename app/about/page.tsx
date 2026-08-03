@@ -52,11 +52,10 @@ export default function AboutPage() {
             </div>
             <Reveal delayIndex={1}>
               <MediaFrame
-                src="/images/hero/warren-cross.jpg"
-                alt="Warren Cross Jr., founder of Cross Services Group"
+                src="/images/hero/19-tech-circle.jpg"
+                alt="19 Tech Circle, the Cross Services Group building in Natick"
                 ratio="4/3"
                 sizes="(min-width: 1024px) 480px, 90vw"
-                note="Founder photo, or an early Classic Shine photo"
               />
             </Reveal>
           </div>
