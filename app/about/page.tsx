@@ -21,11 +21,10 @@ export default function AboutPage() {
         <Container className="py-12 md:py-20">
           <div className="grid gap-10 lg:grid-cols-[1.1fr_1fr] lg:items-center lg:gap-16">
             <div>
-              <p className="type-eyebrow mb-5 text-cross-blue">About us</p>
-              <h1 className="max-w-[20ch] text-[34px] leading-[1.05] md:text-[52px]">
-                One company, built one business at a time
+              <h1 className="text-center text-[26px] leading-[1.05] text-cross-blue md:text-[40px]">
+                About us
               </h1>
-              <div className="mt-6 flex max-w-[68ch] flex-col gap-4 text-[18px]">
+              <div className="mt-8 flex max-w-[68ch] flex-col gap-4 text-[18px]">
                 <p>
                   Cross Services Group was founded by Warren Cross Jr. in {site.foundedYear},
                   and has been providing the very best in car and property maintenance
@@ -69,6 +68,8 @@ export default function AboutPage() {
           eyebrow="Leadership"
           title="The people who run it"
           lead="Between them they cover operations, finance, real estate, house cleaning and technology. Several have been here more than a decade."
+          eyebrowClassName="text-[15px]!"
+          titleClassName="text-[22px]! md:text-[28px]! lg:text-[32px]!"
         />
         <div className="mt-10 md:mt-14">
           <TeamGrid />

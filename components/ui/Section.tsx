@@ -62,6 +62,8 @@ export function SectionHeader({
   id,
   align = "left",
   tone = "dark",
+  eyebrowClassName = "",
+  titleClassName = "",
 }: {
   eyebrow?: string;
   title: string;
@@ -69,6 +71,10 @@ export function SectionHeader({
   id?: string;
   align?: "left" | "center";
   tone?: "dark" | "light";
+  /** Extra classes appended to the eyebrow, e.g. to bump its size for one instance. */
+  eyebrowClassName?: string;
+  /** Extra classes appended to the h2, e.g. to shrink it for one instance. */
+  titleClassName?: string;
 }) {
   const isLight = tone === "light";
   return (
@@ -77,7 +83,7 @@ export function SectionHeader({
         <p
           className={`type-eyebrow mb-4 flex items-center gap-2 ${
             align === "center" ? "justify-center" : ""
-          } ${isLight ? "text-white/70" : "text-muted"}`}
+          } ${isLight ? "text-white/70" : "text-muted"} ${eyebrowClassName}`}
         >
           <CheckGlyph className={isLight ? "text-white/70" : "text-cross-blue"} />
           {eyebrow}
@@ -87,7 +93,7 @@ export function SectionHeader({
         id={id}
         className={`text-[26px] leading-[1.15] md:text-[34px] lg:text-[40px] ${
           isLight ? "text-white" : ""
-        }`}
+        } ${titleClassName}`}
       >
         {title}
       </h2>
