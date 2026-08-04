@@ -8,7 +8,6 @@ import { site } from "@/content/site";
 import { servicesByGroup, getService } from "@/content/services";
 import {
   HEARD_ABOUT_OPTIONS,
-  TOWN_OPTIONS,
   fieldErrors,
   quoteSchema,
   type QuoteInput,
@@ -36,7 +35,6 @@ type FormState = {
   propertyType: "home" | "business" | "";
   street: string;
   town: string;
-  townOther: string;
   zip: string;
   name: string;
   phone: string;
@@ -51,7 +49,6 @@ const EMPTY: FormState = {
   propertyType: "",
   street: "",
   town: "",
-  townOther: "",
   zip: "",
   name: "",
   phone: "",
@@ -260,10 +257,6 @@ export function QuoteForm() {
         {/* ------------------------------------------------------- step 2 */}
         {step === 1 ? (
           <div className="mt-6">
-            <p className="max-w-[68ch] text-[17px] text-muted">
-              This just tells us which of our teams should pick the job up. Everything
-              we do is available either way.
-            </p>
             {errors.propertyType ? (
               <p role="alert" className="mt-4 text-[15px] text-cross-blue">
                 {errors.propertyType}
@@ -299,10 +292,6 @@ export function QuoteForm() {
         {/* ------------------------------------------------------- step 3 */}
         {step === 2 ? (
           <div className="mt-6 flex flex-col gap-6">
-            <p className="max-w-[68ch] text-[17px] text-muted">
-              Where is the property? We work across {site.serviceAreaLabel}.
-            </p>
-
             <Field id="street" label="Street address" error={errors.street} required>
               <TextInput
                 id="street"
@@ -317,36 +306,17 @@ export function QuoteForm() {
             </Field>
 
             <Field id="town" label="Town" error={errors.town} required>
-              <Select
+              <TextInput
                 id="town"
                 name="town"
                 value={form.town}
                 onChange={(v) => update("town", v)}
-                options={TOWN_OPTIONS}
                 autoComplete="address-level2"
-                placeholder="Choose your town"
+                placeholder="Natick"
                 error={errors.town}
                 required
               />
             </Field>
-
-            {form.town === "Other" ? (
-              <Field
-                id="townOther"
-                label="Which town?"
-                hint="We will let you know if you are in range."
-                error={errors.townOther}
-              >
-                <TextInput
-                  id="townOther"
-                  name="townOther"
-                  value={form.townOther}
-                  onChange={(v) => update("townOther", v)}
-                  autoComplete="address-level2"
-                  error={errors.townOther}
-                />
-              </Field>
-            ) : null}
 
             <Field id="zip" label="Zip code" error={errors.zip} required>
               <TextInput
@@ -368,12 +338,8 @@ export function QuoteForm() {
         {/* ------------------------------------------------------- step 4 */}
         {step === 3 ? (
           <div className="mt-6 flex flex-col gap-6">
-            <p className="max-w-[68ch] text-[17px] text-muted">
-              Last part. We will come back to you with one quote covering everything
-              you ticked.
-            </p>
 
-            <Field id="name" label="Your name" error={errors.name}>
+            <Field id="name" label="Your name" error={errors.name} required>
               <TextInput
                 id="name"
                 name="name"
@@ -381,10 +347,11 @@ export function QuoteForm() {
                 onChange={(v) => update("name", v)}
                 autoComplete="name"
                 error={errors.name}
+                required
               />
             </Field>
 
-            <Field id="phone" label="Phone" error={errors.phone}>
+            <Field id="phone" label="Phone" error={errors.phone} required>
               <TextInput
                 id="phone"
                 name="phone"
@@ -395,10 +362,11 @@ export function QuoteForm() {
                 autoComplete="tel"
                 placeholder="508-555-0100"
                 error={errors.phone}
+                required
               />
             </Field>
 
-            <Field id="email" label="Email" error={errors.email}>
+            <Field id="email" label="Email" error={errors.email} required>
               <TextInput
                 id="email"
                 name="email"
@@ -409,6 +377,7 @@ export function QuoteForm() {
                 autoComplete="email"
                 placeholder="you@example.com"
                 error={errors.email}
+                required
               />
             </Field>
 
@@ -454,7 +423,7 @@ export function QuoteForm() {
             name={form.name}
             email={form.email}
             propertyType={form.propertyType}
-            address={`${form.street}, ${form.town === "Other" ? form.townOther : form.town}, MA ${form.zip}`}
+            address={`${form.street}, ${form.town}, MA ${form.zip}`}
           />
         ) : null}
 

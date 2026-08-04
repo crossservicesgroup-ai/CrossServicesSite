@@ -5,9 +5,6 @@
 
 import { z } from "zod";
 import { serviceSlugs } from "@/content/services";
-import { site } from "@/content/site";
-
-const TOWNS = [...site.serviceAreaTowns, "Other"] as const;
 
 export const quoteSchema = z.object({
   services: z
@@ -22,14 +19,7 @@ export const quoteSchema = z.object({
   }),
 
   street: z.string().trim().min(3, "Enter the street address."),
-  town: z
-    .string()
-    .trim()
-    .min(1, "Choose a town.")
-    .refine((v) => (TOWNS as readonly string[]).includes(v), {
-      message: "Choose a town from the list, or pick Other.",
-    }),
-  townOther: z.string().trim().max(80).optional().or(z.literal("")),
+  town: z.string().trim().min(2, "Enter your town."),
   zip: z
     .string()
     .trim()
@@ -53,8 +43,6 @@ export const quoteSchema = z.object({
 });
 
 export type QuoteInput = z.infer<typeof quoteSchema>;
-
-export const TOWN_OPTIONS = TOWNS;
 
 export const HEARD_ABOUT_OPTIONS = [
   "Google search",

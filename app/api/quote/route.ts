@@ -82,7 +82,7 @@ export async function POST(request: Request) {
   }
 
   const serviceNames = data.services.map((slug) => getService(slug)?.name ?? slug);
-  const town = data.town === "Other" ? data.townOther || "Other" : data.town;
+  const town = data.town;
 
   if (!RESEND_API_KEY || !FROM) {
     console.warn(
