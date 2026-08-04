@@ -127,11 +127,10 @@ export default function ClubPage() {
           </Reveal>
           <Reveal className="lg:order-1">
             <MediaFrame
-              src="/images/club/garage-gym.jpg"
+              src="/images/club/garage-gym.webp"
               alt="The Garage Gym at Cross Courts in Natick"
               ratio="4/3"
               sizes="(min-width: 1024px) 520px, 90vw"
-              note="Fitness center or Garage Gym photo"
             />
           </Reveal>
         </div>

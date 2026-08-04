@@ -128,9 +128,9 @@ export const services: Service[] = [
     ],
     brandId: null,
     related: ["landscaping", "power-washing", "property-management"],
-    heroImage: "/images/services/irrigation-hero.jpg",
+    heroImage: "/images/services/irrigation-hero.webp",
     gallery: [
-      "/images/services/irrigation-1.jpg",
+      "/images/services/irrigation-1.webp",
       "/images/services/irrigation-2.jpg",
       "/images/services/irrigation-3.jpg",
     ],
@@ -172,10 +172,10 @@ export const services: Service[] = [
     ],
     brandId: "new-view",
     related: ["window-washing", "gutter-cleaning", "landscaping"],
-    heroImage: "/images/services/power-washing-hero.jpg",
+    heroImage: "/images/services/power-washing-hero.webp",
     gallery: [
-      "/images/services/power-washing-1.jpg",
-      "/images/services/power-washing-2.jpg",
+      "/images/services/power-washing-1.webp",
+      "/images/services/power-washing-2.webp",
       "/images/services/power-washing-3.jpg",
     ],
     beforeAfter: {
@@ -290,7 +290,7 @@ export const services: Service[] = [
     brandId: null,
     secondaryBrandId: "the-furies",
     related: ["window-washing", "junk-removal", "janitorial-cleaning"],
-    heroImage: "/images/services/residential-cleaning-hero.jpg",
+    heroImage: "/images/services/residential-cleaning-hero.webp",
     gallery: [
       "/images/services/residential-cleaning-1.jpg",
       "/images/services/residential-cleaning-2.jpg",
@@ -499,7 +499,7 @@ export const services: Service[] = [
     ],
     brandId: null,
     related: ["janitorial-cleaning", "landscaping", "painting-handyman"],
-    heroImage: "/images/services/property-management-hero.jpg",
+    heroImage: "/images/services/property-management-hero.webp",
     gallery: [
       "/images/services/property-management-1.jpg",
       "/images/services/property-management-2.jpg",
