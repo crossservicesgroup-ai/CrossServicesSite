@@ -81,10 +81,6 @@ export function Hero() {
             roughly 710px beside the card, which clears it. */}
         <div className="flex flex-col gap-12 xl:flex-row xl:items-center xl:justify-between xl:gap-16">
           <div className="flex max-w-[56ch] flex-col items-start text-left">
-            <p className="type-eyebrow mb-6 text-white/70">
-              MetroWest Boston · Since {site.foundedYear}
-            </p>
-
             {/* The tagline holds one line at every width. Rather than let it wrap
                 on narrow screens, the size tracks the viewport and only stops at
                 64px — the clamp is set so the longest line still clears the
