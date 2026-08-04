@@ -136,6 +136,13 @@ export const team: TeamMember[] = [
     isDivisionHead: true,
   },
   {
+    id: "abby-schlom",
+    name: "Abby Schlom",
+    title: "Executive Assistant",
+    photo: null, // [NEEDS INPUT] headshot
+    bio: null, // [NEEDS INPUT] bio
+  },
+  {
     id: "joe-slavik",
     name: "Joe Slavik",
     title: "Operations Analyst",

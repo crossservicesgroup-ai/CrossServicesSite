@@ -67,7 +67,7 @@ export default function AboutPage() {
           id="team-heading"
           eyebrow="Leadership"
           title="The people who run it"
-          lead="Between them they cover operations, finance, real estate, house cleaning and technology. Several have been here more than a decade."
+          lead="Our leadership team combines decades of experience in operations, finance, and real estate. With several members having been with Cross Services Group for more than ten years, they play a vital role in delivering the outstanding service, trusted relationships, and long-term growth that have been the foundation of our company since 1989."
           eyebrowClassName="text-[15px]!"
           titleClassName="text-[22px]! md:text-[28px]! lg:text-[32px]!"
         />
@@ -78,10 +78,10 @@ export default function AboutPage() {
           <span className="type-eyebrow block text-muted">Draft — assets needed</span>
           <span className="mt-2 block">
             Headshots are needed for everyone, and bios for Warren III, Megan, Giulia,
-            Joe and Brian. The Irrigation and Car Detailing division heads still need
-            names as well as headshots. Until then those cards show initials and just
-            a name and title, which is deliberate — a company logo never stands in for
-            a person.
+            Joe, Brian and Abby. The Irrigation and Car Detailing division heads still
+            need names as well as headshots. Until then those cards show initials and
+            just a name and title, which is deliberate — a company logo never stands
+            in for a person.
           </span>
         </p>
       </Section>
