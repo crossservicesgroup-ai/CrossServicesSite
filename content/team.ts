@@ -82,7 +82,7 @@ export const team: TeamMember[] = [
   {
     id: "marcio-de-arruda",
     name: "Marcio De Arruda",
-    title: "New-View",
+    title: "Power Washing, Window Cleaning, Gutter Cleaning",
     photo: null, // [NEEDS INPUT] headshot
     bio: null, // [NEEDS INPUT] bio
     isDivisionHead: true,
@@ -96,19 +96,51 @@ export const team: TeamMember[] = [
     isDivisionHead: true,
   },
   {
-    id: "joe-slavik",
-    name: "Joe Slavik",
-    title: "Operations Analyst",
-    photo: null, // [NEEDS INPUT] headshot
-    bio: null, // [NEEDS INPUT] bio
-  },
-  {
     id: "brian-rothwell",
     name: "Brian Rothwell",
     title: "Technology",
     photo: "/images/team/brian-rothwell.png",
     bio: null, // [NEEDS INPUT] bio
     isDivisionHead: true,
+  },
+  {
+    id: "irrigation-lead",
+    name: "Irrigation Lead", // [NEEDS INPUT] real name
+    title: "Irrigation",
+    photo: null, // [NEEDS INPUT] headshot
+    bio: null,
+    isDivisionHead: true,
+  },
+  {
+    id: "car-detailing-lead",
+    name: "Car Detailing Lead", // [NEEDS INPUT] real name
+    title: "Car Detailing",
+    photo: null, // [NEEDS INPUT] headshot
+    bio: null,
+    isDivisionHead: true,
+  },
+  {
+    id: "chip-tarbell-painting-handyman",
+    name: "Chip Tarbell",
+    title: "Painting & Handyman",
+    photo: null, // [NEEDS INPUT] headshot
+    bio: null,
+    isDivisionHead: true,
+  },
+  {
+    id: "chip-tarbell-property-management",
+    name: "Chip Tarbell",
+    title: "Property Management",
+    photo: null, // [NEEDS INPUT] headshot
+    bio: null,
+    isDivisionHead: true,
+  },
+  {
+    id: "joe-slavik",
+    name: "Joe Slavik",
+    title: "Operations Analyst",
+    photo: null, // [NEEDS INPUT] headshot
+    bio: null, // [NEEDS INPUT] bio
   },
 ];
 

@@ -78,8 +78,10 @@ export default function AboutPage() {
           <span className="type-eyebrow block text-muted">Draft — assets needed</span>
           <span className="mt-2 block">
             Headshots are needed for everyone, and bios for Warren III, Megan, Giulia,
-            Joe and Brian. Until then those cards show initials and just a name and
-            title, which is deliberate — a company logo never stands in for a person.
+            Joe and Brian. The Irrigation and Car Detailing division heads still need
+            names as well as headshots. Until then those cards show initials and just
+            a name and title, which is deliberate — a company logo never stands in for
+            a person.
           </span>
         </p>
       </Section>
