@@ -94,7 +94,7 @@ export default function ClubPage() {
               id="squash-heading"
               eyebrow="Squash"
               title="Courts, coaching and competition"
-              lead="Our Junior Academy program is one of the largest in the country, with many nationally ranked players, some of whom rank in the Junior Top 10. The adult program is vibrant, with MSRA league play and in-house box league matches — and recreational play abounds."
+              lead="Our Junior Academy program is one of the largest in the country, with many nationally ranked players, some of whom rank in the Junior Top 10. The adult program is vibrant, with MSRA league play and in-house box league matches — and recreational play."
             />
             <div className="mt-8">
               <CheckList items={SQUASH} />
@@ -119,7 +119,7 @@ export default function ClubPage() {
               id="fitness-heading"
               eyebrow="Fitness"
               title="The fitness center and the Garage Gym"
-              lead="Cross Courts members take advantage of our state-of-the-art fitness center and our Garage Gym, plus a warm-up and stretching room, a lounge with complimentary wifi, and locker rooms with steam."
+              lead="Cross Court members take advantage of our state-of-the-art fitness center and our Garage Gym, plus a warm-up and stretching room, a lounge with complimentary wifi, and locker rooms with a steam room."
             />
             <div className="mt-8">
               <CheckList items={FITNESS} />
@@ -132,6 +132,16 @@ export default function ClubPage() {
               ratio="4/3"
               sizes="(min-width: 1024px) 520px, 90vw"
             />
+            <div className="mt-8 flex justify-center">
+              <ButtonLink
+                href="https://app.courtreserve.com/Online/Memberships/Public/13265"
+                external
+                size="lg"
+                variant="primary"
+              >
+                Join the gym
+              </ButtonLink>
+            </div>
           </Reveal>
         </div>
       </Section>
