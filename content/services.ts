@@ -37,6 +37,8 @@ export type Service = {
   tagline: string;
   /** Overrides `tagline` as the description under this service's checkbox on the quote form. */
   quoteDescription?: string;
+  /** Overrides the default "Residential & commercial" tag, for services offered to only one audience. */
+  audienceLabel?: string;
   /** Two or three sentences at the top of the detail page. */
   intro: string;
   /** The "What's included" checklist. */
@@ -215,9 +217,9 @@ export const services: Service[] = [
     ],
     brandId: "new-view",
     related: ["power-washing", "gutter-cleaning", "residential-cleaning"],
-    heroImage: "/images/services/window-washing-hero.jpg",
+    heroImage: "/images/services/window-washing-hero.png",
     gallery: [
-      "/images/services/window-washing-1.jpg",
+      "/images/services/window-washing-1.png",
       "/images/services/window-washing-2.jpg",
       "/images/services/window-washing-3.jpg",
     ],
@@ -279,6 +281,7 @@ export const services: Service[] = [
     name: "Residential Cleaning",
     group: "cleaning",
     tagline: "Regular house cleaning, plus spring, move-out and post-construction.",
+    audienceLabel: "Residential",
     intro:
       "With the never ending list of daily tasks in our lives, it is hard to keep up with a clean home. We offer regular weekly or bi-weekly visits from our residential house cleaners, and one-time cleans for spring, a move, a special event or the end of a construction project. Our cleaners bring their own supplies, and the same team handles apartment turnovers for property managers.",
     includes: [
@@ -320,6 +323,7 @@ export const services: Service[] = [
     name: "Janitorial Cleaning",
     group: "cleaning",
     tagline: "Nightly commercial cleaning with one person to call.",
+    audienceLabel: "Commercial",
     intro:
       "With the never ending list of daily tasks, it is hard to keep up with a clean work space. Our commercial cleaning business offers convenient nightly visits from professionally trained cleaning staff, on a schedule built around your building rather than ours. Every account gets a named relationship manager, so when something needs changing you are not filing a ticket into the dark.",
     includes: [
@@ -331,9 +335,9 @@ export const services: Service[] = [
     ],
     brandId: null,
     related: ["property-management", "window-washing", "junk-removal"],
-    heroImage: "/images/services/janitorial-cleaning-hero.jpg",
+    heroImage: "/images/services/janitorial-cleaning-hero.webp",
     gallery: [
-      "/images/services/janitorial-cleaning-1.jpg",
+      "/images/services/janitorial-cleaning-1.webp",
       "/images/services/janitorial-cleaning-2.jpg",
     ],
     faqs: [
@@ -356,12 +360,12 @@ export const services: Service[] = [
     slug: "the-furies",
     name: "The Furies",
     group: "cleaning",
-    tagline: "Our sister company handling residential cleaning on Cape Cod.",
-    intro: "Our sister company handling residential cleaning on Cape Cod.",
+    tagline: "Our sister company handles residential & commercial cleaning on Cape Cod.",
+    intro: "Our sister company handles residential & commercial cleaning on Cape Cod.",
     includes: [],
     brandId: "the-furies",
     related: [],
-    heroImage: "/images/services/the-furies-hero.jpg",
+    heroImage: "/images/services/the-furies-hero-2.png",
     gallery: [],
     faqs: [],
     externalUrl: "https://furiescapecodcleaning.com/",
@@ -383,7 +387,7 @@ export const services: Service[] = [
     ],
     brandId: null,
     related: ["gutter-cleaning", "junk-removal", "audio-video"],
-    heroImage: "/images/services/painting-handyman-hero.jpg",
+    heroImage: "/images/services/painting-handyman-hero.jpeg",
     gallery: [
       "/images/services/painting-handyman-1.jpg",
       "/images/services/painting-handyman-2.jpg",
@@ -463,7 +467,7 @@ export const services: Service[] = [
     ],
     brandId: null,
     related: ["painting-handyman", "property-management", "residential-cleaning"],
-    heroImage: "/images/services/audio-video-hero.jpg",
+    heroImage: "/images/services/audio-video-hero.jpeg",
     gallery: ["/images/services/audio-video-1.jpg", "/images/services/audio-video-2.jpg"],
     faqs: [
       {
@@ -526,7 +530,7 @@ export const services: Service[] = [
     slug: "car-detailing",
     name: "Car Detailing",
     group: "vehicles",
-    tagline: "Hand detailing, with free pick-up and delivery nearby.",
+    tagline: "Mobile detailing at your home or office.",
     quoteDescription: "We come to your home or office.",
     intro:
       "Keep your car, truck or van looking and feeling new. Your vehicle is an investment, so it should be treated like one. Classic Shine was the first Cross business, founded in 1989, and it still does full details, interior or exterior only, hand washes, mobile detailing at your home or office, and seasonal car storage — with free pick-up and delivery within five miles.",

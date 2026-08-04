@@ -41,7 +41,7 @@ export const brands: Brand[] = [
     id: "the-furies",
     name: "The Furies",
     logo: "/images/brands/the-furies.svg", // [NEEDS INPUT] logo file
-    blurb: "Our sister company handling residential cleaning on Cape Cod.",
+    blurb: "Our sister company handles residential & commercial cleaning on Cape Cod.",
     externalUrl: "https://furiescapecodcleaning.com",
     // [NEEDS INPUT] year The Furies joined the group
   },

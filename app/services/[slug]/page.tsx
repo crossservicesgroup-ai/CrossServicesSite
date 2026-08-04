@@ -110,7 +110,7 @@ export default async function ServiceDetailPage({
           <div className="min-w-0">
             {/* ------------------------------------------------ heading */}
             <div className="mb-3">
-              <BothAudiencesTag />
+              <BothAudiencesTag label={service.audienceLabel} />
             </div>
             <h1 className="text-[34px] leading-[1.05] md:text-[48px]">{service.name}</h1>
             <p className="mt-4 max-w-[52ch] text-[19px] text-muted md:text-[21px]">

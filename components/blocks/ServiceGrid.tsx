@@ -37,7 +37,7 @@ export function ServiceCard({
           <p className="mt-2 text-[15px] text-muted">{service.tagline}</p>
           {/* mt-auto pins the tag to the bottom so cards in a row line up */}
           <div className="mt-auto pt-5">
-            <BothAudiencesTag />
+            <BothAudiencesTag label={service.audienceLabel} />
           </div>
         </div>
       </LinkCard>

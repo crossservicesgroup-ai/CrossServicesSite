@@ -26,6 +26,13 @@ export function Tag({
 }
 
 /** Used on every service card and service page. */
-export function BothAudiencesTag({ tone = "default" }: { tone?: "default" | "blue" | "light" }) {
-  return <Tag tone={tone}>Residential &amp; commercial</Tag>;
+export function BothAudiencesTag({
+  tone = "default",
+  label = "Residential & commercial",
+}: {
+  tone?: "default" | "blue" | "light";
+  /** Override for services that are not offered to both audiences. */
+  label?: string;
+}) {
+  return <Tag tone={tone}>{label}</Tag>;
 }
