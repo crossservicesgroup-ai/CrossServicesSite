@@ -131,11 +131,7 @@ export const services: Service[] = [
     brandId: null,
     related: ["landscaping", "power-washing", "property-management"],
     heroImage: "/images/services/irrigation-hero.webp",
-    gallery: [
-      "/images/services/irrigation-1.webp",
-      "/images/services/irrigation-2.jpg",
-      "/images/services/irrigation-3.jpg",
-    ],
+    gallery: [],
     faqs: [
       {
         q: "Can you repair an irrigation system you did not install?",
@@ -332,10 +328,7 @@ export const services: Service[] = [
     brandId: null,
     related: ["property-management", "window-washing", "junk-removal"],
     heroImage: "/images/services/janitorial-cleaning-hero.webp",
-    gallery: [
-      "/images/services/janitorial-cleaning-1.webp",
-      "/images/services/janitorial-cleaning-2.jpg",
-    ],
+    gallery: [],
     faqs: [
       {
         q: "Can you clean outside our business hours?",
@@ -426,10 +419,7 @@ export const services: Service[] = [
     brandId: null,
     related: ["residential-cleaning", "painting-handyman", "property-management"],
     heroImage: "/images/services/junk-removal-hero.jpg",
-    gallery: [
-      "/images/services/junk-removal-1.jpg",
-      "/images/services/junk-removal-2.jpg",
-    ],
+    gallery: [],
     faqs: [
       {
         q: "Do I have to move anything to the curb?",
