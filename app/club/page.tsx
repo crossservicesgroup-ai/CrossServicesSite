@@ -40,7 +40,7 @@ const FITNESS = [
 const MEMBERSHIP_GROUPS = [
   {
     label: "Squash",
-    tiers: ["Family Membership", "Single Membership", "Junior Membership"],
+    tiers: ["Single Membership", "Family Membership", "Junior Membership"],
   },
   {
     label: "Fitness Center",
@@ -206,7 +206,11 @@ export default function ClubPage() {
               </p>
 
               <div className="mt-6">
-                <ButtonLink href={site.courtReserveUrl} external className="w-full sm:w-auto">
+                <ButtonLink
+                  href="https://app.courtreserve.com/Online/Memberships/Public/13265"
+                  external
+                  className="w-full sm:w-auto"
+                >
                   See membership options
                 </ButtonLink>
               </div>
