@@ -37,6 +37,17 @@ const FITNESS = [
   "Massage and chiropractic through our health and wellness program",
 ];
 
+const MEMBERSHIP_GROUPS = [
+  {
+    label: "Squash",
+    tiers: ["Family Membership", "Single Membership", "Junior Membership"],
+  },
+  {
+    label: "Fitness Center",
+    tiers: ["Garage Gym - Individual", "Garage Gym - Family", "Garage Gym - Student"],
+  },
+];
+
 export default function ClubPage() {
   const hasHero = imageExists(HERO_IMAGE);
 
@@ -178,12 +189,20 @@ export default function ClubPage() {
               )}
 
               <h3 className="mt-8 text-[19px]">Membership</h3>
-              <p className="mt-3 rounded-[2px] border border-dashed border-line bg-paper p-4 text-[15px] text-muted">
-                <span className="type-eyebrow block text-muted">Draft — to confirm</span>
-                <span className="mt-2 block">
-                  Membership tiers and pricing have not been supplied yet. Current rates
-                  are shown in the booking portal.
-                </span>
+              <div className="mt-4 flex flex-col gap-5">
+                {MEMBERSHIP_GROUPS.map((group) => (
+                  <div key={group.label}>
+                    <p className="type-eyebrow text-muted">{group.label}</p>
+                    <ul className="mt-2 flex flex-col gap-2 text-[16px]">
+                      {group.tiers.map((tier) => (
+                        <li key={tier}>{tier}</li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+              <p className="mt-3 text-[15px] text-muted">
+                Pricing is shown in the booking portal.
               </p>
 
               <div className="mt-6">
