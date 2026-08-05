@@ -175,11 +175,7 @@ export const services: Service[] = [
     brandId: "new-view",
     related: ["window-washing", "gutter-cleaning", "landscaping"],
     heroImage: "/images/services/power-washing-hero.webp",
-    gallery: [
-      "/images/services/power-washing-1.webp",
-      "/images/services/power-washing-2.webp",
-      "/images/services/power-washing-3.jpg",
-    ],
+    gallery: [],
     beforeAfter: {
       before: "/images/services/power-washing-before.jpg",
       after: "/images/services/power-washing-after.jpg",
