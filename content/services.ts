@@ -210,11 +210,7 @@ export const services: Service[] = [
     brandId: "new-view",
     related: ["power-washing", "gutter-cleaning", "residential-cleaning"],
     heroImage: "/images/services/window-washing-hero.png",
-    gallery: [
-      "/images/services/window-washing-1.png",
-      "/images/services/window-washing-2.jpg",
-      "/images/services/window-washing-3.jpg",
-    ],
+    gallery: [],
     faqs: [
       {
         q: "Do you clean screens and sills too, or just the glass?",

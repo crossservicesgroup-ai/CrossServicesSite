@@ -77,8 +77,8 @@ export default function AboutPage() {
         <p className="mt-8 rounded-[2px] border border-dashed border-line bg-paper p-4 text-[15px] text-muted">
           <span className="type-eyebrow block text-muted">Draft — assets needed</span>
           <span className="mt-2 block">
-            Headshots are needed for everyone, and bios for Warren III, Megan, Giulia,
-            Joe, Brian and Abby. The Irrigation and Car Detailing division heads still
+            Headshots are needed for everyone, and bios for Warren III, Megan, Joe,
+            Brian and Abby. The Irrigation and Car Detailing division heads still
             need names as well as headshots. Until then those cards show initials and
             just a name and title, which is deliberate — a company logo never stands
             in for a person.

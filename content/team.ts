@@ -65,13 +65,6 @@ export const team: TeamMember[] = [
     bio: null, // [NEEDS INPUT] bio
   },
   {
-    id: "giulia-palizzolo",
-    name: "Giulia Palizzolo",
-    title: "Operations Associate",
-    photo: null, // [NEEDS INPUT] headshot
-    bio: null, // [NEEDS INPUT] bio
-  },
-  {
     id: "grace-silva",
     name: "Grace Silva",
     title: "House Cleaning",
