@@ -87,7 +87,7 @@ export const services: Service[] = [
     ],
     brandId: null,
     related: ["irrigation", "power-washing", "gutter-cleaning"],
-    heroImage: "/images/services/landscaping-hero.png",
+    heroImage: "/images/services/landscaping-hero-2.jpg",
     gallery: [
       "/images/services/landscaping-1.png",
       "/images/services/landscaping-2.jpg",

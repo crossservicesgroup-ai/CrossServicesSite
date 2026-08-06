@@ -25,14 +25,20 @@ export function Tag({
   );
 }
 
-/** Used on every service card and service page. */
+/** Used on every service card and service page. Plain caption text, not a boxed chip. */
 export function BothAudiencesTag({
   tone = "default",
-  label = "Residential & commercial",
+  label = "Residential & Commercial",
 }: {
   tone?: "default" | "blue" | "light";
   /** Override for services that are not offered to both audiences. */
   label?: string;
 }) {
-  return <Tag tone={tone}>{label}</Tag>;
+  const tones = {
+    default: "text-muted",
+    blue: "text-cross-blue",
+    light: "text-white/70",
+  } as const;
+
+  return <p className={`text-[14px] italic ${tones[tone]}`}>{label}</p>;
 }
