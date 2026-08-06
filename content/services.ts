@@ -62,10 +62,10 @@ export type Service = {
 
 /** Display names and running order for the five groups. */
 export const serviceGroups: { id: ServiceGroup; name: string }[] = [
-  { id: "grounds", name: "Grounds & exterior" },
+  { id: "grounds", name: "Grounds & Exterior" },
   { id: "cleaning", name: "Cleaning" },
-  { id: "repairs", name: "Repairs & projects" },
-  { id: "property", name: "Property management" },
+  { id: "repairs", name: "Repairs & Projects" },
+  { id: "property", name: "Property Management" },
   { id: "vehicles", name: "Vehicles" },
 ];
 

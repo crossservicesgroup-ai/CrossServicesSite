@@ -17,7 +17,9 @@ export default function ServicesIndexPage() {
     <>
       <section className="border-b border-line bg-paper">
         <Container className="py-12 md:py-20">
-          <p className="type-eyebrow mb-5 text-cross-blue">Services</p>
+          <p className="font-display mb-5 text-[19px] font-semibold text-cross-blue">
+            Services
+          </p>
           <h1 className="max-w-[20ch] text-[34px] leading-[1.05] md:text-[52px]">
             Everything a property needs, from one company
           </h1>

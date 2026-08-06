@@ -166,7 +166,9 @@ function ServicesDropdown({ pathname }: { pathname: string }) {
             <div className="grid grid-cols-3 gap-x-10 gap-y-8">
               {groups.map((group) => (
                 <div key={group.id}>
-                  <p className="type-eyebrow mb-3 text-muted">{group.name}</p>
+                  <p className="font-display mb-3 text-[17px] font-semibold text-cross-navy">
+                    {group.name}
+                  </p>
                   <ul className="flex flex-col gap-0.5">
                     {group.services.map((service) =>
                       service.externalUrl ? (
@@ -200,7 +202,7 @@ function ServicesDropdown({ pathname }: { pathname: string }) {
                 href="/services"
                 className="text-[16px] font-medium text-cross-blue underline-offset-4 hover:underline"
               >
-                See all services and how they fit together →
+                See All Services and How They Fit Together →
               </Link>
             </div>
           </div>
