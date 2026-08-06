@@ -34,7 +34,9 @@ export function GroupJumpLinks({
   return (
     <nav aria-label="Jump to a service group" className="hidden lg:block">
       <div className="sticky top-28">
-        <p className="type-eyebrow mb-4 text-muted">On this page</p>
+        <p className="font-display mb-4 text-[17px] font-semibold text-cross-navy">
+          On this page
+        </p>
         <ul className="flex flex-col gap-1 border-l border-line">
           {groups.map((group) => (
             <li key={group.id}>
