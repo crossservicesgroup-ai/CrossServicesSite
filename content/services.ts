@@ -77,7 +77,7 @@ export const services: Service[] = [
     group: "grounds",
     tagline: "Year-round grounds care, from spring clean-up to fall leaf removal.",
     intro:
-      "The first thing anyone sees when they arrive at your home or your building is the grounds. Our landscape crews handle design, planting, weekly maintenance and seasonal clean-ups, whether it is a single property in Natick or a portfolio of commercial sites, all season long.",
+      "The first thing anyone sees when they arrive at your home or your building is the grounds. Our landscape crews handle design, planting, weekly maintenance and seasonal clean-ups, whether it is a residential property or commercial sites.",
     includes: [
       "Full landscape assessments",
       "Plant recommendations and design",
@@ -515,7 +515,7 @@ export const services: Service[] = [
     tagline: "Mobile detailing at your home or office.",
     quoteDescription: "We come to your home or office.",
     intro:
-      "Keep your car, truck or van looking and feeling new. Your vehicle is an investment, so it should be treated like one. Classic Shine was the first Cross business, founded in 1989, and it still does full details, interior or exterior only, hand washes, mobile detailing at your home or office, and seasonal car storage — with free pick-up and delivery within five miles.",
+      "Keep your car, truck, or van looking and feeling like new. Your vehicle is an investment, and it deserves professional care. Founded in 1989 as the first Cross Services Group business, Classic Shine offers complete interior and exterior detailing, hand washes, mobile detailing at your home or workplace, recurring on-site detailing for businesses, offices, fleet detailing, and seasonal vehicle storage with free pick-up and delivery within five miles.",
     includes: [
       "Full detail",
       "Exterior or interior detail only",

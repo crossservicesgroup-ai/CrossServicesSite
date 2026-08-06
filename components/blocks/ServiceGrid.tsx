@@ -60,7 +60,7 @@ export function ServiceGrid({
       {groups.map((group) => (
         <div key={group.id} id={group.id} className="scroll-mt-28">
           <div className="mb-6 border-b border-line pb-4 md:mb-8">
-            <GroupHeading className="type-eyebrow text-cross-blue">
+            <GroupHeading className="text-[22px] font-medium text-cross-blue md:text-[26px]">
               {group.name}
             </GroupHeading>
           </div>
