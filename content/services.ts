@@ -350,7 +350,7 @@ export const services: Service[] = [
     includes: [],
     brandId: "the-furies",
     related: [],
-    heroImage: "/images/services/the-furies-hero-2.png",
+    heroImage: "/images/services/the-furies-hero-3.jpeg",
     gallery: [],
     faqs: [],
     externalUrl: "https://furiescapecodcleaning.com/",
