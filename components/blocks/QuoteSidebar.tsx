@@ -11,7 +11,7 @@ export function QuoteSidebar({ serviceSlug, serviceName }: { serviceSlug: string
   return (
     <aside className="hidden lg:block">
       <div className="sticky top-28 rounded-[3px] border border-line bg-surface p-6">
-        <p className="type-eyebrow mb-4 flex items-center gap-2 text-cross-blue">
+        <p className="font-display mb-4 flex items-center gap-2 text-[19px] font-semibold text-cross-blue">
           <CheckGlyph />
           Get a quote
         </p>
@@ -29,10 +29,6 @@ export function QuoteSidebar({ serviceSlug, serviceName }: { serviceSlug: string
             {site.phone.display}
           </ButtonLink>
         </div>
-
-        <p className="mt-6 border-t border-line pt-5 text-[15px] text-muted">
-          {site.guarantee.quote}
-        </p>
       </div>
     </aside>
   );

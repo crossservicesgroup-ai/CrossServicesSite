@@ -438,7 +438,7 @@ export const services: Service[] = [
     group: "repairs",
     tagline: "Tv's, sound, cameras and networks.",
     intro:
-      "Do not let outdated technology or security gaps disrupt your home or your business. Our technology division installs and supports audio and video systems, network cameras, data networking, hosted phone systems and video conferencing. For a homeowner that means the TV and the wifi finally behave. For a facility manager it means the cameras, the phones and the conference rooms are one vendor's problem instead of four.",
+      "Our Technology Service Division provides solutions that enhance entertainment, convenience, and peace of mind. From whole-home audio and home theater systems to surveillance cameras, our skilled technicians ensure every system is seamlessly integrated and easy to use. We work with both residential and commercial properties, using high-quality equipment and clean, professional installations. Whether you're upgrading existing systems or starting from scratch, we handle every detail so you can sit back, relax, and enjoy a smarter, more secure space.",
     includes: [
       "Audio and video systems",
       "Network cameras",
@@ -475,7 +475,7 @@ export const services: Service[] = [
     group: "property",
     tagline: "One point of contact for the whole property, all year.",
     intro:
-      "Have peace of mind knowing that your property is being cared for when you cannot be there and that all of its needs are being met. We handle routine maintenance and preventative care, run large and small projects, and stay reachable for emergencies around the clock, for a low monthly fee. It works the same way for a second home you visit twice a year and for a commercial building with tenants in it.",
+      "Have peace of mind knowing that your home is being cared for when you cannot be there and that all your needs are being met. Frequent home inspections will ensure safety from weather and security related events. With frequent walk-throughs our team will monitor all automobiles, entryways and doors as well as monitor the temperature and alarm systems. All potential repair or maintenance needs will be accompanied with a suggested action plan to ensure proper correction at your preference.",
     includes: [
       "Routine maintenance",
       "Preventative care",
