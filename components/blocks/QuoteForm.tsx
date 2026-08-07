@@ -226,7 +226,9 @@ export function QuoteForm() {
               <div className="flex flex-col gap-8">
                 {groups.map((group) => (
                   <div key={group.id}>
-                    <p className="type-eyebrow mb-3 text-cross-blue">{group.name}</p>
+                    <p className="font-display mb-3 text-[19px] font-semibold text-cross-blue">
+                      {group.name}
+                    </p>
                     <div className="flex flex-col gap-2">
                       {group.services.map((service) => (
                         <CheckboxField
@@ -475,7 +477,7 @@ export function QuoteForm() {
 function ProgressDots({ step }: { step: number }) {
   return (
     <div className="mb-8">
-      <p className="type-eyebrow mb-3 text-muted">
+      <p className="font-display mb-3 text-[17px] font-semibold text-cross-navy">
         Step {Math.min(step + 1, STEPS.length)} of {STEPS.length}
       </p>
       <ol className="flex gap-1.5" aria-hidden="true">
