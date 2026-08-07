@@ -157,7 +157,7 @@ export const services: Service[] = [
     group: "grounds",
     tagline: "Houses, siding, decks, patios, driveways and walkways.",
     intro:
-      "New England weather is not just hard on us, it is hard on our buildings too. Our crews power wash siding, roofs, decks, patios, walkways and courts using environmentally safe products that are gentle on children, pets and planting beds. It is the fastest way to make a house or a commercial building look cared for again.",
+      "New England weather can take a toll on your home and commercial property. Our experienced team provides professional power washing for siding, roofs, decks, patios, walkways, driveways, and other exterior surfaces using environmentally responsible cleaning solutions. It's one of the fastest and most effective ways to restore your property's appearance and keep it looking its best year-round.",
     includes: [
       "House siding",
       "Bluestone patio and wood deck",
@@ -199,7 +199,7 @@ export const services: Service[] = [
     group: "grounds",
     tagline: "Spot and streak free glass, inside and out.",
     intro:
-      "Glass breaks down over time as dirt builds up on the surface. Our service technicians clean interior and exterior glass, storm windows, screens and sills, and get the light back into a room. We do the same work for office buildings and retail storefronts, where clean glass is the first thing a customer sees.",
+      "Over time, dirt, dust, and debris can build up on your windows, reducing their clarity and appearance. Our crews clean interior and exterior windows, storm windows, screens, and sills to let more natural light into your home and leave your glass sparkling. We also provide professional window cleaning for office buildings and retail storefronts, helping businesses make a great first impression with clean, streak-free windows.",
     includes: [
       "Interior and exterior washing",
       "Storm window washing",
@@ -233,7 +233,7 @@ export const services: Service[] = [
     group: "grounds",
     tagline: "Clear gutters and downspouts, without you going up a ladder.",
     intro:
-      "Keeping gutters and downspouts clear is the cheapest water damage insurance there is, and it is the job most likely to end with someone on a ladder they should not be on. We clear gutters and drains, flush the downspouts, and repair and caulk the runs that have started to leak, on houses and on commercial buildings.",
+      "Clogged gutters can lead to costly water damage, making regular gutter maintenance one of the simplest ways to protect your home or business. Our crews remove leaves and debris, clear downspouts, and inspect your gutter system to ensure water flows properly. We also repair and seal leaking gutters, helping protect your property and keep your gutter system performing its best year-round.",
     includes: [
       "Annual or bi-annual gutter cleaning, spring and fall",
       "Downspout and drain clearing",
@@ -271,7 +271,7 @@ export const services: Service[] = [
     tagline: "Regular house cleaning, plus spring, move-out and post-construction.",
     audienceLabel: "Residential",
     intro:
-      "With the never ending list of daily tasks in our lives, it is hard to keep up with a clean home. We offer regular weekly or bi-weekly visits from our residential house cleaners, and one-time cleans for spring, a move, a special event or the end of a construction project. Our cleaners bring their own supplies, and the same team handles apartment turnovers for property managers.",
+      "With the never ending list of daily tasks in our lives, it is hard to keep up with a clean home. We offer regular weekly or bi-weekly visits from our residential house cleaners, and one-time cleans for spring, a move, a special event or a post-construction cleaning.",
     includes: [
       "Flexible weekly or bi-weekly cleaning schedules",
       "One-time cleanings: spring cleaning, moving, post-construction or a special event",
@@ -313,7 +313,7 @@ export const services: Service[] = [
     tagline: "Nightly commercial cleaning with one person to call.",
     audienceLabel: "Commercial",
     intro:
-      "With the never ending list of daily tasks, it is hard to keep up with a clean work space. Our commercial cleaning business offers convenient nightly visits from professionally trained cleaning staff, on a schedule built around your building rather than ours. Every account gets a named relationship manager, so when something needs changing you are not filing a ticket into the dark.",
+      "With the never ending list of daily tasks, it is hard to keep up with a clean work space. Our commercial cleaning business offers convenient nightly visits from professionally trained cleaning staff, on a schedule built around your building rather than ours.",
     includes: [
       "Flexible cleaning schedules, nights or early mornings",
       "Consistent, timely and thorough service",
@@ -363,7 +363,7 @@ export const services: Service[] = [
     group: "repairs",
     tagline: "The lingering to-do list, finally done.",
     intro:
-      "Are there projects lingering in the back of your mind? The air filters that need changing, the light bulbs in the cathedral ceiling, the room that has needed repainting for two years. Our carpenters and painters take on full interior and exterior painting for homes and commercial spaces, and handyman work by the hour or by the project, so the whole list goes at once.",
+      "Are there projects lingering in the back of your mind? The air filters that need changing, the light bulbs in the ceiling, the room that has needed repainting for two years. Our carpenters and painters take on full interior and exterior painting for homes and commercial spaces, and handyman work by the hour or by the project, so the whole list goes at once.",
     includes: [
       "Full painting services for residential or commercial projects",
       "Painting by the hour or by the project",
@@ -399,7 +399,7 @@ export const services: Service[] = [
     group: "repairs",
     tagline: "We sort it, load it and take it away.",
     intro:
-      "At Cross Junk Removal we handle everything from sorting and lifting to loading and disposal, so the only thing you have to do is point. Furniture, appliances, construction debris, an old hot tub or a full estate clear-out — it goes in one visit. We clear garages, attics, basements, storage units, offices and yards for homeowners, realtors and property managers alike.",
+      "At Cross Junk Removal we handle everything from sorting and lifting to loading and disposal, so the only thing you have to do is point. Furniture, appliances, construction debris, an old hot tub or a full estate clear-out it goes in one visit. We clear garages, attics, basements, storage units, offices and yards for homeowners, realtors and property managers.",
     includes: [
       "Furniture, appliances and mattresses",
       "Swing sets, sheds, fences and decks",
