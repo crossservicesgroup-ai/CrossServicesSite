@@ -70,7 +70,7 @@ function Stars({ rating }: { rating: number }) {
           />
         ))}
       </span>
-      <span className="type-eyebrow text-muted">{rating} out of 5</span>
+      <span className="text-[14px] font-medium text-muted">{rating} out of 5</span>
     </p>
   );
 }
