@@ -45,7 +45,9 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <p className="type-eyebrow mb-3 text-white/60">Get in touch</p>
+            <p className="font-display mb-3 text-[17px] font-semibold text-white">
+              Get in touch
+            </p>
             <ul className="flex flex-col gap-2 text-[15px]">
               <li>
                 <a

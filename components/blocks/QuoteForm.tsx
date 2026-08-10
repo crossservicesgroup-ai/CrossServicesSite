@@ -206,7 +206,7 @@ export function QuoteForm() {
           tabIndex={-1}
           className="text-[26px] leading-[1.15] outline-none md:text-[34px]"
         >
-          {step === 4 ? "Thanks — that is with us" : STEPS[step]}
+          {step === 4 ? "Thanks!" : STEPS[step]}
         </h1>
 
         {/* ------------------------------------------------------- step 1 */}
@@ -569,8 +569,7 @@ function Confirmation({
         </p>
         <p className="mt-4 text-[17px]">
           Someone from the Cross team will be in touch to confirm the details and get
-          you a quote. If you need it sooner, call us — we will pull it up on screen
-          while you are on the phone.
+          you a quote.
         </p>
         <div className="mt-6">
           <ButtonLink href={site.phone.href}>
@@ -581,10 +580,12 @@ function Confirmation({
       </div>
 
       <div className="mt-8 rounded-[3px] border border-line bg-surface p-6 md:p-8">
-        <p className="type-eyebrow mb-5 text-muted">What you sent us</p>
+        <p className="font-display mb-5 text-[19px] font-semibold text-cross-navy">
+          What you sent us
+        </p>
         <dl className="flex flex-col gap-4 text-[16px]">
           <div>
-            <dt className="text-muted">Services</dt>
+            <dt className="font-semibold text-muted">Services</dt>
             <dd className="mt-1">
               <ul className="flex flex-col gap-1.5">
                 {services.map((s) => (
@@ -597,11 +598,11 @@ function Confirmation({
             </dd>
           </div>
           <div>
-            <dt className="text-muted">Property</dt>
+            <dt className="font-semibold text-muted">Property</dt>
             <dd className="mt-1">{propertyType === "business" ? "A business" : "A home"}</dd>
           </div>
           <div>
-            <dt className="text-muted">Address</dt>
+            <dt className="font-semibold text-muted">Address</dt>
             <dd className="mt-1">{address}</dd>
           </div>
         </dl>

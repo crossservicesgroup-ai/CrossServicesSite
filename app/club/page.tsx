@@ -33,7 +33,7 @@ const FITNESS = [
   "The Garage Gym",
   "Warm-up and stretching room",
   "Lounge with complimentary wifi",
-  "Locker rooms with steam",
+  "Locker rooms with a steam room",
   "Massage and chiropractic through our health and wellness program",
 ];
 
