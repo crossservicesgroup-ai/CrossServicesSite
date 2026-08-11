@@ -30,6 +30,7 @@ export default function HomePage() {
             <video
               src="/videos/cross-quick-hit.mp4"
               controls
+              loop
               playsInline
               className="aspect-video w-full bg-cross-navy object-cover"
             >
