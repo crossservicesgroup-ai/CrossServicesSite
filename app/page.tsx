@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { site } from "@/content/site";
 import { localBusinessSchema, pageMetadata } from "@/lib/seo";
-import { Container, Section, SectionHeader } from "@/components/ui/Section";
+import { Section, SectionHeader } from "@/components/ui/Section";
 import { Hero } from "@/components/blocks/Hero";
 import { ServiceGrid } from "@/components/blocks/ServiceGrid";
 import { Reviews } from "@/components/blocks/Reviews";
@@ -22,23 +22,6 @@ export default function HomePage() {
       />
 
       {/* 1 */} <Hero />
-
-      {/* video */}
-      <section className="bg-paper">
-        <Container className="py-10 md:py-14">
-          <div className="overflow-hidden rounded-[3px] border border-line">
-            <video
-              src="/videos/cross-quick-hit.mp4"
-              controls
-              loop
-              playsInline
-              className="aspect-video w-full bg-cross-navy object-cover"
-            >
-              Your browser does not support this video.
-            </video>
-          </div>
-        </Container>
-      </section>
 
       {/* 2 */}
       <Section
