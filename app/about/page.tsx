@@ -68,7 +68,7 @@ export default function AboutPage() {
           eyebrow="Leadership"
           title="The people who run it"
           lead="Our leadership team combines decades of experience in operations, finance, and real estate. With several members having been with Cross Services Group for more than ten years, they play a vital role in delivering the outstanding service, trusted relationships, and long-term growth that have been the foundation of our company since 1989."
-          eyebrowClassName="text-[15px]!"
+          eyebrowClassName="font-display! text-[19px]! font-semibold! normal-case! tracking-normal! text-cross-blue!"
           titleClassName="text-[22px]! md:text-[28px]! lg:text-[32px]!"
         />
         <div className="mt-10 md:mt-14">

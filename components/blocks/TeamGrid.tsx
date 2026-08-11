@@ -26,7 +26,9 @@ export function TeamGrid() {
 
       {divisionHeads.length > 0 ? (
         <div className="mt-12">
-          <p className="type-eyebrow mb-6 text-[15px]! text-cross-blue">Division heads</p>
+          <p className="font-display mb-6 text-[19px] font-semibold text-cross-blue">
+            Division Heads
+          </p>
           <ul className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {divisionHeads.map((member) => (
               <TeamCard key={member.id} member={member} onOpen={() => setActiveId(member.id)} />
