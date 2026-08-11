@@ -386,7 +386,6 @@ export function QuoteForm() {
             <Field
               id="message"
               label="Anything else we should know?"
-              hint="Optional. Access notes, timing, the thing that is actually bothering you."
               error={errors.message}
             >
               <TextArea
@@ -405,7 +404,6 @@ export function QuoteForm() {
                 value={form.heardAbout}
                 onChange={(v) => update("heardAbout", v)}
                 options={HEARD_ABOUT_OPTIONS}
-                placeholder="Optional"
                 error={errors.heardAbout}
               />
             </Field>
