@@ -51,10 +51,16 @@ export default function CareersPage() {
             </p>
             <p>
               If you&rsquo;re interested in joining Cross Services Group, send us a
-              brief note about your background, experience, and which area
-              you&rsquo;re most interested in. We&rsquo;ll keep your information on
-              file and reach out if a position becomes available that matches your
-              skills.
+              brief note to{" "}
+              <a
+                href={`mailto:${site.email}`}
+                className="font-medium text-cross-blue underline-offset-4 hover:underline"
+              >
+                {site.email}
+              </a>{" "}
+              about your background, experience, and which area you&rsquo;re most
+              interested in. We&rsquo;ll keep your information on file and reach out
+              if a position becomes available that matches your skills.
             </p>
             <p>We appreciate your interest and look forward to hearing from you!</p>
           </div>
