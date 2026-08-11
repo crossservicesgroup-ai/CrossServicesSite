@@ -94,14 +94,16 @@ export function MobileMenu({ open, onClose }: { open: boolean; onClose: () => vo
           <Link
             href="/services"
             onClick={onClose}
-            className="type-eyebrow mb-5 inline-flex text-cross-blue"
+            className="font-display mb-5 inline-flex text-[17px] font-semibold text-cross-blue"
           >
             All services →
           </Link>
           <div className="flex flex-col gap-6">
             {groups.map((group) => (
               <div key={group.id}>
-                <p className="type-eyebrow mb-2 text-muted">{group.name}</p>
+                <p className="font-display mb-2 text-[16px] font-semibold text-cross-navy">
+                  {group.name}
+                </p>
                 <ul className="flex flex-col">
                   {group.services.map((service) =>
                     service.externalUrl ? (

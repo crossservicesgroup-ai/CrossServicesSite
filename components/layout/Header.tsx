@@ -45,23 +45,23 @@ export function Header() {
           <LogoLink />
 
           {/* ------------------------------------------------ desktop nav */}
-          <div className="hidden items-center gap-1 lg:flex">
-            <ServicesDropdown pathname={pathname} />
-            {NAV.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                aria-current={pathname === item.href ? "page" : undefined}
-                className={`inline-flex min-h-11 items-center rounded-[2px] px-3.5 text-[18px] transition-colors hover:text-cross-blue ${
-                  pathname === item.href ? "text-cross-blue" : "text-ink"
-                }`}
-              >
-                {item.label}
-              </Link>
-            ))}
-          </div>
+          <div className="hidden items-center gap-6 lg:flex">
+            <div className="flex items-center gap-1">
+              <ServicesDropdown pathname={pathname} />
+              {NAV.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  aria-current={pathname === item.href ? "page" : undefined}
+                  className={`inline-flex min-h-11 items-center rounded-[2px] px-3.5 text-[18px] transition-colors hover:text-cross-blue ${
+                    pathname === item.href ? "text-cross-blue" : "text-ink"
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </div>
 
-          <div className="hidden lg:block">
             <ButtonLink href="/quote">Get a quote</ButtonLink>
           </div>
 
