@@ -24,7 +24,7 @@ export default function ContactPage() {
               <li className="flex items-start gap-4">
                 <Phone aria-hidden="true" className="mt-1 size-5 shrink-0 text-cross-blue" />
                 <div>
-                  <p className="type-eyebrow text-muted">Phone</p>
+                  <p className="font-display text-[15px] font-semibold text-cross-blue">Phone</p>
                   <a
                     href={site.phone.href}
                     className="mt-1 inline-block text-[19px] font-medium text-cross-blue underline-offset-4 hover:underline"
@@ -37,7 +37,7 @@ export default function ContactPage() {
               <li className="flex items-start gap-4">
                 <Mail aria-hidden="true" className="mt-1 size-5 shrink-0 text-cross-blue" />
                 <div className="min-w-0">
-                  <p className="type-eyebrow text-muted">Email</p>
+                  <p className="font-display text-[15px] font-semibold text-cross-blue">Email</p>
                   <a
                     href={`mailto:${site.email}`}
                     className="mt-1 inline-block break-all text-[17px] text-cross-blue underline-offset-4 hover:underline"
@@ -50,7 +50,7 @@ export default function ContactPage() {
               <li className="flex items-start gap-4">
                 <MapPin aria-hidden="true" className="mt-1 size-5 shrink-0 text-cross-blue" />
                 <div>
-                  <p className="type-eyebrow text-muted">Address</p>
+                  <p className="font-display text-[15px] font-semibold text-cross-blue">Address</p>
                   <a
                     href={site.address.mapsUrl}
                     target="_blank"
@@ -67,7 +67,7 @@ export default function ContactPage() {
               <li className="flex items-start gap-4">
                 <Clock aria-hidden="true" className="mt-1 size-5 shrink-0 text-cross-blue" />
                 <div>
-                  <p className="type-eyebrow text-muted">Hours</p>
+                  <p className="font-display text-[15px] font-semibold text-cross-blue">Hours</p>
                   <dl className="mt-2 flex flex-col gap-1 text-[17px]">
                     {site.hours.map((h) => (
                       <div key={h.days} className="flex gap-3">
@@ -108,6 +108,7 @@ export default function ContactPage() {
               eyebrow="General inquiry"
               title="Send us a message"
               lead="For anything that is not a quote request — an existing job, an invoice, a question about whether we cover your town."
+              eyebrowClassName="font-display! text-[19px]! font-semibold! normal-case! tracking-normal! text-cross-blue!"
             />
             <div className="mt-8">
               <ContactForm />

@@ -15,7 +15,7 @@ import { Field, TextArea, TextInput } from "@/components/ui/Field";
    inquiry via the message body.
    -------------------------------------------------------------------------- */
 
-type Errors = Partial<Record<"name" | "email" | "message" | "form", string>>;
+type Errors = Partial<Record<"name" | "email" | "phone" | "message" | "form", string>>;
 
 export function ContactForm() {
   const [name, setName] = useState("");
@@ -34,6 +34,8 @@ export function ContactForm() {
     if (name.trim().length < 2) next.name = "Enter your name.";
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim()))
       next.email = "Enter an email address we can reply to.";
+    if (phone.replace(/\D/g, "").length < 10)
+      next.phone = "Enter a 10-digit phone number so we can reach you.";
     if (message.trim().length < 5) next.message = "Tell us what you need, in a line or two.";
 
     setErrors(next);
@@ -101,7 +103,7 @@ export function ContactForm() {
         />
       </div>
 
-      <Field id="contact-name" label="Your name" error={errors.name}>
+      <Field id="contact-name" label="Your name" error={errors.name} required>
         <TextInput
           id="contact-name"
           name="name"
@@ -109,10 +111,11 @@ export function ContactForm() {
           onChange={setName}
           autoComplete="name"
           error={errors.name}
+          required
         />
       </Field>
 
-      <Field id="contact-email" label="Email" error={errors.email}>
+      <Field id="contact-email" label="Email" error={errors.email} required>
         <TextInput
           id="contact-email"
           name="email"
@@ -122,10 +125,11 @@ export function ContactForm() {
           inputMode="email"
           autoComplete="email"
           error={errors.email}
+          required
         />
       </Field>
 
-      <Field id="contact-phone" label="Phone" hint="Optional, but it is usually quicker.">
+      <Field id="contact-phone" label="Phone" error={errors.phone} required>
         <TextInput
           id="contact-phone"
           name="phone"
@@ -134,10 +138,12 @@ export function ContactForm() {
           onChange={setPhone}
           inputMode="tel"
           autoComplete="tel"
+          error={errors.phone}
+          required
         />
       </Field>
 
-      <Field id="contact-message" label="How can we help?" error={errors.message}>
+      <Field id="contact-message" label="How can we help?" error={errors.message} required>
         <TextArea
           id="contact-message"
           name="message"
@@ -145,6 +151,7 @@ export function ContactForm() {
           onChange={setMessage}
           rows={5}
           error={errors.message}
+          required
         />
       </Field>
 

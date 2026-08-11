@@ -100,6 +100,7 @@ export function TextArea({
   error,
   placeholder,
   rows = 4,
+  required,
 }: {
   id: string;
   name: string;
@@ -108,6 +109,7 @@ export function TextArea({
   error?: string;
   placeholder?: string;
   rows?: number;
+  required?: boolean;
 }) {
   return (
     <textarea
@@ -117,6 +119,7 @@ export function TextArea({
       rows={rows}
       placeholder={placeholder}
       onChange={(e) => onChange(e.target.value)}
+      required={required}
       aria-invalid={error ? true : undefined}
       aria-describedby={error ? `${id}-error` : undefined}
       className={`${inputBase} resize-y ${error ? "border-cross-blue" : "border-line focus:border-cross-blue"}`}

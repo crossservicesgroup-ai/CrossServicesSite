@@ -13,7 +13,12 @@ const FROM = process.env.QUOTE_FROM_EMAIL;
 const contactSchema = z.object({
   name: z.string().trim().min(2),
   email: z.string().trim().email(),
-  phone: z.string().trim().max(40).optional().or(z.literal("")),
+  phone: z
+    .string()
+    .trim()
+    .refine((v) => v.replace(/\D/g, "").length >= 10, {
+      message: "Enter a 10-digit phone number so we can reach you.",
+    }),
   message: z.string().trim().min(5).max(2000),
   /* Spam trap — checked after parsing, not validated here. */
   website: z.string().optional(),
