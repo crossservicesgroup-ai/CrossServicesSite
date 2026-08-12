@@ -13,7 +13,7 @@ import { Reveal } from "@/components/ui/Reveal";
 export const metadata: Metadata = pageMetadata({
   title: "Cross Courts — squash and fitness in Natick",
   description:
-    "Four international squash courts, one of the largest junior academies in the country, adult leagues, a fitness center and the Garage Gym. At 19 Tech Circle, Natick.",
+    "Four international squash courts, one of the largest junior academies in the country, adult leagues, a fitness center and the Garage Gym. At 19 Tech Cir #1023, Natick.",
   path: "/club",
 });
 
@@ -234,7 +234,7 @@ export default function ClubPage() {
             <div className="mt-5 overflow-hidden rounded-[3px] border border-line">
               <iframe
                 src={site.address.mapEmbedUrl}
-                title="Map showing Cross Courts at 19 Tech Circle, Natick"
+                title="Map showing Cross Courts at 19 Tech Cir #1023, Natick"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 className="block h-[300px] w-full"

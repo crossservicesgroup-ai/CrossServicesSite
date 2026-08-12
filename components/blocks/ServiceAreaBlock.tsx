@@ -12,7 +12,7 @@ export function ServiceAreaBlock() {
             id="service-area-heading"
             eyebrow="Service area"
             title={`Where we work in ${site.serviceAreaLabel}`}
-            lead="Based at 19 Tech Circle in Natick, and out on the road across the towns below every day. Not sure if you are in range? Call and ask."
+            lead="Based at 19 Tech Cir #1023 in Natick, and out on the road across the towns below every day. Not sure if you are in range? Call and ask."
           />
           <ul className="mt-8 flex flex-wrap gap-x-3 gap-y-3">
             {site.serviceAreaTowns.map((town) => (

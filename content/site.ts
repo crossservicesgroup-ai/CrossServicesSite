@@ -19,21 +19,25 @@ export const site = {
   phone: {
     /** Digits only — this is what the phone actually dials. */
     raw: "5086521910",
-    /** How the number is shown on screen. */
-    display: "508-652-1910",
+    /** How the number is shown on screen. Matches the Google Business
+        Profile exactly — local search rewards identical formatting. */
+    display: "(508) 652-1910",
     /** Ready-made link for tap-to-call. Do not edit. */
     href: "tel:+15086521910",
   },
 
   email: "CSG@CrossServicesGroup.com",
 
+  /* Written exactly as it appears on the Google Business Profile — "Cir"
+     not "Circle", and including the suite. Search engines match these
+     against directory listings character by character. */
   address: {
-    street: "19 Tech Circle",
+    street: "19 Tech Cir #1023",
     city: "Natick",
     state: "MA",
     zip: "01760",
     /** One-line version used in the footer. */
-    full: "19 Tech Circle, Natick, MA 01760",
+    full: "19 Tech Cir #1023, Natick, MA 01760",
     /** Opens the address in the visitor's maps app. */
     mapsUrl: "https://maps.google.com/?q=19+Tech+Circle,+Natick,+MA+01760",
     /** Embedded map shown on the contact page. */

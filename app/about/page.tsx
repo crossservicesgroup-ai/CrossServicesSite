@@ -54,7 +54,7 @@ export default function AboutPage() {
             <Reveal delayIndex={1}>
               <MediaFrame
                 src="/images/hero/19-tech-circle.jpg"
-                alt="19 Tech Circle, the Cross Services Group building in Natick"
+                alt="19 Tech Cir #1023, the Cross Services Group building in Natick"
                 ratio="4/3"
                 sizes="(min-width: 1024px) 480px, 90vw"
               />
