@@ -142,6 +142,13 @@ export const team: TeamMember[] = [
     photo: null, // [NEEDS INPUT] headshot
     bio: null, // [NEEDS INPUT] bio
   },
+  {
+    id: "gavin-mestler",
+    name: "Gavin Mestler",
+    title: "Intern",
+    photo: null, // [NEEDS INPUT] headshot
+    bio: null, // [NEEDS INPUT] bio
+  },
 ];
 
 /** "Warren Cross Jr." -> "WC". Used for the initials circle. */
