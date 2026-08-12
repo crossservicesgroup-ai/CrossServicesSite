@@ -150,6 +150,13 @@ export const team: TeamMember[] = [
     bio: null, // [NEEDS INPUT] bio
   },
   {
+    id: "joanna-tang",
+    name: "Joanna Tang",
+    title: "Operations Intern",
+    photo: null, // [NEEDS INPUT] headshot
+    bio: null, // [NEEDS INPUT] bio
+  },
+  {
     id: "michael-fair",
     name: "Michael Fair",
     title: "Business Development",
