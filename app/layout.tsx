@@ -56,8 +56,14 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
+    /* suppressHydrationWarning applies to this element's own attributes only,
+       not to anything nested inside it. Browser extensions commonly add
+       attributes to <html> before React hydrates — a11y and dark-mode ones
+       add data-js-focus-visible — which React would otherwise report as a
+       mismatch on every page load. */
     <html
       lang="en"
+      suppressHydrationWarning
       className={`${newsreader.variable} ${plexSans.variable} ${plexMono.variable}`}
     >
       <body className="min-h-dvh">

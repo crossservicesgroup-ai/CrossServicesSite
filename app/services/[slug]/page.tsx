@@ -35,8 +35,11 @@ export async function generateMetadata({
   const service = getService(slug);
   if (!service) return {};
 
+  /* Titles carry the town as well as the service — "Window Washing in
+     Natick, MA" — because that is how people search for a local trade. The
+     root layout appends "| Cross Services Group". */
   return pageMetadata({
-    title: service.name,
+    title: `${service.name} in ${site.address.city}, ${site.address.state}`,
     description: `${service.tagline} ${service.name} for homes and commercial properties across ${site.serviceAreaLabel}, from Cross Services Group.`,
     path: `/services/${service.slug}`,
   });

@@ -23,6 +23,9 @@ const serviceRedirects = services
   }));
 
 const pageRedirects = [
+  // Squarespace served the homepage at /home as well as /
+  { source: "/home", destination: "/", statusCode: 301 as const },
+  { source: "/request-a-quote", destination: "/quote", statusCode: 301 as const },
   { source: "/cardetailing", destination: "/services", statusCode: 301 as const },
   { source: "/about-us", destination: "/about", statusCode: 301 as const },
   { source: "/about-us-1", destination: "/about", statusCode: 301 as const },

@@ -7,7 +7,9 @@ import { Reveal } from "@/components/ui/Reveal";
 import { TeamGrid } from "@/components/blocks/TeamGrid";
 
 export const metadata: Metadata = pageMetadata({
-  title: "About Cross Services Group",
+  /* Not "About Cross Services Group" — the root layout already appends
+     "| Cross Services Group", which made the brand appear twice. */
+  title: `About Us — ${site.address.city}, ${site.address.state}`,
   description:
     "Founded in Natick in 1989 by Warren Cross Jr. and family owned ever since. The story of how one car detailing business became eleven services under one roof.",
   path: "/about",
@@ -52,7 +54,7 @@ export default function AboutPage() {
             <Reveal delayIndex={1}>
               <MediaFrame
                 src="/images/hero/19-tech-circle.jpg"
-                alt="19 Tech Circle, the Cross Services Group building in Natick"
+                alt="19 Tech Cir, the Cross Services Group building in Natick"
                 ratio="4/3"
                 sizes="(min-width: 1024px) 480px, 90vw"
               />
@@ -65,25 +67,13 @@ export default function AboutPage() {
       <Section tone="surface" id="team" labelledBy="team-heading" className="scroll-mt-24">
         <SectionHeader
           id="team-heading"
-          eyebrow="Leadership"
-          title="The people who run it"
+          title="Leadership"
           lead="Our leadership team combines decades of experience in operations, finance, and real estate. With several members having been with Cross Services Group for more than ten years, they play a vital role in delivering the outstanding service, trusted relationships, and long-term growth that have been the foundation of our company since 1989."
-          eyebrowClassName="font-display! text-[19px]! font-semibold! normal-case! tracking-normal! text-cross-blue!"
           titleClassName="text-[22px]! md:text-[28px]! lg:text-[32px]!"
         />
         <div className="mt-10 md:mt-14">
           <TeamGrid />
         </div>
-        <p className="mt-8 rounded-[2px] border border-dashed border-line bg-paper p-4 text-[15px] text-muted">
-          <span className="type-eyebrow block text-muted">Draft — assets needed</span>
-          <span className="mt-2 block">
-            Headshots are needed for everyone, and bios for Warren III, Megan, Joe,
-            Brian, Abby and Gavin. The Irrigation and Car Detailing division heads
-            still need names as well as headshots. Until then those cards show
-            initials and just a name and title, which is deliberate — a company logo
-            never stands in for a person.
-          </span>
-        </p>
       </Section>
     </>
   );

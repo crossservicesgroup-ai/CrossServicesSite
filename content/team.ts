@@ -92,7 +92,7 @@ export const team: TeamMember[] = [
     id: "brian-rothwell",
     name: "Brian Rothwell",
     title: "Technology",
-    photo: "/images/team/brian-rothwell.png",
+    photo: "/images/team/brian-rothwell.webp",
     bio: null, // [NEEDS INPUT] bio
     isDivisionHead: true,
   },
@@ -145,7 +145,14 @@ export const team: TeamMember[] = [
   {
     id: "gavin-mestler",
     name: "Gavin Mestler",
-    title: "Intern",
+    title: "Operations Intern",
+    photo: null, // [NEEDS INPUT] headshot
+    bio: null, // [NEEDS INPUT] bio
+  },
+  {
+    id: "michael-fair",
+    name: "Michael Fair",
+    title: "Business Development",
     photo: null, // [NEEDS INPUT] headshot
     bio: null, // [NEEDS INPUT] bio
   },

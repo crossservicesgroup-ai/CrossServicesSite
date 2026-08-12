@@ -24,7 +24,7 @@ export const timeline: TimelineEntry[] = [
   {
     year: 2007,
     title: "Cross Courts is built",
-    body: "Warren develops Cross Courts Squash and Fitness Center at 19 Tech Circle, with four international squash courts and a full fitness facility.",
+    body: "Warren develops Cross Courts Squash and Fitness Center at 19 Tech Cir #1023, with four international squash courts and a full fitness facility.",
     yearConfirmed: true,
   },
   {

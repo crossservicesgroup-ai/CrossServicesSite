@@ -6,7 +6,7 @@ import { Section, SectionHeader } from "@/components/ui/Section";
 import { ContactForm } from "@/components/blocks/ContactForm";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Contact",
+  title: `Contact — ${site.address.city}, ${site.address.state}`,
   description: `Call ${site.phone.display}, email ${site.email}, or visit us at ${site.address.full}. Cross Services Group serves MetroWest Boston.`,
   path: "/contact",
 });
@@ -94,7 +94,7 @@ export default function ContactPage() {
             <div className="mt-8 overflow-hidden rounded-[3px] border border-line">
               <iframe
                 src={site.address.mapEmbedUrl}
-                title="Map showing Cross Services Group at 19 Tech Circle, Natick"
+                title="Map showing Cross Services Group at 19 Tech Cir #1023, Natick"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 className="block h-[280px] w-full"

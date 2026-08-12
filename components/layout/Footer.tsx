@@ -88,7 +88,9 @@ export function Footer() {
 
         <div className="mt-8 flex flex-col gap-2 border-t border-white/15 pt-5 text-[13px] text-white/55 md:flex-row md:items-center md:justify-between">
           <p>
-            © {new Date().getFullYear()} {site.legalName}. All rights reserved.
+            {/* legalName already ends in "Inc." — no extra full stop, or it
+                renders as "Inc..". */}
+            © {new Date().getFullYear()} {site.legalName} All rights reserved.
           </p>
           <p>
             {site.address.full} · {site.phone.display}

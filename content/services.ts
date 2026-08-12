@@ -87,7 +87,7 @@ export const services: Service[] = [
     ],
     brandId: null,
     related: ["irrigation", "power-washing", "gutter-cleaning"],
-    heroImage: "/images/services/landscaping-hero-2.jpg",
+    heroImage: "/images/services/landscaping-hero-2.webp",
     gallery: [
       "/images/services/landscaping-1.png",
       "/images/services/landscaping-2.jpg",
@@ -170,7 +170,7 @@ export const services: Service[] = [
     ],
     brandId: "new-view",
     related: ["window-washing", "gutter-cleaning", "landscaping"],
-    heroImage: "/images/services/power-washing-hero-4.png",
+    heroImage: "/images/services/power-washing-hero-4.webp",
     gallery: [],
     beforeAfter: {
       before: "/images/services/power-washing-before.jpg",
@@ -209,7 +209,7 @@ export const services: Service[] = [
     ],
     brandId: "new-view",
     related: ["power-washing", "gutter-cleaning", "residential-cleaning"],
-    heroImage: "/images/services/window-washing-hero.png",
+    heroImage: "/images/services/window-washing-hero.webp",
     gallery: [],
     faqs: [
       {
@@ -241,7 +241,7 @@ export const services: Service[] = [
     ],
     brandId: "new-view",
     related: ["power-washing", "window-washing", "painting-handyman"],
-    heroImage: "/images/services/gutter-cleaning-hero.png",
+    heroImage: "/images/services/gutter-cleaning-hero.webp",
     gallery: [
       "/images/services/gutter-cleaning-1.jpg",
       "/images/services/gutter-cleaning-2.jpg",
@@ -414,7 +414,7 @@ export const services: Service[] = [
     ],
     brandId: null,
     related: ["residential-cleaning", "painting-handyman", "property-management"],
-    heroImage: "/images/services/junk-removal-hero.jpg",
+    heroImage: "/images/services/junk-removal-hero.webp",
     gallery: [],
     faqs: [
       {
@@ -526,7 +526,7 @@ export const services: Service[] = [
     ],
     brandId: "classic-shine",
     related: ["residential-cleaning", "power-washing", "property-management"],
-    heroImage: "/images/services/car-detailing-hero.png",
+    heroImage: "/images/services/car-detailing-hero.webp",
     gallery: [],
     beforeAfter: {
       before: "/images/services/car-detailing-before.jpg",
