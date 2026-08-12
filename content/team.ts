@@ -92,7 +92,7 @@ export const team: TeamMember[] = [
     id: "brian-rothwell",
     name: "Brian Rothwell",
     title: "Technology",
-    photo: "/images/team/brian-rothwell.png",
+    photo: "/images/team/brian-rothwell.webp",
     bio: null, // [NEEDS INPUT] bio
     isDivisionHead: true,
   },

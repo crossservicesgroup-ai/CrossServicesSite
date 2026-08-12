@@ -6,7 +6,7 @@ import { Section, SectionHeader } from "@/components/ui/Section";
 import { ContactForm } from "@/components/blocks/ContactForm";
 
 export const metadata: Metadata = pageMetadata({
-  title: "Contact",
+  title: `Contact — ${site.address.city}, ${site.address.state}`,
   description: `Call ${site.phone.display}, email ${site.email}, or visit us at ${site.address.full}. Cross Services Group serves MetroWest Boston.`,
   path: "/contact",
 });

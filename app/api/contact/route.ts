@@ -5,10 +5,10 @@ import { site } from "@/content/site";
 
 /* General inquiry handler for /contact. Uses the same Resend configuration
    as the quote route — see app/api/quote/route.ts for the environment
-   variables it needs. */
+   variables it needs: RESEND_API_KEY, QUOTE_FROM_EMAIL, QUOTE_TO_EMAIL.
 
-const RESEND_API_KEY = process.env.RESEND_API_KEY;
-const FROM = process.env.QUOTE_FROM_EMAIL;
+   No email address is written into this file, and the visitor is never told
+   a message went through unless Resend accepted it. */
 
 const contactSchema = z.object({
   name: z.string().trim().min(2),
@@ -24,6 +24,8 @@ const contactSchema = z.object({
   website: z.string().optional(),
 });
 
+type ContactInput = z.infer<typeof contactSchema>;
+
 const WINDOW_MS = 10 * 60 * 1000;
 const MAX_PER_WINDOW = 5;
 const hits = new Map<string, number[]>();
@@ -36,6 +38,9 @@ function rateLimited(ip: string): boolean {
   if (hits.size > 5000) hits.clear();
   return recent.length > MAX_PER_WINDOW;
 }
+
+/** Shown to the visitor whenever the office did not get the message. */
+const SEND_FAILED = `We could not send that just now. Call us on ${site.phone.display} and we will take it over the phone.`;
 
 export async function POST(request: Request) {
   const ip =
@@ -65,39 +70,104 @@ export async function POST(request: Request) {
   const data = parsed.data;
   if (data.website) return NextResponse.json({ ok: true });
 
-  if (!RESEND_API_KEY || !FROM) {
-    console.warn(
-      "[contact] RESEND_API_KEY or QUOTE_FROM_EMAIL is not set — message not emailed:",
-      JSON.stringify(data, null, 2),
+  const submittedAt = timestamp();
+
+  /* Read config at request time so a corrected variable takes effect on the
+     next request rather than needing a restart. */
+  const apiKey = process.env.RESEND_API_KEY;
+  const from = process.env.QUOTE_FROM_EMAIL;
+  const to = process.env.QUOTE_TO_EMAIL;
+
+  const missing = [
+    apiKey ? null : "RESEND_API_KEY",
+    from ? null : "QUOTE_FROM_EMAIL",
+    to ? null : "QUOTE_TO_EMAIL",
+  ].filter(Boolean);
+
+  if (!apiKey || !from || !to) {
+    console.error(
+      `[contact] NOT SENT — missing environment variable(s): ${missing.join(", ")}. ` +
+        "Add them in Vercel (Project → Settings → Environment Variables) and redeploy. " +
+        "The message below never reached the office:\n" +
+        inquiryEmail(data, submittedAt),
     );
-    return NextResponse.json({ ok: true, delivered: false });
+    return NextResponse.json({ error: SEND_FAILED }, { status: 500 });
   }
 
+  const resend = new Resend(apiKey);
+  const recipients = to
+    .split(",")
+    .map((address) => address.trim())
+    .filter(Boolean);
+
+  /* The Resend SDK reports a refused send by returning `{ error }` rather
+     than throwing, and only throws for transport-level problems. Both count
+     as a failure, so both are handled. */
+  let failure: unknown = null;
   try {
-    const resend = new Resend(RESEND_API_KEY);
-    await resend.emails.send({
-      from: FROM,
-      to: site.email,
+    const { error } = await resend.emails.send({
+      from,
+      to: recipients,
       replyTo: data.email,
       subject: `Website inquiry from ${data.name}`,
-      text: [
-        "General inquiry from the contact page",
-        "",
-        `Name:  ${data.name}`,
-        `Email: ${data.email}`,
-        `Phone: ${data.phone || "Not given"}`,
-        "",
-        "Message:",
-        data.message,
-      ].join("\n"),
+      text: inquiryEmail(data, submittedAt),
     });
+    if (error) failure = error;
   } catch (error) {
-    console.error("[contact] Resend failed:", error);
-    return NextResponse.json(
-      { error: `We could not send that. Call ${site.phone.display}.` },
-      { status: 502 },
+    failure = error;
+  }
+
+  if (failure) {
+    console.error(
+      "[contact] NOT SENT — Resend rejected the inquiry email.\n" +
+        `Resend error: ${describeError(failure)}\n` +
+        "The message below never reached the office:\n" +
+        inquiryEmail(data, submittedAt),
     );
+    return NextResponse.json({ error: SEND_FAILED }, { status: 502 });
   }
 
   return NextResponse.json({ ok: true, delivered: true });
+}
+
+function describeError(error: unknown): string {
+  if (error instanceof Error) {
+    return `${error.name}: ${error.message}${error.stack ? `\n${error.stack}` : ""}`;
+  }
+  try {
+    return JSON.stringify(error, null, 2);
+  } catch {
+    return String(error);
+  }
+}
+
+function timestamp(): string {
+  const formatted = new Intl.DateTimeFormat("en-US", {
+    dateStyle: "full",
+    timeStyle: "short",
+    timeZone: "America/New_York",
+  }).format(new Date());
+  return `${formatted} ET`;
+}
+
+function inquiryEmail(data: ContactInput, submittedAt: string): string {
+  return [
+    "GENERAL INQUIRY FROM THE CONTACT PAGE",
+    `Submitted ${submittedAt} via crossservicesgroup.com`,
+    "",
+    "----------------------------------------------------------------",
+    "CONTACT",
+    "----------------------------------------------------------------",
+    `Name:  ${data.name}`,
+    `Email: ${data.email}`,
+    `Phone: ${data.phone}`,
+    "",
+    "Reply to this email to answer them directly.",
+    "",
+    "----------------------------------------------------------------",
+    "MESSAGE",
+    "----------------------------------------------------------------",
+    data.message,
+    "",
+  ].join("\n");
 }

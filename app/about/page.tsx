@@ -7,7 +7,9 @@ import { Reveal } from "@/components/ui/Reveal";
 import { TeamGrid } from "@/components/blocks/TeamGrid";
 
 export const metadata: Metadata = pageMetadata({
-  title: "About Cross Services Group",
+  /* Not "About Cross Services Group" — the root layout already appends
+     "| Cross Services Group", which made the brand appear twice. */
+  title: `About Us — ${site.address.city}, ${site.address.state}`,
   description:
     "Founded in Natick in 1989 by Warren Cross Jr. and family owned ever since. The story of how one car detailing business became eleven services under one roof.",
   path: "/about",

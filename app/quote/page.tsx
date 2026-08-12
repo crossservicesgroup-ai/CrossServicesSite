@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
+import { site } from "@/content/site";
 import { pageMetadata } from "@/lib/seo";
 import { Container } from "@/components/ui/Section";
 import { QuoteForm } from "@/components/blocks/QuoteForm";
@@ -27,8 +28,8 @@ function FormSkeleton() {
     <div className="mx-auto w-full max-w-[680px]" role="status">
       <p className="type-eyebrow text-muted">Loading the quote form…</p>
       <p className="mt-4 text-[17px] text-muted">
-        If this does not appear, call us on 508-652-1910 and we will take the details
-        over the phone.
+        If this does not appear, call us on {site.phone.display} and we will take the
+        details over the phone.
       </p>
     </div>
   );
