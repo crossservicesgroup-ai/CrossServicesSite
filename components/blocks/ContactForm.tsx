@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { site } from "@/content/site";
+import { trackEvent } from "@/lib/analytics";
 import { Button } from "@/components/ui/Button";
 import { Field, TextArea, TextInput } from "@/components/ui/Field";
 
@@ -55,6 +56,9 @@ export function ContactForm() {
         setSending(false);
         return;
       }
+      /* Only after the server has accepted it — see the note in QuoteForm. */
+      trackEvent("contact_submitted");
+
       setSent(true);
     } catch {
       setErrors({

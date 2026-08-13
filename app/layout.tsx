@@ -5,6 +5,7 @@ import { SITE_URL } from "@/lib/seo";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { StickyCallBar } from "@/components/layout/StickyCallBar";
+import { Analytics } from "@/components/analytics/Analytics";
 import "./globals.css";
 
 /* Display face — h1 and h2 only. */
@@ -79,6 +80,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </main>
         <Footer />
         <StickyCallBar />
+        <Analytics />
       </body>
     </html>
   );
