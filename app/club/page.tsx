@@ -70,7 +70,7 @@ export default function ClubPage() {
         ) : null}
 
         <Container className="relative py-16 md:py-24 lg:py-28">
-          <p className="type-eyebrow mb-6 text-white/70">Cross Courts · Natick</p>
+          <p className="font-display font-semibold mb-6 text-white/70">Cross Courts · Natick</p>
           <h1 className="max-w-[18ch] text-[34px] leading-[1.05] text-white md:text-[52px] lg:text-[60px]">
             One of the premier squash clubs in the northeast
           </h1>
@@ -104,6 +104,7 @@ export default function ClubPage() {
             <SectionHeader
               id="squash-heading"
               eyebrow="Squash"
+              eyebrowClassName="font-display! text-[15px]! font-semibold! normal-case! tracking-normal!"
               title="Courts, coaching and competition"
               lead="Our Junior Academy program is one of the largest in the country, with many nationally ranked players, some of whom rank in the Junior Top 10. The adult program is vibrant, with MSRA league play and in-house box league matches — and recreational play."
             />
@@ -129,6 +130,7 @@ export default function ClubPage() {
             <SectionHeader
               id="fitness-heading"
               eyebrow="Fitness"
+              eyebrowClassName="font-display! text-[15px]! font-semibold! normal-case! tracking-normal!"
               title="The fitness center and the Garage Gym"
               lead="Cross Court members take advantage of our state-of-the-art fitness center and our Garage Gym, plus a warm-up and stretching room, a lounge with complimentary wifi, and locker rooms with a steam room."
             />
@@ -162,6 +164,7 @@ export default function ClubPage() {
         <SectionHeader
           id="club-visit-heading"
           eyebrow="Visit"
+          eyebrowClassName="font-display! text-[15px]! font-semibold! normal-case! tracking-normal!"
           title="Hours and location"
         />
         <div className="mt-8 grid gap-8 md:grid-cols-2 md:gap-12">
