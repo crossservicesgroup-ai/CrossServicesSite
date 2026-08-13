@@ -12,6 +12,7 @@ import {
   quoteSchema,
   type QuoteInput,
 } from "@/lib/quote-schema";
+import { trackEvent } from "@/lib/analytics";
 import { Button, ButtonLink } from "@/components/ui/Button";
 import { CheckboxField } from "@/components/ui/CheckboxField";
 import { Field, Select, TextArea, TextInput } from "@/components/ui/Field";
@@ -160,6 +161,16 @@ export function QuoteForm() {
         setSubmitting(false);
         return;
       }
+
+      /* Only after the server has accepted it — a lead we failed to send is
+         not a lead. `source_service` is the service page that sent the
+         visitor here, which is what ties a booking back to the page that
+         earned it. */
+      trackEvent("quote_submitted", {
+        services: result.data.services.join(","),
+        property_type: result.data.propertyType,
+        source_service: params.get("service") ?? "none",
+      });
 
       setStep(4);
     } catch {
