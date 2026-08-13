@@ -24,6 +24,25 @@ export default function HomePage() {
       {/* 1 */} <Hero />
 
       {/* 2 */}
+      <Section tone="surface" labelledBy="quick-hit-heading">
+        <SectionHeader id="quick-hit-heading" title="See us in action" align="center" />
+        <div className="mt-10 md:mt-14">
+          <div className="mx-auto max-w-[860px] overflow-hidden rounded-[3px] bg-line">
+            <video
+              src="/videos/cross-quick-hit.mp4"
+              controls
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="auto"
+              className="aspect-video w-full"
+            />
+          </div>
+        </div>
+      </Section>
+
+      {/* 3 */}
       <Section
         tone="paper"
         labelledBy="services-heading"
@@ -35,7 +54,7 @@ export default function HomePage() {
         </div>
       </Section>
 
-      {/* 3 */} <Reviews />
+      {/* 4 */} <Reviews />
     </>
   );
 }

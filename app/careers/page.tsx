@@ -19,7 +19,12 @@ export default function CareersPage() {
   return (
     <>
       <Section tone="paper" labelledBy="roles-heading">
-        <SectionHeader id="roles-heading" eyebrow="Open roles" title="What we are hiring for" />
+        <SectionHeader
+          id="roles-heading"
+          eyebrow="Open roles"
+          eyebrowClassName="font-display! text-[15px]! font-semibold! normal-case! tracking-normal!"
+          title="What we are hiring for"
+        />
 
         {OPEN_ROLES.length > 0 ? (
           <ul className="mt-8 flex flex-col gap-3">
