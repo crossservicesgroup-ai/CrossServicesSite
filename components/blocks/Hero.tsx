@@ -112,7 +112,7 @@ export function Hero() {
           {/* shrink-0 so the flex row takes its space out of the copy column
               rather than compressing the card. */}
           <div className="w-full max-w-[30ch] shrink-0 rounded-[3px] border border-white/15 bg-white/6 p-6 text-left backdrop-blur-[2px] md:max-w-[34ch]">
-            <p className="type-eyebrow mb-4 text-white/60">Today&apos;s list</p>
+            <p className="font-display font-semibold mb-4 text-white/60">Today&apos;s list</p>
             <HeroChecklist items={CHECKLIST} />
           </div>
         </div>
