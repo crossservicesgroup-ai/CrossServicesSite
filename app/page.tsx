@@ -34,7 +34,7 @@ export default function HomePage() {
           playsInline
           preload="auto"
           aria-label="Cross Services Group services overview"
-          className="mx-auto block aspect-video w-full max-w-[1400px]"
+          className="mx-auto block aspect-video w-full max-w-[1100px]"
         />
       </Section>
 
