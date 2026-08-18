@@ -63,7 +63,7 @@ export const site = {
   social: {
     instagram: "https://www.instagram.com/crossservicesgroup/",
     linkedin: "https://www.linkedin.com/company/cross-services-group-inc/",
-    facebook: "https://www.facebook.com/people/Cross-Services-Group/61572752550872/",
+    facebook: "https://www.facebook.com/profile.php?id=61593606473285",
   },
 
   /** Cross Courts membership + court booking portal. */
