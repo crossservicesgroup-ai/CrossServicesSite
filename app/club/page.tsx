@@ -17,7 +17,7 @@ export const metadata: Metadata = pageMetadata({
   path: "/club",
 });
 
-const HERO_IMAGE = "/images/club/courts-hero.webp";
+const HERO_IMAGE = "/images/club/courts-hero-2.jpg";
 
 const SQUASH = [
   "Four international squash courts",
@@ -114,7 +114,7 @@ export default function ClubPage() {
           </Reveal>
           <Reveal delayIndex={1}>
             <MediaFrame
-              src="/images/club/squash2.png"
+              src="/images/club/squash-3.jpg"
               alt="A squash court at Cross Courts"
               ratio="4/3"
               sizes="(min-width: 1024px) 520px, 90vw"
@@ -140,7 +140,7 @@ export default function ClubPage() {
           </Reveal>
           <Reveal className="lg:order-1">
             <MediaFrame
-              src="/images/club/garage-gym.webp"
+              src="/images/club/garage-gym-2.jpg"
               alt="The Garage Gym at Cross Courts in Natick"
               ratio="4/3"
               sizes="(min-width: 1024px) 520px, 90vw"
@@ -221,7 +221,13 @@ export default function ClubPage() {
           </div>
 
           <div>
-            <p className="flex items-start gap-3 text-[17px]">
+            <MediaFrame
+              src="/images/club/crosscourts-3.jpg"
+              alt="Cross Courts in Natick"
+              ratio="3/2"
+              sizes="(min-width: 768px) 520px, 90vw"
+            />
+            <p className="mt-5 flex items-start gap-3 text-[17px]">
               <MapPin aria-hidden="true" className="mt-1 size-5 shrink-0 text-cross-blue" />
               <a
                 href={site.address.mapsUrl}
@@ -229,15 +235,14 @@ export default function ClubPage() {
                 rel="noopener noreferrer"
                 className="underline-offset-4 hover:text-cross-blue hover:underline"
               >
-                {site.address.street}
-                <br />
-                {site.address.city}, {site.address.state} {site.address.zip}
+                {site.address.street}, {site.address.city}, {site.address.state}{" "}
+                {site.address.zip}
               </a>
             </p>
             <div className="mt-5 overflow-hidden rounded-[3px] border border-line">
               <iframe
                 src={site.address.mapEmbedUrl}
-                title="Map showing Cross Courts at 19 Tech Cir #1023, Natick"
+                title="Map showing Cross Courts at 19 Tech Cir, Natick"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 className="block h-[300px] w-full"
