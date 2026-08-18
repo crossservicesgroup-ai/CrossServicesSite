@@ -12,6 +12,7 @@ import { MobileMenu } from "@/components/layout/MobileMenu";
 
 const NAV = [
   { label: "Cross Courts", href: "/club" },
+  { label: "The Furies", href: "https://furiescapecodcleaning.com/", external: true },
   { label: "About", href: "/about" },
   { label: "Careers", href: "/careers" },
   { label: "Contact", href: "/contact" },
@@ -48,18 +49,30 @@ export function Header() {
           <div className="hidden items-center gap-6 lg:flex">
             <div className="flex items-center gap-1">
               <ServicesDropdown pathname={pathname} />
-              {NAV.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  aria-current={pathname === item.href ? "page" : undefined}
-                  className={`inline-flex min-h-11 items-center rounded-[2px] px-3.5 text-[18px] transition-colors hover:text-cross-blue ${
-                    pathname === item.href ? "text-cross-blue" : "text-ink"
-                  }`}
-                >
-                  {item.label}
-                </Link>
-              ))}
+              {NAV.map((item) =>
+                item.external ? (
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex min-h-11 items-center rounded-[2px] px-3.5 text-[18px] text-ink transition-colors hover:text-cross-blue"
+                  >
+                    {item.label}
+                  </a>
+                ) : (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    aria-current={pathname === item.href ? "page" : undefined}
+                    className={`inline-flex min-h-11 items-center rounded-[2px] px-3.5 text-[18px] transition-colors hover:text-cross-blue ${
+                      pathname === item.href ? "text-cross-blue" : "text-ink"
+                    }`}
+                  >
+                    {item.label}
+                  </Link>
+                ),
+              )}
             </div>
 
             <ButtonLink href="/quote">Get a quote</ButtonLink>

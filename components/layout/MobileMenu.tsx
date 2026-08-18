@@ -11,6 +11,7 @@ import { LogoLink } from "@/components/layout/Logo";
 
 const PAGES = [
   { label: "Cross Courts", href: "/club" },
+  { label: "The Furies", href: "https://furiescapecodcleaning.com/", external: true },
   { label: "About", href: "/about" },
   { label: "Careers", href: "/careers" },
   { label: "Contact", href: "/contact" },
@@ -140,14 +141,26 @@ export function MobileMenu({ open, onClose }: { open: boolean; onClose: () => vo
           <ul className="flex flex-col">
             {PAGES.map((page) => (
               <li key={page.href}>
-                <Link
-                  href={page.href}
-                  onClick={onClose}
-                  aria-current={pathname === page.href ? "page" : undefined}
-                  className="flex min-h-13 items-center border-b border-line font-display text-[22px] text-cross-navy"
-                >
-                  {page.label}
-                </Link>
+                {page.external ? (
+                  <a
+                    href={page.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={onClose}
+                    className="flex min-h-13 items-center border-b border-line font-display text-[22px] text-cross-navy"
+                  >
+                    {page.label}
+                  </a>
+                ) : (
+                  <Link
+                    href={page.href}
+                    onClick={onClose}
+                    aria-current={pathname === page.href ? "page" : undefined}
+                    className="flex min-h-13 items-center border-b border-line font-display text-[22px] text-cross-navy"
+                  >
+                    {page.label}
+                  </Link>
+                )}
               </li>
             ))}
           </ul>

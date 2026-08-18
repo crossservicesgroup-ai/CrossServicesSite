@@ -341,21 +341,6 @@ export const services: Service[] = [
     ],
     legacyPath: "/janitorial-cleaning",
   },
-  {
-    slug: "the-furies",
-    name: "The Furies",
-    group: "cleaning",
-    tagline: "Our sister company handles residential & commercial cleaning on Cape Cod.",
-    intro: "Our sister company handles residential & commercial cleaning on Cape Cod.",
-    includes: [],
-    brandId: "the-furies",
-    related: [],
-    heroImage: "/images/services/the-furies-hero-3.jpeg",
-    gallery: [],
-    faqs: [],
-    externalUrl: "https://furiescapecodcleaning.com/",
-  },
-
   /* ---------------------------------------------------------------- REPAIRS */
   {
     slug: "painting-handyman",
