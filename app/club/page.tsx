@@ -111,6 +111,15 @@ export default function ClubPage() {
             <div className="mt-8">
               <CheckList items={SQUASH} />
             </div>
+            <p className="mt-5 text-[16px] font-semibold text-muted">
+              To sign up for clinics or schedule lessons, email{" "}
+              <a
+                href="mailto:info@crosscourtsquash.com"
+                className="text-cross-blue underline-offset-4 hover:underline"
+              >
+                info@crosscourtsquash.com
+              </a>
+            </p>
           </Reveal>
           <Reveal delayIndex={1}>
             <MediaFrame
