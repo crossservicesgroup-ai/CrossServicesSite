@@ -8,7 +8,7 @@ const MESSAGE = "Now Booking Fall Irrigation Blowouts — Call Today!";
    matching change to the -50% in the marquee keyframes in globals.css. */
 export function AnnouncementBanner() {
   return (
-    <div className="overflow-hidden border-y border-white/10 bg-cross-navy py-1.5">
+    <div className="overflow-hidden border-y border-white/10 bg-cross-navy py-2">
       <a
         href={site.phone.href}
         aria-label={`${MESSAGE} ${site.phone.display}`}
@@ -19,7 +19,7 @@ export function AnnouncementBanner() {
             {Array.from({ length: 4 }).map((_, i) => (
               <span
                 key={i}
-                className="font-display text-[13px] font-semibold tracking-wide text-white md:text-[14px]"
+                className="font-display text-[15px] font-semibold tracking-wide text-white md:text-[16px]"
               >
                 {MESSAGE}
               </span>
