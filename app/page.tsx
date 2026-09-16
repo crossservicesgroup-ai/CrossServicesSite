@@ -22,9 +22,9 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema()) }}
       />
 
-      {/* 1 */} <Hero />
-
       <AnnouncementBanner />
+
+      {/* 1 */} <Hero />
 
       {/* 2 */}
       <Section tone="surface" bleed className="!pt-8 !pb-0 md:!pt-12 lg:!pt-16">
