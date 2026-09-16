@@ -155,6 +155,25 @@
   }
 }
 
+/* Scrolling announcement banner. The track is two copies of the message
+   wide, so translating by exactly -50% loops without a visible seam. */
+.marquee-track {
+  animation: marquee 22s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -177,6 +196,10 @@
   }
 
   .strike-path[data-struck="true"] {
+    animation: none;
+  }
+
+  .marquee-track {
     animation: none;
   }
 

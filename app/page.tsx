@@ -3,6 +3,7 @@ import { site } from "@/content/site";
 import { localBusinessSchema, pageMetadata } from "@/lib/seo";
 import { Section, SectionHeader } from "@/components/ui/Section";
 import { Hero } from "@/components/blocks/Hero";
+import { AnnouncementBanner } from "@/components/blocks/AnnouncementBanner";
 import { ServiceGrid } from "@/components/blocks/ServiceGrid";
 import { Reviews } from "@/components/blocks/Reviews";
 
@@ -22,6 +23,8 @@ export default function HomePage() {
       />
 
       {/* 1 */} <Hero />
+
+      <AnnouncementBanner />
 
       {/* 2 */}
       <Section tone="surface" bleed className="!pt-8 !pb-0 md:!pt-12 lg:!pt-16">
