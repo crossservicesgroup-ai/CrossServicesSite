@@ -18,7 +18,6 @@ import { BeforeAfter } from "@/components/blocks/BeforeAfter";
 import { Gallery } from "@/components/blocks/Gallery";
 import { Faq } from "@/components/blocks/Faq";
 import { QuoteSidebar } from "@/components/blocks/QuoteSidebar";
-import { QuoteCta } from "@/components/blocks/QuoteCta";
 
 export function generateStaticParams() {
   return services
@@ -199,12 +198,6 @@ export default async function ServiceDetailPage({
           <QuoteSidebar serviceSlug={service.slug} serviceName={service.name} />
         </div>
       </Container>
-
-      <QuoteCta
-        title={`Get a quote for ${service.name.toLowerCase()}`}
-        body="We will pre-select this one for you. Add anything else you need on the same form."
-        service={service.slug}
-      />
     </>
   );
 }
