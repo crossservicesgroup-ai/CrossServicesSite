@@ -121,7 +121,19 @@ export default async function ServiceDetailPage({
 
             {/* -------------------------------------------------- visual */}
             <div className="mt-8">
-              {showBeforeAfter ? (
+              {service.video ? (
+                <video
+                  src={service.video}
+                  controls
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  preload="auto"
+                  aria-label={`${service.name} video`}
+                  className="mx-auto block aspect-video w-full rounded-[3px]"
+                />
+              ) : showBeforeAfter ? (
                 <BeforeAfter
                   before={ba!.before}
                   after={ba!.after}

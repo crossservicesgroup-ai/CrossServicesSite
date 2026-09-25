@@ -59,6 +59,8 @@ export type Service = {
   gallery: string[];
   /** A matched pair for the before/after slider, where good photos exist. */
   beforeAfter?: { before: string; after: string; caption: string };
+  /** Optional video shown above the FAQ section on the detail page. */
+  video?: string;
   faqs: { q: string; a: string }[];
   /** The old Squarespace address, if this service had one. Used to build the redirects in next.config.ts. */
   legacyPath?: string;
@@ -574,6 +576,7 @@ export const services: Service[] = [
       after: "/images/services/car-detailing-after.jpg",
       caption: "Interior detail, front to back.",
     },
+    video: "/videos/car-detailing.mp4",
     faqs: [
       {
         q: "Do you come to me?",
