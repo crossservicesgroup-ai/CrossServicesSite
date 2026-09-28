@@ -1,4 +1,5 @@
 import { Mail, MapPin, Phone } from "lucide-react";
+import Link from "next/link";
 import {
   FacebookIcon,
   InstagramIcon,
@@ -16,7 +17,7 @@ const SOCIALS = [
 
 export function Footer() {
   return (
-    <footer className="on-navy bg-cross-navy text-white/80">
+    <footer className="on-navy bg-cross-navy pb-[76px] text-white/80 md:pb-0">
       <Container className="py-10 md:py-14">
         <div className="grid gap-8 md:grid-cols-2 md:items-start">
           {/* Brand */}
@@ -92,6 +93,12 @@ export function Footer() {
                 renders as "Inc..". */}
             © {new Date().getFullYear()} {site.legalName} All rights reserved.
           </p>
+          <Link
+            href="/privacy-policy"
+            className="inline-flex min-h-11 items-center self-start text-white/80 underline underline-offset-4 hover:text-white"
+          >
+            Privacy Policy
+          </Link>
           <p>
             {site.address.full} · {site.phone.display}
           </p>
