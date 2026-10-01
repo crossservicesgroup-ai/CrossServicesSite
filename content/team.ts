@@ -146,7 +146,7 @@ export const team: TeamMember[] = [
     id: "tina-boss",
     name: "Tina Boss",
     title: "Office Administrator",
-    photo: null, // [NEEDS INPUT] headshot
+    photo: "/images/team/tina-boss.jpg",
     bio: null, // [NEEDS INPUT] bio
   },
   {
