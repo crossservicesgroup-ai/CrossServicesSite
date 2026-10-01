@@ -153,7 +153,7 @@ export const team: TeamMember[] = [
     id: "amanda-delconte",
     name: "Amanda DelConte",
     title: "Office Administrator",
-    photo: null, // [NEEDS INPUT] headshot
+    photo: "/images/team/amanda-delconte.jpg",
     bio: null, // [NEEDS INPUT] bio
   },
 ];
