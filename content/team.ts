@@ -154,7 +154,7 @@ export const team: TeamMember[] = [
     name: "Amanda DelConte",
     title: "Office Administrator",
     photo: "/images/team/amanda-delconte.jpg",
-    bio: null, // [NEEDS INPUT] bio
+    bio: "Amanda joined Cross Services Group in September of 2026. She is responsible for working closely with the Landscaping and Handyman divisions of Cross Services, ensuring planning, reporting, coordination and execution of work is conducted smoothly. Amanda has over 20 years supporting clients and managing relationships and project completion.\n\nShe was previously a Project Coordinator/Project Manager with Rodenhiser Home Services and Director of Talent for American Robotics, prior to joining Cross Services Group. Amanda graduated with a Bachelor of Arts from Longwood University and was a two-year member of the women’s soccer team.\n\nOutside of the office, most days she can be found on a sports field or hockey rink with her two extremely active children, playing the role of their favorite Uber driver."
   },
 ];
 
