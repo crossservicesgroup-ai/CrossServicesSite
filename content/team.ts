@@ -132,8 +132,8 @@ export const team: TeamMember[] = [
     id: "abby-schlom",
     name: "Abby Schlom",
     title: "Executive Assistant",
-    photo: null, // [NEEDS INPUT] headshot
-    bio: null, // [NEEDS INPUT] bio
+    photo: "/images/team/abby-schlom.jpg",
+    bio: "Abby Schlom serves as Executive Assistant to Warren Cross, Jr. at Cross Services Group, where she supports senior leadership and helps coordinate the company’s day-to-day administrative and operational priorities. She manages executive scheduling, assists with meetings and special projects, coordinates with internal teams and outside partners, and helps keep important initiatives organized and moving forward. With a background in executive support, office operations, communications, and project coordination, Abby brings a proactive and detail-oriented approach to her work.\n\nAbby graduated from Northeastern University with a Bachelor of Arts in Criminal Justice and a minor in Political Science. Outside of work, she enjoys spending time with family, gardening, her neighborhood book club, and her service dog, Annie."
   },
   {
     id: "michael-fair",
