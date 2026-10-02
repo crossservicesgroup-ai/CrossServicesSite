@@ -116,7 +116,7 @@ export const team: TeamMember[] = [
     id: "michael-fair",
     name: "Michael Fair",
     title: "Business Development",
-    photo: null, // [NEEDS INPUT] headshot
+    photo: "/images/team/michael-fair.jpg",
     bio: null, // [NEEDS INPUT] bio
   },
   {
