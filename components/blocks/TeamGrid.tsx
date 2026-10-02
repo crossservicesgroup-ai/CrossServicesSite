@@ -51,7 +51,9 @@ function TeamCard({ member, onOpen }: { member: TeamMember; onOpen: () => void }
         <Avatar member={member} />
         <div className="min-w-0">
           <h3 className="text-[19px] leading-tight">{member.name}</h3>
-          <p className="mt-1 text-[15px] text-muted">{member.title}</p>
+          {member.title ? (
+            <p className="mt-1 text-[15px] text-muted">{member.title}</p>
+          ) : null}
         </div>
       </div>
 

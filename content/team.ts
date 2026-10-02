@@ -44,13 +44,6 @@ export const team: TeamMember[] = [
     bio: "Chris joined Cross Services Group in October of 2022. With a Business degree from Babson College, focusing on Accounting and Finance, Chris began an entrepreneurial career by joining a first-generation family manufacturing business. Before being named president of the business, Chris was responsible for managing the administrative and financial operations of the company. His involvement in the development of operational strategy, key performance indicators and processes lead to greater responsibilities. His outstanding time-management and organization along with excellent communication, and leadership skills advanced Chris to President of the manufacturing business within four years.\n\nChris is a problem solver with a critical thinker mindset. Working as a change agent he reinvented how the business operated over the course of 35 years by having great insight, inspiration, and influence on key employees, empowering, and supporting them with change implementation and continuous improvement.\n\nAfter the sale of what became a 60-year-old second-generation business Chris found an opportunity to assist another successful family operated company. Utilizing his expansive experience in all business operations Chris was able to bring greater stability to the administrative and financial operations of the company. During his tenure Chris assisted the company in the sale and transitioning of the business to a multimillion-dollar national organization. Working through the due diligence and transition plan Chris helped with the adaptation of new processes and systems.\n\nContributing to the growth and success of others, remaining open to new thoughts and ideas, staying hungry for knowledge, and engaging in the never-ending process of self-improvement brings Chris endless satisfaction.",
   },
   {
-    id: "chip-tarbell",
-    name: "Chip Tarbell",
-    title: "Vice President of Operations",
-    photo: null, // [NEEDS INPUT] headshot
-    bio: "Chip joined Cross Services Group in July of 2018 and oversees many of the day-to-day projects within the organization. He graduated from St. Lawrence University with a BA in Economics in 1981, where he played Football & ran Track and Field. His career started with local commercial property owner, Haynes Management of Wellesley, running the landscape division of D.M. Bernardi for a number of years, as well as having project management responsibilities on the contracting side. He was Director of Facilities at the Belmont Hill School for 12 years, where he coached football and wrestling.\n\nChip lives in Wakefield with his wife and has two grown children and one grandchild. In his free time, he is an avid New England sports fan and enjoys time in Rockport, MA with his family and friends.",
-  },
-  {
     id: "campbell-armstrong",
     name: "Campbell Armstrong",
     title: "Business Development and Real Estate Manager",
@@ -98,32 +91,16 @@ export const team: TeamMember[] = [
   },
   {
     id: "irrigation-lead",
-    name: "Irrigation Lead", // [NEEDS INPUT] real name
-    title: "Irrigation",
+    name: "Irrigation", // [NEEDS INPUT] real name
+    title: "",
     photo: null, // [NEEDS INPUT] headshot
     bio: null,
     isDivisionHead: true,
   },
   {
     id: "car-detailing-lead",
-    name: "Car Detailing Lead", // [NEEDS INPUT] real name
-    title: "Car Detailing",
-    photo: null, // [NEEDS INPUT] headshot
-    bio: null,
-    isDivisionHead: true,
-  },
-  {
-    id: "chip-tarbell-painting-handyman",
-    name: "Chip Tarbell",
-    title: "Painting & Handyman",
-    photo: null, // [NEEDS INPUT] headshot
-    bio: null,
-    isDivisionHead: true,
-  },
-  {
-    id: "chip-tarbell-property-management",
-    name: "Chip Tarbell",
-    title: "Property Management",
+    name: "Car Detailing", // [NEEDS INPUT] real name
+    title: "",
     photo: null, // [NEEDS INPUT] headshot
     bio: null,
     isDivisionHead: true,
@@ -155,6 +132,14 @@ export const team: TeamMember[] = [
     title: "Office Administrator",
     photo: "/images/team/amanda-delconte.jpg",
     bio: "Amanda joined Cross Services Group in September of 2026. She is responsible for working closely with the Landscaping and Handyman divisions of Cross Services, ensuring planning, reporting, coordination and execution of work is conducted smoothly. Amanda has over 20 years supporting clients and managing relationships and project completion.\n\nShe was previously a Project Coordinator/Project Manager with Rodenhiser Home Services and Director of Talent for American Robotics, prior to joining Cross Services Group. Amanda graduated with a Bachelor of Arts from Longwood University and was a two-year member of the women’s soccer team.\n\nOutside of the office, most days she can be found on a sports field or hockey rink with her two extremely active children, playing the role of their favorite Uber driver."
+  },
+  {
+    id: "chip-tarbell",
+    name: "Chip Tarbell",
+    title: "Vice President of Operations, Painting & Handyman, Property Management",
+    photo: null, // [NEEDS INPUT] headshot
+    bio: "Chip joined Cross Services Group in July of 2018 and oversees many of the day-to-day projects within the organization. He graduated from St. Lawrence University with a BA in Economics in 1981, where he played Football & ran Track and Field. His career started with local commercial property owner, Haynes Management of Wellesley, running the landscape division of D.M. Bernardi for a number of years, as well as having project management responsibilities on the contracting side. He was Director of Facilities at the Belmont Hill School for 12 years, where he coached football and wrestling.\n\nChip lives in Wakefield with his wife and has two grown children and one grandchild. In his free time, he is an avid New England sports fan and enjoys time in Rockport, MA with his family and friends.",
+    isDivisionHead: true,
   },
 ];
 
