@@ -124,7 +124,7 @@ export const team: TeamMember[] = [
     name: "Tina Boss",
     title: "Office Administrator",
     photo: "/images/team/tina-boss.jpg",
-    bio: null, // [NEEDS INPUT] bio
+    bio: "Tina brings more than 40 years experience in office management, business operations and business ownership to her role at Cross Services Group. Her extensive experience has given her a strong understanding of operations, customer service, leadership, and the importance of building lasting relationships with customers.\n\nAs Office Administrator at Cross Services Group, Tina oversees daily office operations, coordinates scheduling and customer communications, and provides administrative support that helps promote efficiency and exceptional service. Known for her professionalism, organization, and problem-solving abilities, Tina is a trusted resource dedicated to ensuring a positive customer experience.\n\nTina earned a Bachelor of Arts in both Legal Studies and Social Science and holds a Paralegal Certificate from Webster University in St. Louis, Missouri. Outside of work, Tina enjoys spending time with her two children and granddaughter. She is an avid reader, enjoys music, gardening, swimming, and walking."
   },
   {
     id: "amanda-delconte",
