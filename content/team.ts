@@ -117,7 +117,7 @@ export const team: TeamMember[] = [
     name: "Michael Fair",
     title: "Business Development",
     photo: null, // [NEEDS INPUT] headshot
-    bio: null, // [NEEDS INPUT] bio
+    bio: "Michael Fair is a Business Development & Marketing Associate at Cross Services Group, where he plays a key role in developing new business opportunities, building customer relationships, and supporting marketing and operational initiatives across CSG’s divisions. He works closely with customers to connect them with the services that best meet their needs while identifying opportunities to improve efficiency and drive continued growth.\n\nMichael graduated from Stonehill College with a degree in Business Administration, a concentration in Management, and a minor in Entrepreneurship. Outside of work, he enjoys playing hockey and golf, spending time on Cape Cod, and being active with family and friends."
   },
   {
     id: "tina-boss",
