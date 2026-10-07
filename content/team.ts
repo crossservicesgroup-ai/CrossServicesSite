@@ -55,7 +55,7 @@ export const team: TeamMember[] = [
     name: "Megan Griffith",
     title: "Customer Development Manager",
     photo: "/images/team/megan-griffith.png",
-    bio: null, // [NEEDS INPUT] bio
+    bio: "Megan joined Cross Services Group in June of 2024 and oversees customer relations across each division. She serves as the primary point of contact for new leads and existing clients, cross promoting our services and optimizing customer retention, and aiding in marketing and strategy development for each division.\n\nMegan has her real estate license and was previously an engagement manager with The Concord Group, a real estate advisory firm in San Francisco where she developed strategic solutions and best use analysis across a broad range of real estate asset classes. She also currently runs a girls lacrosse club, called Trax Lacrosse, in the metro west area.\n\nMegan graduated from Boston College with a BA in English, where she played lacrosse.\n\nIn her free time, Megan enjoys spending time with her family, traveling, skiing, exercise, tennis, paddle, hiking and coaching her kids in soccer and lacrosse."
   },
   {
     id: "grace-silva",
