@@ -477,9 +477,9 @@ export const services: Service[] = [
   },
   {
     slug: "audio-video",
-    name: "TV's, Sound, Cameras and Networks",
+    name: "Audio & Video",
     group: "repairs",
-    tagline: "Tv's, sound, cameras and networks.",
+    tagline: "TV's, Sound, Cameras and Networks.",
     intro:
       "Our Technology Service Division provides solutions that enhance entertainment, convenience, and peace of mind. From whole-home audio and home theater systems to surveillance cameras, our skilled technicians ensure every system is seamlessly integrated and easy to use. We work with both residential and commercial properties, using high-quality equipment and clean, professional installations. Whether you're upgrading existing systems or starting from scratch, we handle every detail so you can sit back, relax, and enjoy a smarter, more secure space.",
     includes: [
