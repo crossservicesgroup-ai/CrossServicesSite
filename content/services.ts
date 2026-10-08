@@ -477,7 +477,7 @@ export const services: Service[] = [
   },
   {
     slug: "audio-video",
-    name: "Audio & Video",
+    name: "TV's, Sound, Cameras and Networks",
     group: "repairs",
     tagline: "Tv's, sound, cameras and networks.",
     intro:
