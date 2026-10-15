@@ -42,6 +42,12 @@ export function Footer() {
                 </li>
               ))}
             </ul>
+            <Link
+              href="/testimonials"
+              className="mt-4 inline-flex min-h-10 items-center rounded-[2px] border border-white/20 px-4 text-[15px] font-medium text-white transition-colors hover:bg-white/10"
+            >
+              Testimonials
+            </Link>
           </div>
 
           {/* Contact */}

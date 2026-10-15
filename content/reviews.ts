@@ -44,3 +44,35 @@ export const reviews: Review[] = [
     rating: 5,
   },
 ];
+
+/* ==========================================================================
+   VIDEO TESTIMONIALS
+   Shown on /testimonials. Add an entry per video and it renders
+   automatically.
+
+   Two ways to supply a video:
+   - `src`: an .mp4 saved in /public/videos/testimonials/, e.g.
+     "/videos/testimonials/rochelle.mp4". Add `poster` (a still image in
+     /public/images/...) so the card has a thumbnail before it plays.
+   - `youtubeId`: the ID from a YouTube link (the part after "v=" or after
+     "youtu.be/"). Use this for long or large videos.
+   ========================================================================== */
+
+export type VideoTestimonial = {
+  /** Leave undefined for a compilation video with several clients. */
+  author?: string;
+  /** A slug from services.ts, or null for a general testimonial. */
+  serviceSlug: string | null;
+  /** Optional one-line pull quote shown under the video. */
+  quote?: string;
+  src?: string;
+  poster?: string;
+  youtubeId?: string;
+};
+
+export const videoTestimonials: VideoTestimonial[] = [
+  {
+    serviceSlug: null,
+    src: "/videos/testimonials/detailing-testimonials.mp4",
+  },
+];

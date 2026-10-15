@@ -15,6 +15,7 @@ export function Reviews() {
       <SectionHeader
         id="reviews-heading"
         eyebrow="What clients say"
+        eyebrowClassName="font-display! text-[15px]! font-semibold! normal-case! tracking-normal!"
         title="Thirty-plus years of repeat business and referrals"
       />
 
