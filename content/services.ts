@@ -342,6 +342,7 @@ export const services: Service[] = [
       "/images/services/residential-cleaning-1.jpg",
       "/images/services/residential-cleaning-2.jpg",
     ],
+    video: "/videos/house-cleaning.mp4",
     faqs: [
       {
         q: "Do I need to supply cleaning products?",
