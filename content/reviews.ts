@@ -73,6 +73,10 @@ export type VideoTestimonial = {
 export const videoTestimonials: VideoTestimonial[] = [
   {
     serviceSlug: null,
+    src: "/videos/testimonials/home-management-testimonials.mp4",
+  },
+  {
+    serviceSlug: null,
     src: "/videos/testimonials/detailing-testimonials.mp4",
   },
 ];
