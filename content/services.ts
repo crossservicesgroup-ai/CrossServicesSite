@@ -267,6 +267,7 @@ export const services: Service[] = [
     related: ["power-washing", "gutter-cleaning", "residential-cleaning"],
     heroImage: "/images/services/window-washing-hero.webp",
     gallery: [],
+    video: "/videos/window-washing.mp4",
     faqs: [
       {
         q: "Do you clean screens and sills too, or just the glass?",
