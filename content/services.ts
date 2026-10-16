@@ -422,6 +422,7 @@ export const services: Service[] = [
       "/images/services/painting-handyman-1.jpg",
       "/images/services/painting-handyman-2.jpg",
     ],
+    video: "/videos/painting-handyman.mp4",
     faqs: [
       {
         q: "Is there a minimum size of job?",
