@@ -32,11 +32,16 @@ export default function TestimonialsPage() {
           eyebrow="Testimonials"
           eyebrowClassName="font-display! text-[15px]! font-semibold! normal-case! tracking-normal!"
           title="Hear it from our clients"
-          lead="Homeowners and property managers on what it is like to work with Cross Services Group."
         />
 
         {videos.length > 0 ? (
-          <ul className="mt-10 grid grid-cols-1 gap-5 md:mt-14 md:grid-cols-2">
+          /* A single video gets one wider, centred column instead of half
+             of an empty two-column grid. */
+          <ul
+            className={`mt-10 grid grid-cols-1 gap-5 md:mt-14 ${
+              videos.length === 1 ? "mx-auto max-w-[880px]" : "md:grid-cols-2"
+            }`}
+          >
             {videos.map((video, i) => (
               <Reveal as="li" key={`${video.src ?? video.youtubeId}-${i}`} delayIndex={i} className="h-full">
                 <VideoCard video={video} />
