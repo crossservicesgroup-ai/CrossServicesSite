@@ -154,6 +154,7 @@ export const services: Service[] = [
       after: "/images/services/landscaping-after.jpg",
       caption: "A front bed rebuilt and replanted.",
     },
+    video: "/videos/landscaping.mp4",
     faqs: [
       {
         q: "Do you take on weekly maintenance as well as one-off projects?",
