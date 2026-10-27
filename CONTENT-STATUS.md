@@ -34,7 +34,7 @@ whether the file exists on disk; no code changes needed.
 | Membership tiers and pricing | `app/club/page.tsx` | Shows a "to confirm" note and points at the booking portal |
 | Square footage and building count (130,000 sq ft, 6 buildings) | `content/site.ts` → `commercial` | **Taken from Warren's bio on the current site, not from you.** Confirm before launch |
 | Acquisition years for the timeline | `content/timeline.ts` | 1989 and 2007 are confirmed. Six entries show "Year to confirm" rather than a guessed date |
-| Bios for Warren III, Megan, Giulia, Joe and Brian | `content/team.ts` | Card shows name and title only, with no "read bio" control |
+| Bios for Megan, Giulia, Joe and Brian | `content/team.ts` | Card shows name and title only, with no "read bio" control |
 | Open roles and benefits | `app/careers/page.tsx` → `OPEN_ROLES`, `BENEFITS` | Both empty, with a visible note. Nothing about health cover, time off or training is claimed |
 | Confirmation that the brand → service mapping is right | `content/brands.ts`, `content/services.ts` | Built as specified: New-View on power washing / window washing / gutter cleaning, Classic Shine on car detailing, The Furies as a second card on residential cleaning |
 | Google rating and review count | `components/blocks/Proof.tsx` | **Not shown.** The proof strip uses only verifiable facts, because we have no confirmed rating |
