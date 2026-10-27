@@ -137,7 +137,7 @@ export const team: TeamMember[] = [
     id: "chip-tarbell",
     name: "Chip Tarbell",
     title: "Vice President of Operations, Painting & Handyman, Property Management",
-    photo: null, // [NEEDS INPUT] headshot
+    photo: "/images/team/chip-tarbell.jpg",
     bio: "Chip joined Cross Services Group in July of 2018 and oversees many of the day-to-day projects within the organization. He graduated from St. Lawrence University with a BA in Economics in 1981, where he played Football & ran Track and Field. His career started with local commercial property owner, Haynes Management of Wellesley, running the landscape division of D.M. Bernardi for a number of years, as well as having project management responsibilities on the contracting side. He was Director of Facilities at the Belmont Hill School for 12 years, where he coached football and wrestling.\n\nChip lives in Wakefield with his wife and has two grown children and one grandchild. In his free time, he is an avid New England sports fan and enjoys time in Rockport, MA with his family and friends.",
     isDivisionHead: true,
   },
