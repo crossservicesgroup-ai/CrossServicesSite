@@ -1,6 +1,7 @@
 import { site } from "@/content/site";
 
-const MESSAGE = "Now Booking Fall Irrigation Blowouts — Call Today!";
+const MESSAGE =
+  "NOW OFFERING AUDIO/VIDEO & SMART HOME SERVICES! — Networking • Security Cameras • TV Installation • Sound Systems — Contact Us Today to Get Started!";
 
 /* Seamless loop: the track holds two copies of the message back to back and
    scrolls exactly 50% of its own width, so the moment it resets, copy #2 is
@@ -16,7 +17,7 @@ export function AnnouncementBanner() {
       >
         {[0, 1].map((copy) => (
           <span key={copy} aria-hidden={copy === 1} className="flex items-center gap-16">
-            {Array.from({ length: 4 }).map((_, i) => (
+            {Array.from({ length: 2 }).map((_, i) => (
               <span
                 key={i}
                 className="font-display text-[15px] font-semibold tracking-wide text-white md:text-[16px]"
