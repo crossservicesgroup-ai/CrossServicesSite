@@ -1,7 +1,7 @@
 import { site } from "@/content/site";
 
 const MESSAGE =
-  "NOW OFFERING AUDIO/VIDEO & SMART HOME SERVICES! — Networking • Security Cameras • TV Installation • Sound Systems — Contact Us Today to Get Started!";
+  "Now Offering Audio/Video & Smart Home Services! — Networking • Security Cameras • TV Installation • Sound Systems — Contact Us Today to Get Started!";
 
 /* Seamless loop: the track holds two copies of the message back to back and
    scrolls exactly 50% of its own width, so the moment it resets, copy #2 is
