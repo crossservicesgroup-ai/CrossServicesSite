@@ -537,6 +537,7 @@ export const services: Service[] = [
       "/images/services/property-management-1.jpg",
       "/images/services/property-management-2.jpg",
     ],
+    video: "/videos/property-management.mp4",
     faqs: [
       {
         q: "What does routine maintenance actually cover?",
