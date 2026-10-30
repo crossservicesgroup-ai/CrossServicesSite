@@ -127,13 +127,6 @@ export const team: TeamMember[] = [
     bio: "Tina brings more than 40 years experience in office management, business operations and business ownership to her role at Cross Services Group. Her extensive experience has given her a strong understanding of operations, customer service, leadership, and the importance of building lasting relationships with customers.\n\nAs Office Administrator at Cross Services Group, Tina oversees daily office operations, coordinates scheduling and customer communications, and provides administrative support that helps promote efficiency and exceptional service. Known for her professionalism, organization, and problem-solving abilities, Tina is a trusted resource dedicated to ensuring a positive customer experience.\n\nTina earned a Bachelor of Arts in both Legal Studies and Social Science and holds a Paralegal Certificate from Webster University in St. Louis, Missouri. Outside of work, Tina enjoys spending time with her two children and granddaughter. She is an avid reader, enjoys music, gardening, swimming, tennis and walking."
   },
   {
-    id: "amanda-delconte",
-    name: "Amanda DelConte",
-    title: "Office Administrator",
-    photo: "/images/team/amanda-delconte.jpg",
-    bio: "Amanda is responsible for working closely with the Landscaping and Handyman divisions of Cross Services, ensuring planning, reporting, coordination and execution of work is conducted smoothly. Amanda has over 20 years supporting clients and managing relationships and project completion.\n\nShe was previously a Project Coordinator/Project Manager with Rodenhiser Home Services and Director of Talent for American Robotics, prior to joining Cross Services Group. Amanda graduated with a Bachelor of Arts from Longwood University and was a two-year member of the women’s soccer team.\n\nOutside of the office, most days she can be found on a sports field or hockey rink with her two extremely active children, playing the role of their favorite Uber driver."
-  },
-  {
     id: "chip-tarbell",
     name: "Chip Tarbell",
     title: "Vice President of Operations, Painting & Handyman, Property Management",
