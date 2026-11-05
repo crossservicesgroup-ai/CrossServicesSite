@@ -86,7 +86,7 @@ export const team: TeamMember[] = [
     name: "Brian Rothwell",
     title: "Technology",
     photo: "/images/team/brian-rothwell.webp",
-    bio: null, // [NEEDS INPUT] bio
+    bio: "Brian Rothwell works in the Technology Service Division at Cross Services Group, where he provides technology solutions for both residential and commercial clients. His work includes audio and video systems, network cameras, data networking, hosted phone systems, video conferencing solutions, and technology consulting.\n\nBrian works on both new installations and existing systems, often troubleshooting equipment installed by others, identifying underlying issues, and helping make systems more reliable and easier to use. He brings a practical, solutions-focused approach to each project and works closely with customers to ensure their technology is properly integrated and suited to their needs.\n\nIn addition to his client-facing work, Brian supports technology needs across Cross Services Group, helping ensure systems, equipment, and day-to-day technical operations run smoothly. He assists employees with troubleshooting, supports technology-related projects and improvements, and helps maintain reliable systems across the organization.\n\nBrian attended Providence College. Outside of work, he enjoys spending time with his wife and 2 boys, attending and watching Patriots, Red Sox and Celtics games.",
     isDivisionHead: true,
   },
   {
