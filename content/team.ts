@@ -33,7 +33,7 @@ export const team: TeamMember[] = [
     id: "warren-cross-iii",
     name: "Warren Cross III",
     title: "Vice President",
-    photo: null, // [NEEDS INPUT] headshot
+    photo: "/images/team/warren-cross-iii.jpg",
     bio: "Warren Cross III joined Cross Services Group full-time in 2021 after previously working across several of the company’s service divisions, including car detailing, landscaping and irrigation, and carpentry and painting. This hands-on experience gave him a strong understanding of the company’s operations and the services it provides to its customers.\n\nAs Vice President, Warren manages the Landscaping and Irrigation Division and the Furies Cape Cod Cleaning and Linen Rental Division. He also helps oversee several of the company’s other service divisions, including Night Cleaning and House Cleaning, while working closely with leadership and field teams on day-to-day operations, staffing, training, and service delivery.\n\nGrowing up around a family-owned business gave Warren an early appreciation for entrepreneurship and the importance of strong customer relationships. He brings a hands-on approach to leadership and enjoys identifying opportunities to improve operations, develop employees, and contribute to the continued growth of Cross Services Group.\n\nWarren graduated from Babson College, where he developed a strong foundation in business and entrepreneurship. Outside of work, he enjoys staying active, playing sports, and spending time with his family.",
   },
   {
